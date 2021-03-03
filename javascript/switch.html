@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <script>
+            function check(){
+                var v=parseInt(document.frm.t1.value);
+                switch(v){
+                    case 1: alert('This is case 1'); break;
+                    case 2: alert('This is case 2'); break;
+                    case 3: alert('This is case 3'); break;
+                    default: alert('Enter 1-3 only'); break;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form name=frm>
+            Nter 1-3: <input type="text"  name="t1"/>
+            <input type="button" value=CHECK onclick="check()" />
+        </form>
+    </body>
+</html>

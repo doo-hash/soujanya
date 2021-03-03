@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <script>
+            function checkGrade(){
+                var marks=eval(document.frm.t1.value);
+                if(marks>=90)
+                alert('grade A');
+                else if(marks>=75)
+                alert('grade B');
+                else if(marks>=60)
+                alert('grade C');
+                else
+                alert('grade D');
+            }
+        </script>
+    </head>
+    <body>
+        <form name=frm>
+            <label>Enter ur marks: </label>
+            <input type="text" name=t1 />
+            <input type="button" value="CHECK" onclick="checkGrade()" />
+        </form>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+    <body>
+        <script>
+            const arr1=[1,2,3];
+            const arr2=[4,5,6];
+            const arr=arr1.concat(arr2);
+            document.write(arr+'<br>');
+
+            const arr3=[7,8,9];
+            const arr4=[10,11,12,arr3];
+            document.write(arr4+"<br>");
+
+            //using spread operator
+            const arr5=[10,20,30];
+            const arr6=[50,60,...arr5,70];
+            document.write(arr6+"<br>");
+
+            let nums=[10,20,9,30];
+            document.write(Math.min(...nums)+"<br>");
+
+            var arr7=[11,22,33,44];
+            var arr8=[...arr7];
+            arr8.push(55);
+            document.write(arr8);
+        </script>
+    </body>
+</html>

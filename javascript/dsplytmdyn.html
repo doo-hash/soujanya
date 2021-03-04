@@ -1,0 +1,12 @@
+<html>
+    <body>
+        <p id=p1></p>
+        <script>
+            setInterval(mytime,1000);
+            function mytime() {
+             var time=new Date;
+             document.getElementById('p1').innerHTML=time.toLocaleTimeString();   
+            }
+        </script>
+    </body>
+</html>

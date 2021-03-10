@@ -1,0 +1,12 @@
+<html>
+    <body>
+        <p id=p1></p>
+        <script>
+            var nums=[12,30,8,25,55,10];
+            function chkNums(num){
+                return num>=20;
+            }
+            document.getElementById('p1').innerHTML=nums.filter(chkNums);
+        </script>
+    </body>
+</html>

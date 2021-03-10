@@ -1,0 +1,18 @@
+<html>
+    <body>
+        <script>
+            function txtvalid(t1){
+                if(frm.t1.value.length==0){
+                    t1.style.background="pink";
+                    alert('enter something in t1');
+                }
+                else{
+                    t1.style.background="white";
+                }
+            }
+        </script>
+        <form name=frm>
+            <input type="text" name=t1 onblur="txtvalid(this)">
+        </form>
+    </body>
+</html>

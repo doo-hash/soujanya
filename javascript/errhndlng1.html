@@ -1,0 +1,25 @@
+<html>
+    <body>
+        <script>
+            function myFun(){
+                var a=100;
+                var b=0;
+                try{
+                    if(b==0){
+                        throw('divide by zero error');
+                    }
+                    else{
+                        var c=a/b;
+                        alert(c);
+                    }
+                }
+                catch(err){
+                    alert('Error: '+err);
+                }
+            }
+        </script>
+        <form>
+            <input type="button" value="click" onclick="myFun()">
+        </form>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+<html>
+    <body>
+        <script>
+            var Promise=new Promise(function(resolve, reject){
+                const x="abcde";
+                const y="abcdef";
+                if(x===y){
+                    resolve();
+                }
+                else{
+                    reject();
+
+                }
+            });
+            Promise.then(function(){
+                document.write('both are equal');
+            }).catch(function(){
+                document.write('not equal');
+            });
+        </script>
+    </body>
+</html>

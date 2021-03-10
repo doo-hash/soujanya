@@ -1,0 +1,18 @@
+<html>
+    <body>
+        <p id=p1></p>
+        <script>
+            function student(fname,lname,marks,grade){
+                this.fname=fname;
+                this.lname=lname;
+                this.marks=marks;
+                this.grade=grade;
+            }
+            student.prototype.name=function(){
+                return this.fname+" "+this.lname;
+            };
+            var obj= new student('hari','vasu',550,'grade A');
+            document.getElementById('p1').innerHTML="name: "+obj.name();
+        </script>
+    </body>
+</html>

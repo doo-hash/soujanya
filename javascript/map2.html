@@ -1,0 +1,13 @@
+<html>
+    <body>
+        <p id=p1></p>
+        <script>
+            var nums=[11,22,33,44,55];
+            var new_nums=nums.map(myFun);
+            function myFun(n){
+                return n*2;
+            }
+            document.getElementById('p1').innerHTML=new_nums;
+        </script>
+    </body>
+</html>

@@ -1,0 +1,15 @@
+<html>
+    <body>
+        <script>
+            function fun1(x){
+                return function(y){
+                    return x*y;
+                };
+            }
+            var prod1=fun1(5);
+            var prod2=fun1(10);
+            document.write(prod1(11));
+            document.write(prod2(12));
+        </script>
+    </body>
+</html>

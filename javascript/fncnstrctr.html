@@ -1,0 +1,9 @@
+<html>
+    <body>
+        <p id=p1></p>
+        <script>
+            var v=new Function("a","b","return a*b");
+            document.getElementById('p1').innerHTML=v(10,20);
+        </script>
+    </body>
+</html>

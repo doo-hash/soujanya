@@ -1,0 +1,23 @@
+<html>
+    <body>
+        <script>
+            function sqroot(num){
+                if(num<0)
+                throw new Error('cannot calculate sqroot');
+                else{
+                    return Math.sqrt(num);
+                }
+            }
+            try{
+                sqroot(100);
+                sqroot(169);
+                sqroot(-9);
+                sqroot(196);
+                alert('all calculations are performed successfully');
+            }
+            catch(e){
+                alert(e.message);
+            }
+        </script>
+    </body>
+</html>

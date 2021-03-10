@@ -1,0 +1,11 @@
+<html>
+    <body>
+        <script>
+            let animal={eats:true};
+            let dog={barks:true};
+            dog.__proto__=animal;
+            alert(dog.barks);
+            alert(dog.eats);
+        </script>
+    </body>
+</html>

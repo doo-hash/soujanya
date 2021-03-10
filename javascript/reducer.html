@@ -1,0 +1,15 @@
+<html>
+    <body>
+        <p id=p1></p>
+        <script>
+            var nums=[3.6,5.3,15.5,4.4,2.5];
+            function Add(t,n){
+                return t+Math.round(n);
+            }
+            function myFun(i){
+                document.getElementById('p1').innerHTML=nums.reduce(Add,0);
+            }
+        </script>
+        <button onclick="myFun()">REDUCE</button>
+    </body>
+</html>

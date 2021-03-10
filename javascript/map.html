@@ -1,0 +1,12 @@
+<html>
+    <body>
+        <button onclick="myFun()">CLICK</button>
+        <p id=p1></p>
+        <script>
+            var nums=[4,9,16,25,36,49];
+            function myFun(){
+                document.getElementById('p1').innerHTML=nums.map(Math.sqrt);
+            }
+        </script>
+    </body>
+</html>

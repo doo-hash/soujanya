@@ -1,0 +1,17 @@
+<html>
+    <body>
+        <script>
+            function getEmployees(){
+                let eid=1;
+                return function(ename,salary){
+                    return {eid:eid++,ename,salary};
+                };
+            }
+            const emp=getEmployees();
+            const emp1=emp('ravi','kiran');
+            const emp2=emp('raj','kumar');
+            document.write(emp1.eid+' '+emp1.ename+' '+emp1.salary);
+            document.write(emp2.eid+' '+emp2.ename+' '+emp2.salary);
+        </script>
+    </body>
+</html>

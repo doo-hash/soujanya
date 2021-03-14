@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            table, tr, td{
+                width: 90%;
+                padding: 20px;
+                margin: 25px;
+            }
+            input, select{
+                width: 100%;
+            }
+        </style>
+        <script>
+
+        </script>
+    </head>
+    <body>
+        <form>
+            <table>
+            <tr><td><label for="f1">FirstName</label></td>
+            <td><input type="text" name="f1" placeholder="Enter your firstname" ></td></tr>
+            <tr><td><label for="l1">LastName</label></td>
+            <td><input type="text" name="l1" placeholder="Enter your lastname" ></td></tr>
+            <tr><td><label for="date">Date of Birth</label></td>
+            <td><input type="date" name="d1" ></td></tr>
+            <tr><td><label for="g1">Gender</label></td>
+            <td colspan="2"><input type="radio" name="g1" value="male">Male</td>
+            <td><input type="radio" name="g1" value="female">Female</td></tr>
+            <tr><label>Techinical skills</label></tr>
+            <tr><td><label for="lang1">Languages</label></td>
+            <td><select size="1" name="lang1">
+                <option value="">Select your choice</option>
+                <option value="c">C</option>
+                <option value="c2">C++</option>
+                <option value="java">Java</option>
+                <option value="python">Python</option>
+                <option value="js">Javascript</option>
+                <option value=".net">DotNet</option>
+                <option value="react">React</option>
+                <option value="angular">Angular</option>
+                <option value="html">HTML</option>
+                <option value="css">CSS/SCSS/Bootstrap</option>
+            </select></td></tr>
+            <tr><td><label for="db1">DataBases</label></td>
+            <td><select size="1" name="db1">
+                <option value="">Select your choice</option>
+                <option value="sql">SQL</option>
+                <option value="Mongo">MONGODB</option>
+            </select></td></tr>
+            <tr><td><label for="e1">Email ID</label></td>
+            <td><input type="email" name="e1" placeholder="Enter your Email-ID"></td></tr>
+            <tr><td><label for="tel">Mobile No.</label></td>
+            <td><input type="tel" name="tl1"></td></tr>
+            </table>
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+           
+            #frm1{
+                border: 3px solid black;
+                border-radius: 5px;
+                background-color: floralwhite;
+                padding: 40px;
+            }
+            input[type=text],input[type=email],input[type=tel],select{
+                width: 100%;
+                border: none;
+                border-bottom: 2px solid cornflowerblue;
+                display: inline-block;
+                background: white;
+                padding: 15px;
+                margin: 5px;
+                margin-left: 0px;
+                border-radius: 15px;
+            }
+            input[type=radio]{
+                width: 20%;
+            }
+            input:hover, input:focus-visible, select:hover{
+                background-color: oldlace;
+                border-radius: 15px;
+                display: inline;
+                box-shadow: 2px 2px 4px cadetblue;
+                font-size: 20px;
+            }
+            #st1{
+                background-color: lightskyblue;
+                padding: 10px;
+                margin-top: 15px;
+                margin-left: 37.5%;
+                display: block;
+                width: 25%;
+                font-family: sans-serif;
+                font-size: 20px;
+                overflow-x: visible;
+                border-radius: 10px;
+                text-shadow: 1px 1px 2px midnightblue ;                
+            }
+            .regbtn:hover{
+                box-shadow: 2px 2px 10px rgb(133, 88, 44);
+                font-size: 20px;
+            }
+            h2{
+                text-align: center;
+                font-family: sans-serif;
+            }
+            label, p{
+                font-size: 20px;
+                font-family: 'Lucida Sans';
+                padding: 5px;
+            }
+        </style>
+        <script>
+            function myFun(){
+            }
+        </script>
+    </head>
+    <body>
+        <form name=frm id="frm1" method="POST" action="welcome.html">
+            <div id="d1">
+                <h2>REGISTRATION FORM</h2>
+                <p>Please fill in the details to register to our website.</p>
+                <hr>
+                <label for="f1">FirstName</label><br>
+                <input type="text" name="f1" placeholder="Enter your firstname" required><br>
+                <label for="l1">LastName</label><br>
+                <input type="text" name="l1" placeholder="Enter your lastname" required><br>
+                <label for="date">Date of Birth</label>
+                <input type="date" name="d1" required><br>
+                <label for="g1">Gender</label>
+                <input type="radio" name="g1" value="male">Male
+                <input type="radio" name="g1" value="female">Female<br>
+                <label>Techinical skills</label><br>
+                <label for="lang1">Languages</label>
+                <select size="1" name="lang1" required>
+                    <option value="">Select your choice</option>
+                    <option value="c">C</option>
+                    <option value="c2">C++</option>
+                    <option value="java">Java</option>
+                    <option value="python">Python</option>
+                    <option value="js">Javascript</option>
+                    <option value=".net">DotNet</option>
+                    <option value="react">React</option>
+                    <option value="angular">Angular</option>
+                    <option value="html">HTML</option>
+                    <option value="css">CSS/SCSS/Bootstrap</option>
+                </select><br>
+                <label for="db1">DataBases</label>
+                <select size="1" name="db1" required>
+                    <option value="">Select your choice</option>
+                    <option value="sql">SQL</option>
+                    <option value="Mongo">MONGODB</option>
+                </select><br>
+                <label for="e1">Email ID</label><br>
+                <input type="email" name="e1" placeholder="Enter your Email-ID" required><br>
+                <label for="tel">Mobile No.</label><br>
+                <input type="tel" name="tl1" required><br>
+                <input type="submit" value="Register" id="st1" class="regbtn">
+            </div>
+        </form>
+    </body>
+</html>

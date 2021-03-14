@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <h1>TABLES</h1>
+        <style>
+            table, th,td{
+                border: 2px solid black;
+                text-align: center;
+                border-collapse: collapse;
+                padding: 10px;
+                width: 30%;
+                font-size: 25px;
+            }
+            #t1{
+                margin-top: 30px;
+                margin-left: 80px;
+            }
+            table:hover{
+                background-color:lightgray;
+            }
+            #t2{
+                margin-top: 30px;
+                margin-right: 80px;
+                margin-bottom: 10%;
+            }
+            #d1{
+                display: none;
+            }
+            h1{
+                color:darkblue;
+                text-align: center;
+            }    
+            p{
+                font-size: 25px;
+            } 
+            body{
+                background-image: linear-gradient(-45deg,lightblue,lightgray);
+            }       
+        </style>
+        <script>
+            function myFun() {  
+                    document.getElementById('d1').style.display="block";
+                
+            }
+        </script>
+    </head>
+    <body>
+        <p>click the button to display car models details</p><br>
+        <button onclick="myFun()">Car Models</button>
+        <div id="d1">
+        <table align="left" id=t1>
+            <caption>Car Models</caption>
+            <tr>
+                <th colspan="2">Cars</th>
+            </tr>
+            <tr>
+                <td rowspan="2">car1</td>
+                <td>123</td>
+            </tr>
+            <tr>
+                <td>456</td>
+            </tr>
+            <tr>
+                <td rowspan="3">car2</td>
+                <td>257</td>
+            </tr>
+            <tr>
+                <td>426</td>
+            </tr>
+            <tr>
+                <td>571</td>
+            </tr>
+        </table>
+        <table align="right" id=t2>
+            <caption>Car Models</caption>
+            <tr>
+                <th colspan="2">Cars</th>
+            </tr>
+            <tr>
+                <td rowspan="2">car1</td>
+                <td>153</td>
+            </tr>
+            <tr>
+                <td>486</td>
+            </tr>
+            <tr>
+                <td rowspan="2">car2</td>
+                <td>587</td>
+            </tr>
+            <tr>
+                <td>549</td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+            </tr>
+            <tr>
+                <td rowspan="2">car3</td>
+                <td>519</td>
+            </tr>
+            <tr>
+                <td>547</td>
+            </tr>
+            <tr>
+                <td rowspan="3">car4</td>
+                <td>852</td>
+            </tr>
+            <tr>
+                <td>491</td>
+            </tr>
+            <tr>
+                <td>467</td>
+            </tr>
+        </table>
+    </div>
+    </body>
+</html>

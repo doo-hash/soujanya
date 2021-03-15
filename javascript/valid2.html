@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <script>
+            function Chk(){
+                if(frm.t1.value=="smartz" && frm.p1.value=="tech"){
+                    window.location="welcome.html";
+                }
+                else{
+                    alert('invalid user');
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form name=frm>
+            Username: <input type="text" name=t1 />
+            <br>
+            Password: <input type="password" name=p1 /><br>
+            <input type="submit" value="check" onclick="Chk()" />
+        </form>
+    </body>
+</html>

@@ -1,35 +1,82 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <script>
+            function myFun(){
+                alert('you have registered successfully');
+            }
+        </script>
         <style>
-            table, tr, td{
-                width: 90%;
-                padding: 20px;
-                margin: 25px;
+            table{
+                width: 100%;
+                padding: 25px;
+                margin: 0px 25px 5px 25px;
+            }
+            th{
+                width:30%;
+                padding: 5px;
+                text-align: left;
+                font-weight: normal;
+                font-size: 20px;
+            }
+            td{
+                width: 70%;
+                padding: 5px;
             }
             input, select{
-                width: 100%;
+                width: 95%;
+                padding:10px 0px 10px 0px;
+                border-radius: 12px;
+                font-size: 18px;
             }
+            input[type=radio]{
+                width: 5%;
+            }
+            #p1{
+                font: italic normal normal 20px "Fira sans";
+                padding: 0px 0px 0px 15px;
+            }
+            #g1{
+                padding: 2px 0px 2px 0px;
+            }
+            .regbtn{
+                padding: 4px;
+                margin-top: 5px;
+                margin-left: 37.5%;
+                display: block;
+                width: 25%;
+                font-family: sans-serif;
+                font-size: 15px;
+                overflow-x: visible;
+                border-radius: 10px;               
+            }          
+
         </style>
         <script>
 
         </script>
     </head>
-    <body>
-        <form>
-            <table>
-            <tr><td><label for="f1">FirstName</label></td>
-            <td><input type="text" name="f1" placeholder="Enter your firstname" ></td></tr>
-            <tr><td><label for="l1">LastName</label></td>
-            <td><input type="text" name="l1" placeholder="Enter your lastname" ></td></tr>
-            <tr><td><label for="date">Date of Birth</label></td>
-            <td><input type="date" name="d1" ></td></tr>
-            <tr><td><label for="g1">Gender</label></td>
-            <td colspan="2"><input type="radio" name="g1" value="male">Male</td>
-            <td><input type="radio" name="g1" value="female">Female</td></tr>
-            <tr><label>Techinical skills</label></tr>
-            <tr><td><label for="lang1">Languages</label></td>
-            <td><select size="1" name="lang1">
+    <body><form method="POST" action="welcome.html" enctype="multipart/form-data">
+        <h3 style="text-align: center;padding-bottom: 0px;">REGISTRATION FORM</h3>
+        <p id="p1">Please fill in the form to register.</p>
+        <table>
+            <tr><th style="font-size: 20px;"><b>Personal Info</b></th></tr>
+            <tr><th><label for="f1">FirstName</label></th>
+            <td><input type="text" name="f1" placeholder="Enter your firstname" required/></td></tr>
+            
+            <tr><th><label for="l1">LastName</label></th>
+            <td><input type="text" name="l1" placeholder="Enter your lastname" required/></td></tr>
+            
+            <tr><th><label for="date">Date of Birth</label></th>
+            <td><input type="date" name="d1" max="01/01/2021" min="01/01/1990"/></td></tr>
+            
+            <tr><th><label for="g1">Gender</label></th>
+            <td><input type="radio" name="g1" value="male" id="g1" required/>Male<br>
+            <input type="radio" name="g1" value="female"id="g1" required/>Female</td></tr>
+            
+            <tr><th style="font-size: 20px;"><b>Techinical Skills</b></th></tr>
+            <tr><th><label for="lang1">Languages</label></th>
+            <td><select size="1" name="lang1" multiple required>
                 <option value="">Select your choice</option>
                 <option value="c">C</option>
                 <option value="c2">C++</option>
@@ -42,18 +89,23 @@
                 <option value="html">HTML</option>
                 <option value="css">CSS/SCSS/Bootstrap</option>
             </select></td></tr>
-            <tr><td><label for="db1">DataBases</label></td>
-            <td><select size="1" name="db1">
+            <tr><th><label for="db1">DataBases</label></th>
+            <td><select size="1" name="db1" multiple required>
                 <option value="">Select your choice</option>
                 <option value="sql">SQL</option>
                 <option value="Mongo">MONGODB</option>
             </select></td></tr>
-            <tr><td><label for="e1">Email ID</label></td>
-            <td><input type="email" name="e1" placeholder="Enter your Email-ID"></td></tr>
-            <tr><td><label for="tel">Mobile No.</label></td>
-            <td><input type="tel" name="tl1"></td></tr>
+
+            <tr><th><label for="e1">Email ID</label></th>
+            <td><input type="email" name="e1" placeholder="Enter your Email-ID" required/></td></tr>
+            
+            <tr><th></td><label for="tel">Mobile No.</label></th>
+            <td><input type="tel" name="tl1" max="10" required/></td></tr>
+            
+            <tr><th>upload your resume</th>
+            <td><input type="file" /></td></tr>
             </table>
-            <input type="submit" value="Submit">
+            <input type="submit" value="Register" class="regbtn" onclick="myFun()" />
         </form>
-    </body>
+        </body>
 </html>

@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <script>
+            function txtvalid(tl){
+                if(frm.t1.value.length==0){
+                    t1.style.background="pink";
+                    alert('enter something in textbox');
+                }
+                else{
+                    t1.style.background="white";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            <input type="text" name="t1" onclick="txtvalid(this)" />
+        </form>
+    </body>
+</html>

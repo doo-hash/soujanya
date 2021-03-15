@@ -11,29 +11,39 @@
             input[type=date]{
                 width: 20%;
                 padding:10px;
-                margin: 5px 0px 5px 25px;
+                margin: 5px 0px 5px 175px;
                 border: none;
-                border-bottom: 2px solid cornflowerblue;
+                border-bottom: 2px solid black;
                 border-radius: 10px;
             }
             input[type=text],input[type=email],input[type=tel],select{
                 width: 60%;
                 border: none;
-                border-bottom: 2px solid cornflowerblue;
+                border-bottom: 2px solid black;
                 display: inline-block;
                 background: white;
                 padding: 15px;
-                margin: 5px 0px 5px 50px;
+                margin: 5px 0px 5px 200px;
                 border-radius: 15px;
                 overflow: hidden;
                 
             }
-            input:hover, input:focus-visible, select:hover{
-                background-color: oldlace;
+            input[type=email]{
+                margin: 5px 0px 5px 230px;
+            }
+            input[type=file]{
+                margin: 10px 0px 5px 110px;
+                font-size: 20px;
+
+            }
+            input:hover, select:hover{
                 border-radius: 15px;
                 display: inline;
-                box-shadow: inset 2px 0px 4px cadetblue;
+                box-shadow: inset 2px 0px 4px white;
                 font-size: 20px;
+            }
+            input::after{
+                background: white;
             }
             #st1{
                 background-color: lightskyblue;
@@ -58,7 +68,8 @@
                 padding: 0px 5px 0px 5px;
             }
             #g11{
-                margin: 5px 0px 5px 85px;
+                margin: 5px 0px 5px 230px;
+                padding: 5px 0px 5px 0px;
             }
             #g21{
                 margin: 5px 0px 5px 100px;
@@ -75,25 +86,53 @@
         </style>
         <script>
             function myFun(){
+                var fname=document.getElementById('f11').value;
+                var lname=document.getElementById('l11').value;
+                var email1=document.getElementById('e11').value;
+                var i=document.getElementById('d11').value;
+                try{
+                    if(!isNaN(fname)){
+                        throw 'numbers are not allowed';
+                    }
+                    if(!isNaN(lname)) throw 'numbers are not allowed';
+                    if(i>12-31-2020 || i<01-01-1990){
+                        throw 'Not applicaple';
+                    }
+                    if(frm.tl1.value.length!=10){
+                        throw 'please enter your 10 digit phone number';
+                    }
+                    else{
+                        alert("Name: "+fname+" "+lname+
+                "DOB: "+frm.d1.value
+                +"Gender: "+frm.g1.value
+                +"email: "+email1
+                +"mobile no.: "+frm.tl1.value);
+                    }
+                }
+                catch(err){
+                    alert('input: '+ err);
+                }
+                return false;
             }
         </script>
     </head>
     <body>
-        <form name=frm id="frm1" method="POST" action="welcome.html">
+        <form name=frm id="frm1" method="POST" action="welcome.html" >
             <div id="d1">
                 <h2>REGISTRATION FORM</h2>
                 <p>Please fill in the details to register to our website.</p>
                 <hr>
-                <label for="f1">FirstName</label>
-                <input type="text" name="f1" placeholder="Enter your firstname" required><br>
+                <fieldset><legend>Personal Info</legend>
+                <label for="f12">FirstName</label>
+                <input type="text" name="f12" id="f11" placeholder="Enter your firstname" required><br>
                 <label for="l1">LastName</label>
-                <input type="text" name="l1" placeholder="Enter your lastname" required><br>
+                <input type="text" name="l1" id="l11" placeholder="Enter your lastname" required><br>
                 <label for="date">Date of Birth</label>
-                <input type="date" name="d1" required><br>
+                <input type="date" name="d1" id="d11" required><br>
                 <label for="g1" class="gr1">Gender
                 <input type="radio" name="g1" value="male" id="g11">Male
-                <input type="radio" name="g1" value="female" id="g21">Female</label><br>
-                <label>Techinical skills</label><br>
+                <input type="radio" name="g1" value="female" id="g21">Female</label></fieldset><br>
+                <fieldset><legend>Technical Skills</legend>
                 <label for="lang1">Languages</label>
                 <select size="1" name="lang1" required>
                     <option value="">Select your choice</option>
@@ -113,12 +152,14 @@
                     <option value="">Select your choice</option>
                     <option value="sql">SQL</option>
                     <option value="Mongo">MONGODB</option>
-                </select><br>
+                </select></fieldset><br>
                 <label for="e1">Email ID</label>
                 <input type="email" name="e1" id="e11" placeholder="Enter your Email-ID" required><br>
                 <label for="tel">Mobile No.</label>
-                <input type="tel" name="tl1" id="tl11" required><br>
-                <input type="submit" value="Register" id="st1" class="regbtn">
+                <input type="tel" name="tl1" id="tl11" placeholder="Enter your mobile number" required><br>
+                <label for="f1">Upload Your Resume</label>
+                <input type="file" name="f1"><br>
+                <input type="submit" value="Register" id="st1" class="regbtn" onclick="myFun()">
             </div>
         </form>
     </body>

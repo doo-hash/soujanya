@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <script>
+            var v=document.getElementsByClassName('class1');
+
+            document.write('number of elements selected '+v.length);
+            v[0].style.fontSize="25px";
+            v[0].style.fontSize=color="maroon";
+            v[0].style.fontWeight="bold";
+
+            v[v.length-1].style.fontStyle="italic";
+            v[v.length-1].style.textTransform="pink";
+            for(var i in v){
+                v[i].style.background="pink";
+            }
+        </script>
+    </head>
+    <body>
+        <p class="class1">this</p>
+        <div class="div1 class1">this is </div>
+        <p>this is another</p>
+    </body>
+</html>

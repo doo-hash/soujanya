@@ -1,0 +1,16 @@
+<html>
+    <body>
+        <div>
+            <strong>
+                this is strong text
+            </strong>
+        </div>
+        <script>
+            var e=document.createElement('h1');
+            var s= document.querySelector('strong');
+            var d=document.querySelector('div');
+            e.textContent='This is the header1, that will replace strong tag';
+            d.replaceChild(e,s);
+        </script>
+    </body>
+</html>

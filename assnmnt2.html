@@ -1,43 +1,34 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script>
-            function myFun(){
-                alert('you have registered successfully');
-            }
-        </script>
         <style>
             table{
                 width: 100%;
                 padding: 25px;
-                margin: 0px 25px 5px 25px;
+                margin: 0px 25px 5px 45px;
             }
             th{
                 width:30%;
                 padding: 5px;
                 text-align: left;
                 font-weight: normal;
+            }
+            label{
                 font-size: 20px;
             }
             td{
                 width: 70%;
                 padding: 5px;
             }
-            input, select{
-                width: 95%;
+            input{
                 padding:10px 0px 10px 0px;
                 border-radius: 12px;
-                font-size: 18px;
-            }
-            input[type=radio]{
-                width: 5%;
+                font-size: 20px;
+                overflow: visible;
             }
             #p1{
-                font: italic normal normal 20px "Fira sans";
-                padding: 0px 0px 0px 15px;
-            }
-            #g1{
-                padding: 2px 0px 2px 0px;
+                font: italic normal normal 25px "Fira sans";
+                padding: 0px 0px 0px 25px;
             }
             .regbtn{
                 padding: 4px;
@@ -49,63 +40,156 @@
                 font-size: 15px;
                 overflow-x: visible;
                 border-radius: 10px;               
-            }          
-
+            } 
         </style>
-        <script>
 
-        </script>
     </head>
-    <body><form method="POST" action="welcome.html" enctype="multipart/form-data">
+    <body><form method="POST" action="welcome.html" name="frm">
         <h3 style="text-align: center;padding-bottom: 0px;">REGISTRATION FORM</h3>
         <p id="p1">Please fill in the form to register.</p>
         <table>
             <tr><th style="font-size: 20px;"><b>Personal Info</b></th></tr>
             <tr><th><label for="f1">FirstName</label></th>
-            <td><input type="text" name="f1" placeholder="Enter your firstname" required/></td></tr>
+            <td><input type="text" id="f1" name="fname" size="64" maxlength="25" 
+                pattern="[^\s][a-zA-z\s]{15,64}"
+                placeholder="Enter your firstname" required/></td></tr>
             
             <tr><th><label for="l1">LastName</label></th>
-            <td><input type="text" name="l1" placeholder="Enter your lastname" required/></td></tr>
+            <td><input type="text" id="l1" name="lname" size="64" maxlength="25" 
+                pattern="[^\s][a-zA-Z\s]{15,64}"
+                 placeholder="Enter your lastname" required/></td></tr>
             
             <tr><th><label for="date">Date of Birth</label></th>
-            <td><input type="date" name="d1" max="01/01/2021" min="01/01/1990"/></td></tr>
+            <td><input type="number" min="01" max="31" name="day" id="day" 
+                placeholder="date-DD" style="font-size: 15px;" onchange="chk()" required>
+                <input list="months" id="mnth" name="mnth" 
+                placeholder="month-mm" style="font-size: 15px;" autocomplete="off" required>
+                <datalist id="months" >
+                    <option value="January"></option>
+                    <option value="February"></option>
+                    <option value="March"></option>
+                    <option value="April"></option>
+                    <option value="May"></option>
+                    <option value="June"></option>
+                    <option value="July"></option>
+                    <option value="August"></option>
+                    <option value="September"></option>
+                    <option value="October"></option>
+                    <option value="November"></option>
+                    <option value="December"></option>
+                </datalist>
+                <input type="number" min="1990" max="2021" id="yr" name="year" pattern="[0-9]{4}" 
+                placeholder="year-yyyy" style="font-size: 15px;" onchange="chk()" required></td></tr>
             
-            <tr><th><label for="g1">Gender</label></th>
-            <td><input type="radio" name="g1" value="male" id="g1" required/>Male<br>
-            <input type="radio" name="g1" value="female"id="g1" required/>Female</td></tr>
+            <tr><th><label for="gndr">Gender</label></th>
+            <td><input type="radio" name="gndr" value="male" id="g1" />
+                <label style="font-size: 20px;">Male</label><br>
+            <input type="radio" name="gndr" value="female" id="g2" />
+                <label style="font-size: 20px;">Female</label>
+            </td></tr>
             
             <tr><th style="font-size: 20px;"><b>Techinical Skills</b></th></tr>
             <tr><th><label for="lang1">Languages</label></th>
-            <td><select size="1" name="lang1" multiple required>
-                <option value="">Select your choice</option>
-                <option value="c">C</option>
-                <option value="c2">C++</option>
-                <option value="java">Java</option>
-                <option value="python">Python</option>
-                <option value="js">Javascript</option>
-                <option value=".net">DotNet</option>
-                <option value="react">React</option>
-                <option value="angular">Angular</option>
-                <option value="html">HTML</option>
-                <option value="css">CSS/SCSS/Bootstrap</option>
-            </select></td></tr>
+            <td><input type="checkbox" id="lang1" name="lang" value="c">
+            <label for="lang1">C</label>
+            <input type="checkbox" id="lang2" name="lang" value="python">
+            <label for="lang2">Python</label>
+            <input type="checkbox" id="lang3" name="lang" value="java">
+            <label for="lang3">Java</label>
+            <input type="checkbox" id="lang4" name="lang" value="react">
+            <label for="lang4">React</label>
+            <input type="checkbox" id="lang5" name="lang" value="css">
+            <label for="lang5">CSS</label>
+            <input type="checkbox" id="lang6" name="lang" value="other">
+            <label for="lang6">Other</label>
+            <input type="text" id="othrval1" name="other">
+            </td></tr>
             <tr><th><label for="db1">DataBases</label></th>
-            <td><select size="1" name="db1" multiple required>
-                <option value="">Select your choice</option>
-                <option value="sql">SQL</option>
-                <option value="Mongo">MONGODB</option>
-            </select></td></tr>
+            <td><input type="checkbox" id="db1" name="db" value="sql">
+            <label for="db1">SQL</label>
+            <input type="checkbox" id="db2" name="db" value="mongodb">
+            <label for="db2">MongoDB</label>
+            <input type="checkbox" id="db3" name="db" value="otherdb">
+            <label for="db3">Other</label>
+            <input type="text" id="db4" name="othrdb">
+        </td></tr>
 
             <tr><th><label for="e1">Email ID</label></th>
-            <td><input type="email" name="e1" placeholder="Enter your Email-ID" required/></td></tr>
+            <td><input type="email" name="emailid" id="e1" placeholder="Enter your Email-ID" size="64" required/></td></tr>
             
-            <tr><th></td><label for="tel">Mobile No.</label></th>
-            <td><input type="tel" name="tl1" max="10" required/></td></tr>
+            <tr><th><label for="tel1">Mobile No.</label></th>
+            <td><input type="tel" name="mobileno" id="tel1" pattern="[0-9]{10}" maxlength="10" required/></td></tr>
             
-            <tr><th>upload your resume</th>
-            <td><input type="file" /></td></tr>
+            <tr><th><label for="f1">Upload your resume</label></th>
+            <td><input type="file" name="resume" id="f1"/></td></tr>
+            <tr><th></th><td><textarea ondragover="allowdrp(event)" ondrop="drop(event)" rows="7" cols="50" id="ta1" placeholder="Drop your resume here" readonly></textarea></td></tr>
+            
             </table>
-            <input type="submit" value="Register" class="regbtn" onclick="myFun()" />
+            <input type="submit" value="Register" class="regbtn" onsubmit="validateFrm()" />
         </form>
+        <script>
+            var olc=document.querySelector('input[value="other"]');
+            var olt=document.getElementById('othrval1');
+            var odbc=document.querySelector('input[value="otherdb"]');
+            var odbt=document.getElementById('db4');
+            olt.style.visibility='hidden';
+            odbt.style.visibility='hidden';
+
+            function chk(){
+                var d= document.getElementById('day');
+                var y= document.getElementById('yr');
+                if(d.value<1 && d.value>31){
+                    if(y.value<1990 && y.value>2021){
+                        alert('enter correct date');
+                    }
+                }
+            }
+
+            function validateFrm(){
+                if(!frm.gndr.checked){
+                    alert('Please select you gender!');
+                    return false;
+                }
+                else if(frm.lang.checked==false){
+                    alert('Please select the languages!');
+                    return false;
+                }
+                else if(frm.db.checked==false){
+                    alert('select databases!');
+                    return false;
+                }
+                else{
+                    alert('you have registered successfully!');
+                }
+            }
+            
+            olc.addEventListener('change', ()=>{
+                if(olc.checked){
+                    olt.style.visibility="visible";
+                    olt.value='';
+                }else{olt.style.visibility="hidden";}
+            });
+
+            odbc.addEventListener('change', ()=>{
+                if(odbc.checked){
+                    odbt.style.visibility="visible";
+                }else{odbt.style.visibility="hidden";}
+            });
+            function allowdrp(ev){
+                ev.preventDefault();
+            }
+            function drop(ev){
+                ev.preventDefault();
+                
+                    if(event.dataTransfer.items.kind=='file'){
+                        var file=event.dataTransfer.items.getAsFile();
+                        alert('file uploaded successfully');                        
+                    }
+                    else{
+                        alert("please upload correct file type");
+                    }
+                }    
+            
+        </script>
         </body>
 </html>

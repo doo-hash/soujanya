@@ -1,0 +1,31 @@
+<html>
+    <body>
+        <form>
+            <div>Date: 
+            <input type="number" min="01" max="31" name="day">
+            <input list="months" id="mnth" name="mnth">
+            <datalist id="months">
+                <option value="January"></option>
+                <option value="February"></option>
+                <option value="March"></option>
+                <option value="April"></option>
+                <option value="May"></option>
+                <option value="June"></option>
+                <option value="July"></option>
+                <option value="August"></option>
+                <option value="September"></option>
+                <option value="October"></option>
+                <option value="November"></option>
+                <option value="December"></option>
+            </datalist>
+            <input type="number" min="1990" max="2021" name="year">
+            </div>
+            <input type="submit" onsubmit="dod()">
+        </form>
+        <script>
+            function dob(){
+                alert('success');
+            }
+        </script>
+    </body>
+</html>

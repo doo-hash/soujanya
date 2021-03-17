@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <script>
+            function checkRadio(frmName,rbGroupName){
+                var radios=document[frmName].elements[rbGroupName];
+                for(var i=0;i<radios.length;i++){
+                    if(radios[i].checked){
+                        return true;
+                    }
+                }
+                return false;
+            }
+            function validateFrm(){
+                if(!checkRadio('frm1','r'))
+                alert('please enter your gender');
+                else
+                alert('you selected '+frm1.r.value);
+            }
+        </script>
+    </head>
+    <body>
+        <form name="frm1" action="javascript:validateFrm();">
+            <input type="radio" name="r" value="Male">Male<br>
+            <input type="radio" name="r" value="Female">Female<br>
+            <input type="submit" value="Submit">
+            <input type="reset">
+        </form>
+    </body>
+</html>

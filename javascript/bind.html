@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <script>
+            var employee={
+                eid:101,
+                ename:'soumya',
+                salary:15000,
+                dispData:function(){
+                    document.write('EID '+this.eid+'ENAME '+this.ename+'SALARY '+this.salary);
+                }
+            }
+            //employee.dispData();
+            //var empData=employee.dispData;
+            //empData();
+            //var empData=employee.dispData.bind(employee);
+            var empData=employee.dispData().bind(employee,'manager');
+        </script>
+    </body>
+</html>

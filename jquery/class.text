@@ -1,0 +1,28 @@
+jquery:
+this is a light weight js library or function. this uses html, js and css.
+this makes uses of js, css easy. jquery simplifies many tasks of js like dom manipulations, ajax calls.
+jquery library html or dom manipulations, css manipulations, html event methods, ajax utilities, validations , effects,
+animations etc.
+ for online: https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js
+
+ jquery syntax:
+ $ - represents jquery
+ selectors are used to identify html elements(based on name , class, value, type ...)--- uses css selector, custom selectors
+ jquery selector allow to manipulate html elements.
+ these are used to find or select html elements based on their ID, anme class, attribute, type, values of the attribute etc.
+ it is based on css selectors and also it has its own custom selectors
+ all selectors in jquery starts with $ symbol.
+
+ Advantages:
+ jquery helps to improve the performance of the aplication.
+ extensible-- it can be extended to implement customised behaviors.
+ helps to develop most browser compatible webpages.
+ jquery helps to implement user-interface related functionality without writing much code.
+
+ jquery library contains many javascript functions and methods and when we use this we will pass couple of values
+depending on the requirement.
+
+methods:
+css
+hide 
+show

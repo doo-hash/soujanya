@@ -1,0 +1,18 @@
+<html>
+    <body>
+        <script>
+            var employee={
+                eid:101,
+                ename:'meghana',
+                salary:10000
+            }
+            function dispData(desn){
+                document.write('EID '+this.eid+'ENAME '+this.ename+'SALARY '+this.salary+'DESN '+desn);
+            }
+            
+           // dispData.call(employee);
+           dispData.call(employee,'executive');
+           dispData.apply(employee,['executive']);
+        </script>
+    </body>
+</html>

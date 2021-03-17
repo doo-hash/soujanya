@@ -1,0 +1,24 @@
+<html>
+    <body>
+        <script>
+            var emp= new Object();
+            emp.fname='soumya';
+            emp.lname='maachannagari';
+            emp.eid=111;
+            emp.salary=15000;
+            emp.benefits=1000;
+
+            emp.totEarning=function(){
+                return (this.salary+ this.benefits);
+            };
+
+            emp.dispData=function(){
+                document.write("EID "+ emp.eid+" "+", FNAME"+emp.fname+", LNAME"+emp.lname);
+
+                var salary1= emp.totEarning();
+                document.write("SALARY "+ salary1);
+            };
+            emp.dispData();
+        </script>
+    </body>
+</html>

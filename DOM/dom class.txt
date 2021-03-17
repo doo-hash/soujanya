@@ -49,3 +49,15 @@ Properties::
 innerHTML, nodeName, nodeValue, parentNode, childNode, attribute, many more.....
 
 this innerhtml propertiy is used to return or replace the content of html elements.
+
+-----16-03-2021------
+methods
+queryselector
+queryselectorall
+replaceChild
+cloneNode
+queryselector method: this method returns the first element that matches one or more css selectors. if no matches found,
+it returns null. before queryselector, getElementByID method is used widely though still it is useful method nowadays queryselector, queryselectorall
+methods are used which are more flexible to use.
+
+

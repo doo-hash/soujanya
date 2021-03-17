@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <script>
+            function validateDdn(){
+                var v=frm.s1.value;
+                if(frm.s1.selectedIndex==0){
+                    alert('please select a course');
+                    return false;
+                }
+                else{
+                    alert('your interest is '+v);
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form name="frm">
+            <select size="1" name="s1">
+                <option value="c">C</option>
+                <option value="js">Javascript</option>
+                <option value="java">Java</option>
+                <option value="angular">Angular</option>
+            </select>
+            <button onclick="validateDdn()">Select</button>
+        </form>
+    </body>
+</html>

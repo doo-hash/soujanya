@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <script>
+            function validChk(){
+                if(frm.c1.checked==false){
+                    alert('please check the checkbox');
+                    return false;
+                }
+                else{
+                    frm.submit();
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form name="frm">
+            <input type="checkbox" name="c1">check me<br>
+            <input type="button" value="Submit" onsubmit="validChk()">
+            <input type="reset">
+        </form>
+    </body>
+</html>

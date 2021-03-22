@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <script src="jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('#div1').focusin(function(){
+                    $(this).css("background-color","orange");
+                });
+                $("#t1").click(function(){
+                    $(this).focusin().css("background-color","pink");
+                });
+            });
+        </script>
+        <style>
+            div{border:2px solid black;width: 50%;pad: 20px;margin: 20px;}
+            input{padding: 5px;margin: 10px;}
+        </style>
+    </head>
+    <body>
+        <div id="div1">
+            Enter Name:<input type="text">
+        </div>
+        <div>
+            Enter Name:<input type="text" id="t1">
+        </div>
+    </body>
+</html>

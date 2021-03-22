@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <script src="jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('#btn1').click(function(){
+                    $('#div1').fadeTo('slow',0.15);
+                    $('#div2').fadeTo(1000,0.45);
+                    $('#div3').fadeTo(1500,'0.7');
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="div1" style="width: 100px;height: 100px;;background-color: pink;margin: 15px;" ></div>
+        <div id="div2" style="width: 100px;height: 100px;background-color: lightgreen;margin: 15px;"></div>
+        <div id="div3" style="width: 100px;height: 100px;background-color: orange;margin: 15px;"></div>
+        <button id="btn1">fadein</button>
+    </body>
+</html>

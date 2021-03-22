@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <script src="jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('#b1').click(function(){
+                    $('h1,h2,p').addClass('class1');
+                    $('div').addClass('class2');
+                });
+
+            $('#b2').click(function(){
+                    $('h1,h2,p').removeClass('class1');
+                    $('div').removeClass('class2');
+                });
+            });
+        </script>
+        <style>
+            .class1{
+                color: purple;font-family: algerian;
+            }
+            .class2{
+                width: 200px;height:200px;border: 2px solid green; font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <h1> This is header1</h1>
+        <p>this is paragraph</p>
+        <h2>This is header2</h2>
+        <div>this is div tag content</div>
+        <button id="b1">CLICK</button>
+    <button id="b2">click</button>
+    </body>
+</html>

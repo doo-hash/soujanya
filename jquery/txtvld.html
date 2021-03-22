@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <script src="jquery-3.6.0.min.js"></script>
+        <link rel="stylesheet" href="http://jqueryvalidation.org/files/demo/site-demos.css"></link>
+        <script src="http://jqueryvalidation.org/files/dist/jquery.validate.min.js"></script>
+        <script src="http://jqueryvalidation.org/files/dist/additional-methods.min.js"></script>
+        
+        
+    </head>
+    <body>
+        <form id=frm1>
+            <label>
+                Required :
+            </label>
+            <input type="text" class="left" id=t1 name=t1><br>
+            <input type="submit" value="validate">
+
+        </form>
+        <script>
+            jQuery.validator.setDefaults({
+                debug:true,
+                success:"valid"
+            });
+            $('#frm1').validate({
+            rules:{
+                t1:{
+                    required:true
+                }
+            }
+        });
+        </script>
+    </body>
+</html>

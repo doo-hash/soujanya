@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <script src="jquery-3.6.0.min.js">
+        </script>
+        <script>
+            $(document).ready(function){
+            $("p").on({
+                mouseenter:function(){
+                    $(this).css("background-color","lightgray");
+                },
+                mouseleave:function(){
+                    $(this).css("background-color","powderblue");
+                },
+                click:function(){
+                    $(this).css("background-color","yellow");
+                }
+            });
+        });
+        </script>
+    </head>
+    <body>
+        <p>
+            click or move over the paragraph
+        </p>
+    </body>
+</html>

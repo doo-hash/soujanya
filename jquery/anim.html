@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <script src="jquery-3.6.0.min.js"></script>
+        <script>
+        $(document).ready(function(){
+            $('button').click(function(){
+                var div=$('div');
+                div.animate({left:'100px'},"slow");
+                div.animate({fontSize:'3em'},'slow');
+            })
+        })
+        </script>
+    </head>
+    <body>
+        <button>
+            Start animation
+        </button>
+        <div style="background-color: green;height: 100px;width: 200px;color: white;position: absolute;">
+        Animation</div>
+    </body>
+</html>

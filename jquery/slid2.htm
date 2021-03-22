@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('#div1').click(function(){
+                    $('#div2').slideDown(5000).slideUp(4000);
+                });
+            });
+        </script>
+        <style>
+            #div1,#div2{
+                background-color: powderblue;border:1px solid red;padding: 6px; text-align: center;
+            }
+            #div2{
+                display: none;
+                padding: 65px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="div1">Click in div tag1</div>
+        <div id="div2"></div>
+    </body>
+</html>

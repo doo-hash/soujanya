@@ -1,0 +1,18 @@
+array:
+methods: concat(),every(),filter(),forEach(),indexOf(),join(),lastIndexOf(),map(),push(),pop(),reduce(),
+reverse(),shift(),slice(),some(),sort(),splice(),tostring(),unshift()
+
+
+tuples:
+by using arrays we can store si,ilar data types. if you want to store different data type elaments then we declare tuples,tuples are mutable(change).
+once we declre a tuple we can update or change the values of a tupple
+
+Union:
+syntax
+var val:string|number|any
+ 
+ type1|type2|type3
+
+ never:
+ 
+

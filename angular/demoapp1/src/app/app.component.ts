@@ -8,8 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'demoapp1';
-  
-  isvalid:boolean=true;
+  //template driven forms
+  //courses:string[]=["angular","python","c","java"];
+ /*
+ //NGFOR, NGIF, NGSWITCH
+ isvalid:boolean=true;
   changeValue(valid:any){
     this.isvalid=valid;
   } 
@@ -24,12 +27,14 @@ export class AppComponent {
   public choose="";
   setValue(drp:any){
     this.choose=drp.target.value;
-  }
+  }*/
 }
+/*
+//NGSWITCH
 class student{
   Sid?:Number;
   Sname?:String;
   Course?:String;
   duration?:String;
-}
+}*/
 

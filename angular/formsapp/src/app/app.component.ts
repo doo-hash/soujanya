@@ -8,7 +8,24 @@ import { FormControl,FormGroup,Validators,FormBuilder,FormArray } from '@angular
 export class AppComponent {
   title = 'formsapp';
 
-  //FORM BUILDER
+  langs:string[]=['English','German','French','Arabic','Hindi'];
+  myForm=new FormGroup({
+    fullname:new FormGroup({
+      firstname:new FormControl('',Validators.required),
+      lastname: new FormControl('',Validators.required)
+    }),
+    email:new FormControl('',[Validators.required,Validators.pattern("[^@]*@[^@]*")]),
+    password:new FormControl('',[Validators.required,Validators.minLength(8)]),
+    language:new FormControl('')
+  });
+  onSubmit(){
+    if(this.myForm.valid){
+      console.log("form submitted");
+      this.myForm.reset();
+    }
+  }
+
+/*  //FORM BUILDER
   constructor(private fb1:FormBuilder){}
   userData1=this.fb1.group({
     fname1:['',Validators.required],
@@ -24,15 +41,15 @@ onSubmit(){
   console.log('lastname'+ln1);
   console.log("contact info>> phone: "+this.userData1.get(['contact_info','phone'])?.value);
 }
-
-//PARTIALLY UPDATE THE FORM
+*/
+/*//PARTIALLY UPDATE THE FORM
 updateprofile(){
   this.userData1.patchValue({
     fname1:'soujanya',
     contact_info:{
       address1:" 296 vt colony"
     }
-  })
+  })*/
 }
  /* 
  //FORM CONTROL, FORMGROUP, PATCHVALUE
@@ -101,4 +118,4 @@ frm= new FormControl('hai welcome');
   onSubmit(){
     console.warn(this.userData.value);
   }*/
-}
+

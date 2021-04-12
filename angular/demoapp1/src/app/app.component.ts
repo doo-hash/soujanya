@@ -1,5 +1,10 @@
 
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import {ViewChild} from '@angular/core';
+//export class User{
+  
+  //constructor(public name1?:string,public email1?:string, public password?:string, public mobile?:number){}}
 
 @Component({
   selector: 'app-root',
@@ -8,6 +13,54 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'demoapp1';
+  
+  langs:string[]=['English','German','French','Hindi'];
+  model: signupForm = new signupForm();
+  @ViewChild('f') form:any;
+  onSubmit(){
+    if(this.form.valid){
+      console.log("form submitted");
+      this.form.reset();
+    }
+  }
+}
+class signupForm{
+  constructor(public firstname:string='',
+  public lastname:string='',
+  public email1:string='',
+  public psd:string='',
+  public language:string=''){}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /*  model=new User();
+  onSubmit(form:any){
+    console.log(form.value);
+  }
+*/
+
   //template driven forms
   //courses:string[]=["angular","python","c","java"];
  /*
@@ -28,7 +81,7 @@ export class AppComponent {
   setValue(drp:any){
     this.choose=drp.target.value;
   }*/
-}
+
 /*
 //NGSWITCH
 class student{

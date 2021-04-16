@@ -1,0 +1,10 @@
+.classSize{
+    font-size: 30px;
+}
+.classColor{
+    color:brown;
+}
+.classText{
+    text-transform: capitalize;
+    text-shadow: 0 2px 2px solid gray;
+}

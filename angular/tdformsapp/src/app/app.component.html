@@ -12,20 +12,153 @@
 integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
   </head>
   <body>
-    <form #signupfrm="ngForm">
-      <div class="mb-3">
-        <label for="fname" class="form-label">FirstName</label>
-        <input type="text" class="form-control" id="fname" name="fname" required>
+  <div class="container-fluid overflow-hidden">
+    <h2 class="mb-3 display-3 text-center">Registration Form</h2>
+    <p class="lead">Please fill up the form to register.</p>
+    <form #signupfrm="ngForm" class="needs-validation" novalidate>
+      <div class="row mb-3">  
+        <div class="col-2">
+          <label class="form-label"></label>
+          <input type="text" value="Full Name" class="form-control-plaintext" readonly>
+        </div>
+        <div class="col-4">
+          <label for="fname" class="form-label">FirstName</label>
+          <input type="text" class="form-control" id="fname" name="fname" required>
+          <div class="invalid-feedback"></div>
+          <div class="valid-feedback">It's correct</div>
+        </div>
+        <div class="col-4">
+          <label for="lname" class="form-label">LastName</label>
+          <input type="text" class="form-control" id="lname" name="lname" required>
+          <div class="invalid-feedback"></div>
+          <div class="valid-feedback">It's correct</div>
+        </div>
+      </div>
+      <div class="mb-3 row">  
+        <label for="emlid" class="col-2 col-form-label">Email</label>
+        <div class="col-5">
+          <input type="email" class="form-control" id="emlid" name="emlid" required>
+          <div class="invalid-feedback"></div>
+          <div class="valid-feedback">It's correct</div>
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <label for="dob" class="col-2 col-form-label">Date of Birth</label>
+        <div class="col-auto">
+          <input type="date" class="form-control" id="dob" name="dob" required>
+          <div class="invalid-feedback"></div>
+          <div class="valid-feedback">It's correct</div>
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <label for="age" class="col-2 col-form-label">Age</label>
+        <div class="col-2">
+          <input type="number" class="form-control" id="age" name="age">
+          <div class="invalid-feedback"></div>
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <label for="gndr" class="col-2 col-form-label">Gender</label>
+          <div class="form-check form-check-inline col-3">
+            <input type="radio" name="gndr" value="male" class="form-check-input">
+            <label for="gndr" class="form-check-label">Male</label>
+          </div>
+
+          <div class="form-check form-check-inline col-3">
+            <input type="radio" name="gndr" value="female" class="form-check-input">
+            <label for="gndr" class="form-check-label">Female</label>
+          </div>
+          <div class="invalid-feedback"></div>
+          <div class="valid-feedback">It's correct</div>
+      </div>
+      <div class="mb-3 row">
+        <label for="mobile" class="col-2 col-form-label">Mobile No.</label>
+        <div class="col-3">
+          <div class="input-group has-validation">
+            <span class="input-group-text" id="prependno">+91</span>
+        <input type="tel" class="form-control" name="mobile" id="mobile" pattern="[0-9]{10}" 
+        aria-describedby="prependno" required>
+        <div class="valid-feedback">It's correct</div>
+        <div class="invalid-feedback"></div>
+        </div></div>
+      </div>
+      <div class="mb-3 row g-3">
+        <div class="col-2">
+          <label for="psd" class="col-form-label">Password</label></div>
+        <div class="col-5">
+          <input type="password" class="form-control" name="psd" id="psd" aria-describedby="psd-help"></div>
+        <div class="col-4">
+          <div id="psd-help" class="form-text">your psd must be min 8 chars length</div>
+          <div class="invalid-feedback"></div>
+          <div class="valid-feedback">It's correct</div>
+        </div>
+      </div>
+      <div class="mb-3 row g-3">
+        <div class="col-2">
+          <label for="confirmpsd" class="col-form-label">Confirm Password</label></div>
+        <div class="col-5">
+          <input type="password" class="form-control" name="confirmpsd" id="confirmpsd" aria-describedby="psd-help">
+        </div>
+        <div class="col-4">
+          <div id="psd-help" class="form-text">your psd must be min 8 chars length</div>
+          <div class="invalid-feedback"></div>
+          <div class="valid-feedback">It's correct</div>
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <label for="langs1" class="col-2 col-form-label">Languages</label>
+        <div class="form-check form-check-inline col-2">
+          <input type="checkbox" name="tlgu" value="telugu" class="form-check-input">
+          <label for="tlgu" class="form-check-label">Telugu</label>
+        </div>
+
+        <div class="form-check form-check-inline col-2">
+          <input type="checkbox" name="hndi" value="hindi" class="form-check-input">
+          <label for="hndi" class="form-check-label">Hindi</label>
+        </div>
+        <div class="invalid-feedback"></div>
+        <div class="form-check form-check-inline col-2">
+          <input type="checkbox" name="eng" value="english" class="form-check-input">
+          <label for="eng" class="form-check-label">English</label>
+        </div>
+        <div class="invalid-feedback"></div>
+        <div class="valid-feedback">It's correct</div>
+      </div>
+      <div class="mb-3 row">
+        <label for="langs" class="col-2 col-form-label" multiple>Programming Languages</label>
+        <div class="col-5">
+          <select class="form-select">
+            <option value="">Select the known</option>
+            <option value=""></option>
+          </select>
+          <div class="invalid-feedback"></div>
+          <div class="valid-feedback">It's correct</div>
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <label for="resume" class="col-2 col-form-label">Upload your resume</label>
+        <div class="col-5">
+          <input type="file" class="form-control" name="resume" id="resume" required>
+        </div>
+        <div class="invalid-feedback"></div>
+        <div class="valid-feedback">It's correct</div>
+      </div>
+      <div class="mb-3 row">
+        <label for="descriptions" class="col-2 col-form-label">Your likes and Dislikes</label>
+        <div class="col-6">
+          <textarea class="form-control" name="descriptions" id="descriptions" rows="5">Write your likes and dislikes</textarea>
+          <div class="invalid-feedback"></div>
+          <div class="valid-feedback">It's correct</div>
+        </div>
       </div>
       <div class="mb-3">
-        <label for="lname" class="form-label">LastName</label>
-        <input type="text" class="form-control" id="lname" name="lname" required>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" name="chkme" id="chkme" required>
+          <label for="chkme" class="form-check-label">Check me out</label>
+        </div>
       </div>
-      <div class="mb-3">
-        <label for="emlid" class="form-label">Email</label>
-        <input type="email" class="form-control" id="emlid" name="emlid" required>
-      </div>
-      <button type="submit" class="btn btn-primary">Signup</button>
+      <button type="submit" class="btn btn-primary mb-3">Signup</button>
     </form>
+  </div>
   </body>
 </html>

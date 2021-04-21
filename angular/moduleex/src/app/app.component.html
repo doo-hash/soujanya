@@ -1,0 +1,51 @@
+<form #selctform="ngForm" (ngSubmit)="selctform.submitted && onSubmit()">
+    <div>
+  choose the following:<select name="choosen" #choosen="ngModel" 
+  [(ngModel)]="model.choosen" 
+  [ngClass]="[{'is-invalid':'selctform.submitted && (choosen.invalid'}]" multiple required>
+  <option [value]=""></option>  
+  <option [value]="nos[0]" selected>{{nos[0]}}</option>
+    <option [value]="nos[1]">{{nos[1]}}</option>
+    <option [value]="nos[2]">{{nos[2]}} </option>
+    <option [value]="nos[3]">{{nos[3]}} </option>
+    <option [value]="nos[4]">{{nos[4]}} </option>
+    <option [value]="nos[5]">{{nos[5]}} </option>
+    <option [value]="nos[6]">{{nos[6]}} </option>
+    <option [value]="nos[7]">{{nos[7]}} </option>
+    <option [value]="nos[8]">{{nos[8]}}</option>
+    <option [value]="nos[9]">{{nos[9]}}</option>
+  </select>
+  <div *ngIf="selctform.submitted && choosen.invalid">not selected anything</div>
+  <div *ngIf="selctform.submitted && choosen.value==''">select something</div>
+  <div *ngIf="selctform.submitted && (choosen.valid && choosen.value!='')">selected {{choosen.value}} </div>
+  </div>
+  <br><br>
+  <hr><hr>
+  <br><br>
+  <div>
+    <label for="gndr">Gender</label>
+    <input type="radio" name="gndr" [value]="gndrs[0]" 
+      #gndr="ngModel" [(ngModel)]="model.gndr" required>{{gndrs[0]}}
+    <input type="radio" name="gndr" [value]="gndrs[01]" 
+      #gndr="ngModel" [(ngModel)]="model.gndr" required>{{gndrs[01]}}
+  </div>
+  <div *ngIf="selctform.submitted && gndr.invalid">gender not selected</div>
+  <div *ngIf="selctform.submitted && gndr.valid">selected gender: {{gndr.value}}</div>
+
+  <br><br>
+  <hr><hr>
+  <br><br>
+
+  <div>
+      <div *ngFor="let l of prog_langs">
+      <label for="l.id">{{l.lngs}}</label>
+        <input type="checkbox" name={{l.id}}
+       [(ngModel)]="model.langs" value="{{l.lngs}}" 
+       required ></div>
+  </div>
+  <div *ngIf="selctform.submitted && model.langs.valueOf()">oops</div>
+
+  <button type="submit">signup</button>
+</form>
+{{selctform.value|json}}
+

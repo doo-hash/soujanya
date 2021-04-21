@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -8,21 +9,27 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'tdformsapp';
   model=new user();
-  onSubmit(form:any){
-    console.log(form.value);
+  proglangs:string[]=['C','Java','C++','Javascript','HTML','CSS','Bootstrap/Sass','Angular','React','Python'];
+ @ViewChild('signupfrm') form:any;
+  onSubmit(){
+    if(this.form.valid)
+    console.log(this.form.value);
+    console.log("form validated");
   }
 }
 
 export class user{
-  public fname:string='';
-  public lname:string='';
-  public emailid:string='';
-  public dob:string='';
-  public age?:number;
-  public gndr:string='';
-  public mobile?:number;
-  public psd:string='';
-  public langs1:string='';
-  public proglang:string='';
-  public lksdslks:string='';
+ constructor( public name={fname:'',lname:''},
+  public emailid:string='',
+  public dob:string='',
+  public age?:number,
+  public gndr:string='',
+  public mobile?:number,
+  public psd:string='',
+  public confirmpsd:string='',
+  public langs1=["telugu","hindi","english"],
+  public proglang:string='',
+  public lksdslks:string=''){
+  
+  }
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EmpsService } from '../emps.service';
 
 @Component({
   selector: 'emplist',
@@ -11,18 +12,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./emplist.component.css']
 })
 export class EmplistComponent implements OnInit {
+public employees:any=[];
 
-  public employees=[
+  /*public employees=[
     {"eid":101,"ename":"ssss","salary":15222},
     {"eid":102,"ename":"dddd","salary":15222},
     {"eid":103,"ename":"oooo","salary":15222},
     {"eid":104,"ename":"ffff","salary":15222},
     {"eid":105,"ename":"nnnn","salary":15222},
-  ]
-  constructor() { }
+  ]*/
+  constructor(private _empSvc:EmpsService) { }
 
   ngOnInit(): void {
-
+    //this.employees=this._empSvc.getEmps();
+    this._empSvc.getEmps().subscribe(data=>this.employees=data);
   }
 
 }

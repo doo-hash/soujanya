@@ -1,0 +1,10 @@
+nav a:visited,link{
+    color:green;
+}
+nav a:hover{
+    color: blue;
+    background-color: lavenderblush;
+}
+nav a.active{
+    color: lawngreen;
+}

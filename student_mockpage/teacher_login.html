@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/7f77c9a430.js" crossorigin="anonymous"></script>
+    <title></title>
+    <style>
+        .tchrcls{
+            font-family: 'Yomogi', cursive;
+            outline-style: double;
+            outline-color:darkcyan;
+         }
+        .tchrlgn{
+            padding: 5px 0px 5px 0px;
+            background-color: rgba(31, 245, 181, 0.856);
+            text-align: center;
+            }
+            .col{
+            width:25%;
+            float:left;
+            margin-top: 6px;
+        }
+        .input_block{
+            display: flex;
+            width: 75%;
+            margin:6px 0px 10px 0px;
+            float: left;
+            }
+        input[type=text],[type=password],label{
+            width: 100%;
+            font-size: 20px;
+            font-style: italic;
+            padding:7px 0px 7px 0px;
+            margin-left: 10px;
+           }
+        input[type="text"]:focus,[type="password"]:focus{
+            border: 2px solid  rgb(140, 241, 211);
+        }
+        .fa-envelope,.fa-lock{
+            padding:7px ;
+            background:rgb(140, 241, 211);
+            color:white;
+            text-align: center;
+            min-width: 30px;
+            margin-right: 10px;
+        }
+        .fa-user{
+            display: block;
+            color:rgb(134, 107, 252);
+        }
+        button{
+            padding: 5px;
+            margin:5px 0px 0px 10px;
+            font-family: 'Yomogi', cursive;
+            font-size: 20px;
+            background-color:rgb(140, 241, 211);
+            border-radius: 7px;
+            border: none;
+
+        }
+        button:active,button:hover{
+            background-color: dodgerblue;
+        }
+        p{
+            font-size: 18px;
+            margin-left:10px;
+            padding-bottom: 5px;
+        }
+        .row:after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+        @media screen and (max-width:600px){
+            .col,.input_block{
+                width:100%;
+                margin:0px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="tchrcls">
+    <form action="" method="POST">
+        <div class="tchrlgn">
+        <h3><i class="fas fa-user fa-2x"></i> Teacher Login</h3>
+        </div>
+        <div class="row">
+        <div class="col">
+            <label for="tchrid">Teacher ID</label>
+        </div>
+        <div class="input_block">
+        <input type="text" name="tchrid" placeholder="Teacher ID"><i class="fas fa-envelope"></i>
+        </div>
+        </div>
+        <div class="row">
+        <div class="col">
+        <label for="tchrpsd">Password</label>
+        </div>
+        <div class="input_block">
+        <input type="password" name="tchrpsd" placeholder="Password"><i class="fas fa-lock"></i>
+        </div>
+        </div>
+        <div class="row">
+        <button type="submit" name="login">Login</button>
+        <button type="reset" name="cancel">Cancel</button>
+        </div>
+    </form>
+    <p>Don't have an account? <a href="#">Register</a> here.</p>
+    </div>
+</body>
+</html>

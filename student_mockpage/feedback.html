@@ -10,14 +10,15 @@
         body{
             margin: 0%;
         }
-        .col-4 {width: 33.33%; float:left}
+    .col-4 {width: 33.33%; float:left}
     .col-2 {width: 16.66%;float: left; }
     .col-3 {width: 25%;float: left;}
         .feedback,input, button{
             font-family: 'Yomogi', cursive;
         }
     .fdbkhead{
-            padding: 2px 0px 2px 8px;
+            padding: 5px 0px 5px 15px;
+            font-size: 25px;
             background-color:rgba(159, 245, 238, 0.425);
             }
         .feedback .input_block{
@@ -52,9 +53,14 @@
             border-radius: 7px;
             border: none;
         }
-        button:active,button:hover{
+        .fdbkfrm button:active,.fdbkfrm button:hover{
             background-color: rgb(209, 227, 245);
         }
+@media screen and (max-width:600px) {
+    .col-s-12{
+        width:100%;
+    }
+}
     </style>
 </head>
 <body>
@@ -64,25 +70,25 @@
     </div>
     <div class="fdbkfrm">
     <form target="_blank">
-        <div class="col-3">
+        <div class="col-3 col-s-12">
         <div class="input_block">
         <input type="text" placeholder="Name" required name="Name">
         <i class="fas fa-user fa-2x"></i>
         </div>
         </div>
-        <div class="col-3">
+        <div class="col-3 col-s-12">
         <div class="input_block">
         <input type="text" placeholder="Email" required name="Email">
         <i class="fas fa-envelope fa-2x"></i>
         </div>
         </div>
-        <div class="col-4">
+        <div class="col-4 col-s-12">
         <div class="input_block">
         <input type="text" placeholder="Message" required name="Message">
         <i class="fas fa-comment fa-2x"></i>
         </div>
         </div>
-        <div class="col-2">
+        <div class="col-2 col-s-12">
         <button type="submit">SEND</button>
         </div>
     </form>

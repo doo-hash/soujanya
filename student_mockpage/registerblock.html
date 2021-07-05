@@ -7,7 +7,10 @@
   <script src="https://kit.fontawesome.com/7f77c9a430.js" crossorigin="anonymous"></script>
   <title>Register</title>
   <style>
-        [class*="col-"] {
+body{
+  margin: 0%;
+}
+[class*="col-"] {
             float: left;
         }
 
@@ -25,8 +28,9 @@
     .col-12 {width: 100%;}
     .register{
       font-family: 'Yomogi', cursive;
+      background-color: rgba(159, 245, 238, 0.137);
     } 
-    .register .rowp,.register .rowbtn{
+    .register .row{
       display: table;
       width:100%;
     }
@@ -55,7 +59,7 @@
 </head>
 <body>
   <div class="register">
-    <div class="rowp">
+    <div class="row">
         <div class="col-4 col-s-4">
         <p>For Students, Register here to know your regular tasks and performance</p>
         </div>
@@ -69,17 +73,17 @@
         </div>
 
     </div>
-    <div class="rowbtn">
+    <div class="row">
       <div class="col-4 col-s-4">
-      <button type="submit" onclick="window.location.href='./stdnt_registration.html'">Register</button>
+      <button type="submit" class="stdntbtn" onclick="window.location.href='./stdnt_reg.html'">Register</button>
       </div>
 
       <div class="col-4 col-s-4">
-      <button type="submit" onclick="window.location.href='./prnt_reg.html'">Register</button>
+      <button type="submit" class="prntbtn" onclick="window.location.href='./prnt_reg.html'">Register</button>
       </div>
 
       <div class="col-4 col-s-4">
-      <button type="submit" onclick="window.location.href='./tchr_registration.html'">Register</button>
+      <button type="submit" class="tchrbtn" onclick="window.location.href='./tchr_reg.html'">Register</button>
       </div>
 
   </div>

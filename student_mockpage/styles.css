@@ -1,4 +1,4 @@
-*{
+*,*::after,*::before{
     box-sizing: border-box;
 }
 body{
@@ -75,18 +75,19 @@ h1{
 /*---------*****************----------*/
 /*SIDE NAVBAR*/
 [class*="col-"] {
+    float:left;
     width:100%;
-}  
+    padding-right: 20px;
+}
+[class*="col-"]:last-of-type{
+    padding-right: 0px;
+}
 .sidenav{
-    width: 60px;
-    float: right;
-    opacity: 0.2;
+    opacity: 0;
     background-color: rgba(250, 242, 235, 0.863);
     border-radius: 10px;
-    top:20%;
-    -webkit-transform: translateY(10%);
-    -ms-transform: translateY(10%);
-    transform: translateY(10%);
+    position: absolute;
+    z-index: 1;
 }
 .sidenav:hover{
     background-color: rgba(212, 253, 251, 0.637);
@@ -101,16 +102,137 @@ h1{
     color:lightpink;
 }
 /*--------------*****************---------*/
+/*FONT FAMILY*/
+.aboutus,.footer,.events,.register,.feedback{
+    font-family: 'Yomogi', cursive;
+}
+/*------------**********-----------*/
+/*EVENTS*/
+.events{
+    z-index: 0;
+}
+.events .col-3,.events .col-9{
+    padding-right: 0px;
+}
+.evnthead{
+    background-color:rgba(159, 245, 238, 0.425);
+    padding: 5px 0px 5px 15px;
+    font-size: 25px;
+}
+.evntnewshd{
+    font-size: 20px;
+    padding-left: 15px;
+}
+.evntbtns a{
+    display: block;
+    width: 50%;
+    font-size: 20px;
+    padding:7px 0px 7px 15px;
+    background-color: rgba(250, 175, 175, 0.582);
+    box-shadow: 6px 4px 6px 4px rgba(248, 216, 216, 0.582);
+    margin: 20px 0px 10px 15px;
+}
+.evntnewslnk li{
+    font-size: 20px;
+    padding:7px 0px 7px 15px;
+}
+.evntbtns a:hover,.evntbtns a:active{
+    display: block;
+    background-color: rgba(100, 148, 237, 0.637);
+    color: darkblue;
+    box-shadow: 6px 4px 6px 4px rgba(145, 198, 248, 0.288);
+}
+/*-----------***************-----------*/
+/*REEGISTER*/
+.register{
+    background-color: rgba(159, 245, 238, 0.137);
+}
+.register .row{
+    display: table;
+    width:100%;
+}
+.register button{
+    padding: 7px;
+    margin:6px 0px 10px 10px;
+    font-size: 20px;
+    background-color:rgba(197, 240, 243, 0.719);
+    border-radius: 7px;
+    border: none;
+}
+.register .tchrbtn{
+    background-color: rgb(42, 250, 188);
+}
+.register .stdntbtn{
+    background-color: rgba(58, 58, 223, 0.753);
+}
+.register .prntbtn{
+    background-color: rgba(35, 245, 227, 0.753);
+}
+.register button:active,.register button:hover{
+    background-color: rgba(231, 241, 252, 0.61);
+}
+.register p{
+    font-size: 18px;
+    margin-left:10px;
+    padding-bottom: 5px;
+}
+/*--------------***********------------*/
+/*FEEDBACK*/
+.feedback{
+    display: block;
+    width: 100%;
+}
+.fdbkhead{
+    padding: 5px 0px 5px 15px;
+    font-size: 25px;
+    background-color:rgba(159, 245, 238, 0.425);
+    }
+.feedback .input_block{
+    width: 100%;
+    display: flex;
+    margin:6px 0px 10px 0px;
+    float: left;
+    }
+.fdbkfrm input,.fdbkfrm textarea{
+    width: 100%;
+    font-size: 20px;
+    font-style: italic;
+    padding:7px 0px 7px 5px;
+    margin-left: 10px;
+    border: 1px solid rgba(100, 102, 102, 0.342);
+    border-right: none;
+
+}
+.fdbkfrm .fa-user,.fdbkfrm .fa-envelope, .fdbkfrm .fa-comment{
+    padding:7px ;
+    background:rgba(73, 248, 219, 0.719);
+    color:rgba(251, 253, 251, 0.972);
+    text-align: center;
+    min-width: 30px;
+    margin-right: 10px;
+}
+.fdbkfrm button{
+    padding: 7px;
+    margin:6px 0px 10px 10px;
+    font-size: 20px;
+    background-color:rgba(197, 240, 243, 0.719);
+    border-radius: 7px;
+    border: none;
+}
+.fdbkfrm button:active,.fdbkfrm button:hover{
+    background-color: rgb(209, 227, 245);
+}
+/*-----------------********************-----------*/
 /*FOOTER*/
-.col-3 {width: 25%; float:left;}
-.col-6 {width: 50%; float:left;}
 
 .footer{
+    width: 100%;
     background-color:gainsboro;
     color: firebrick;
-    font-family: 'Yomogi', cursive;
     font-size: 18px;
     padding: 15px 5px 5px 20px;
+    display: block;
+    overflow-x: hidden;
 }
 .footer h3{
     text-align: center;
@@ -130,7 +252,7 @@ h1{
 a:visited,a:link,a:hover,a:active{
     text-decoration: none;
 }
-@media only screen and (min-width: 600px) {
+@media only screen and (max-width: 600px) {
     .col-s-1 {width: 8.33%;}
     .col-s-2 {width: 16.66%;}
     .col-s-3 {width: 25%;}
@@ -143,6 +265,20 @@ a:visited,a:link,a:hover,a:active{
     .col-s-10 {width: 83.33%;}
     .col-s-11 {width: 91.66%;}
     .col-s-12 {width: 100%;}
+  }
+@media only screen and (min-width: 600px) {
+    .col-m-1 {width: 8.33%;}
+    .col-m-2 {width: 16.66%;}
+    .col-m-3 {width: 25%;}
+    .col-m-4 {width: 33.33%;}
+    .col-m-5 {width: 41.66%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 {width: 58.33%;}
+    .col-m-8 {width: 66.66%;}
+    .col-m-9 {width: 75%;}
+    .col-m-10 {width: 83.33%;}
+    .col-m-11 {width: 91.66%;}
+    .col-m-12 {width: 100%;}
   }
 @media only screen and (min-width:768px) {
     .col-1 {width: 8.33%;}
@@ -163,7 +299,7 @@ a:visited,a:link,a:hover,a:active{
         float: none;
     }
     .sidenav{
-        float: left;  
+        z-index: 1;  
     }
     .dropdown:hover .drpmenu{
         top: 300px;
@@ -172,6 +308,16 @@ a:visited,a:link,a:hover,a:active{
     }
     .footer ul{
         columns: 2 auto;
-        column-gap: 5%;
     }   
+    .footer li{
+        overflow-x: hidden;
+    }
+}
+@media only screen and (max-width:768px) {
+    .footer ul{
+        columns: 2 auto;
+    }   
+    .footer li{
+        overflow-x: hidden;
+    }
 }

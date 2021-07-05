@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/7f77c9a430.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .news_lgn,input,button,.register, .feedback{
+            font-family: 'Yomogi', cursive;
+        }
+        .news_lgn,.row{
+            margin: 0%;
+        }
+        .news_lgn .col-7,.news_lgn .col-5{
+            display: table;
+        }
+        .newstab li:nth-child(1n+7){
+            display: none;
+        }
+        .row::after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+        [class*="col-"] {
+            float: left;
+        }
+
+        .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;} 
+    .logintab{
+        padding: 15px;
+    }
+    .newstab{
+        padding: 15px;
+    }
+
+    .stflgn{
+            padding: 5px 0px 5px 0px;
+            background-color:rgb(238, 90, 119);
+            text-align: center;
+            }
+        .input_block{
+            display: flex;
+            width: 100%;
+            margin:6px 0px 10px 0px;
+            float: left;
+            }
+        .newstab li,input,label{
+            width: 100%;
+            font-size: 20px;
+            font-style: italic;
+            padding:7px 0px 7px 0px;
+            margin-left: 10px;
+           }
+           label{
+               display: inline-block;
+           }
+        input{
+            border: 1px solid rgba(253, 135, 194, 0.342);
+            border-right: none;
+
+        }
+           input:focus{
+            border: 2px solid rgb(243, 122, 147);
+        }
+        .fa-envelope,.fa-lock{
+            padding:7px ;
+            background:rgb(243, 122, 147);
+            color:honeydew;
+            text-align: center;
+            min-width: 30px;
+            margin-right: 10px;
+        }
+        .stflgn .fa-user-circle{
+            display: block;
+            color: darkblue;
+        }
+        .lginbtns button{
+            padding: 5px;
+            margin: 0px 0px 15px 0px;
+            font-size: 20px;
+            background-color: rgb(240, 235, 215);
+            border: none;
+            float: left;
+        }
+        .login button{
+            padding: 5px;
+            margin:5px 0px 0px 10px;
+            font-size: 20px;
+            background-color:rgb(243, 122, 147);
+            border-radius: 7px;
+            border: none;
+        }
+       
+        .stdntlgn{
+            padding: 5px 0px 5px 0px;
+            background-color:rgba(58, 58, 223, 0.753);
+            text-align: center;
+            }
+        .studentlogin .input_block{
+            display: flex;
+            width: 100%;
+            margin:6px 0px 10px 0px;
+            float: left;
+            }
+        .studentlogin input,label{
+            width: 100%;
+            font-size: 20px;
+            font-style: italic;
+            padding:7px 0px 7px 0px;
+            margin-left: 10px;
+           }
+        .studentlogin input:focus{
+            border: 2px solid rgb(192, 192, 241);
+        }
+        .studentlogin .fa-envelope,.studentlogin .fa-lock{
+            padding:7px ;
+            background:rgb(192, 192, 241);
+            color:rgb(124, 131, 124);
+            text-align: center;
+            min-width: 30px;
+            margin-right: 10px;
+        }
+        .studentlogin input{
+            border: 1px solid rgba(205, 205, 243, 0.637);
+            border-right: none;
+
+        }
+        .studentlogin .fa-user{
+            display: block;
+            color:rgba(254, 255, 255, 0.678);
+        }
+        .studentlogin button{
+            padding: 5px;
+            margin:5px 0px 0px 10px;
+            font-size: 20px;
+            background-color:rgb(192, 192, 241);
+            border-radius: 7px;
+            border: none;
+
+        }
+        .prntlgn{
+            padding: 5px 0px 5px 0px;
+            background-color:rgba(35, 245, 227, 0.753);
+            text-align: center;
+            }
+        .parentlogin .input_block{
+            display: flex;
+            width: 100%;
+            margin:6px 0px 10px 0px;
+            float: left;
+            }
+        .parentlogin input,label{
+            width: 100%;
+            font-size: 20px;
+            font-style: italic;
+            padding:7px 0px 7px 0px;
+            margin-left: 10px;
+           }
+        .parentlogin input{
+            border: 1px solid rgba(100, 102, 102, 0.342);
+            border-right: none;
+
+        }
+        .parentlogin .fa-envelope,.parentlogin .fa-lock{
+            padding:7px ;
+            background:rgba(197, 240, 243, 0.719);
+            color:rgb(124, 131, 124);
+            text-align: center;
+            min-width: 30px;
+            margin-right: 10px;
+        }
+        .parentlogin .fa-user-circle{
+            display: block;
+            color:rgb(62, 71, 69);
+        }
+        .parentlogin button{
+            padding: 5px;
+            margin:5px 0px 0px 10px;
+            font-size: 20px;
+            background-color:rgba(197, 240, 243, 0.719);
+            border-radius: 7px;
+            border: none;
+        }
+        .tchrlgn{
+            padding: 5px 0px 5px 0px;
+            background-color: rgba(31, 245, 181, 0.856);
+            text-align: center;
+            }
+        .teacherlogin .input_block{
+            display: flex;
+            width: 100%;
+            margin:6px 0px 10px 0px;
+            float: left;
+            }
+        .teacherlogin input,label{
+            width: 100%;
+            font-size: 20px;
+            font-style: italic;
+            padding:7px 0px 7px 0px;
+            margin-left: 10px;
+           }
+        .teacherlogin input:focus{
+            border: 2px solid  rgb(140, 241, 211);
+        }
+        .teacherlogin .fa-envelope,.teacherlogin .fa-lock{
+            padding:7px ;
+            background:rgb(140, 241, 211);
+            color:white;
+            text-align: center;
+            min-width: 30px;
+            margin-right: 10px;
+        }
+        .teacherlogin input{
+            border: 2px solid  rgba(140, 241, 211, 0.486);
+        }
+        .teacherlogin .fa-user{
+            display: block;
+            color:white;
+        }
+        .teacherlogin button{
+            padding: 5px;
+            margin:5px 0px 0px 10px;
+            font-family: 'Yomogi', cursive;
+            font-size: 20px;
+            background-color:rgb(140, 241, 211);
+            border-radius: 7px;
+            border: none;
+
+        }
+        .studentlogin,.parentlogin,.teacherlogin{
+            display: none;
+        }
+        .fdbkhead{
+            padding: 2px 0px 2px 8px;
+            background-color:rgba(159, 245, 238, 0.425);
+            }
+        .feedback .input_block{
+            width: 100%;
+            display: flex;
+            margin:6px 0px 10px 0px;
+            float: left;
+            }
+        .fdbkfrm input{
+            width: 100%;
+            font-size: 20px;
+            font-style: italic;
+            padding:7px 0px 7px 5px;
+            margin-left: 10px;
+            border: 1px solid rgba(100, 102, 102, 0.342);
+            border-right: none;
+
+        }
+        .fdbkfrm .fa-user,.fdbkfrm .fa-envelope, .fdbkfrm .fa-comment{
+            padding:7px ;
+            background:rgba(73, 248, 219, 0.719);
+            color:rgba(251, 253, 251, 0.972);
+            text-align: center;
+            min-width: 30px;
+            margin-right: 10px;
+        }
+        .fdbkfrm button{
+            padding: 7px;
+            margin:6px 0px 10px 10px;
+            font-size: 20px;
+            background-color:rgba(197, 240, 243, 0.719);
+            border-radius: 7px;
+            border: none;
+        }
+        button:active,button:hover{
+            background-color: rgba(231, 241, 252, 0.61);
+        }
+        p{
+            font-size: 18px;
+            margin-left:10px;
+            padding-bottom: 5px;
+        }
+        .register .rowp,.register .rowbtn{
+      display: table;
+      width:100%;
+    }
+    .register button{
+            padding: 7px;
+            margin:6px 0px 10px 10px;
+            font-size: 20px;
+            background-color:rgba(197, 240, 243, 0.719);
+            border-radius: 7px;
+            border: none;
+        }
+        .register button:active,.register button:hover{
+            background-color: rgba(231, 241, 252, 0.61);
+        }
+        .register p{
+            font-size: 18px;
+            margin-left:10px;
+            padding-bottom: 5px;
+        }
+        @media screen and (max-width:600px) {
+            .col-s-12{
+                width: 100%;
+            } 
+            .register .col-s-4{
+                width: 33.33%;
+            }            
+        }
+</style>
+</head>
+<body>
+    <div class="news_lgn row">
+        <div class="col-7 col-s-12">
+        <div class="newstab">
+        <h3>News and Notifications</h3>
+        <ul>
+        <li><a href="#">asdmciejgvnsjg avknkanksfmofovm</a></li>
+        <li><a href="#">asdmciejgvnsjg avknkanksfmofovm</a></li>
+        <li><a href="#">asdmciejgvnsjg avknkanksfmofovm</a></li>
+        <li><a href="#">asdmciejgvnsjg avknkanksfmofovm</a></li>
+        <li><a href="#">asdmciejgvnsjg avknkanksfmofovm</a></li>
+        <li><a href="#">asdmciejgvnsjg avknkanksfmofovm</a></li>
+        <li><a href="#">asdmciejgvnsjg avknkanksfmofovm</a></li>
+        <li><a href="#">asdmciejgvnsjg avknkanksfmofovm</a></li>
+        <li><a href="#">asdmciejgvnsjg avknkanksfmofovm</a></li>
+        <li><a href="#">asdmciejgvnsjg avknkanksfmofovm</a></li>
+        <li><a href="#">asdmciejgvnsjg avknkanksfmofovm</a></li>
+        </ul>
+        </div>
+        </div>
+        <div class="col-5 col-s-12">
+        <div class="logintab">
+            <div class="lginbtns">
+                <button class="col-3 student" type="submit" onclick="">Student</button>
+                <button class="col-3" type="submit" onclick="">Staff</button>
+                <button class="col-3" type="button" onclick="">Parent</button>
+                <button class="col-3" type="submit" onclick="">Teacher</button>
+            </div>
+            <div class="login">
+
+                <div class="stafflogin">
+                <form action="#" method="POST">
+                    <div class="stflgn">
+                        <h3><i class="fas fa-user-circle fa-2x"></i> Admin/Staff Login</h3>
+                    </div>    
+                    <div class="row">
+                        <div class="col">
+                            <label for="stdntrlno">Admin/Staff ID</label>
+                        </div>
+                        <div class="input_block">
+                            <input type="text" name="stfid" placeholder="Admin/Staff ID">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="stfpsd">Password</label>
+                        </div>
+                        <div class="input_block">
+                            <input type="password" name="stfpsd" placeholder="Password">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <button type="submit" name="login">Login</button>
+                        <button type="reset" name="cancel">Cancel</button>
+                    </div>
+                    </form>
+                    <p>Don't have an account? <a href="#">Register</a> here.</p>
+                    </div>
+
+                <div class="studentlogin">
+                        <form>
+                            <div class="stdntlgn">
+                            <h3><i class="fas fa-user fa-2x"></i> Student Login</h3>
+                            </div>    
+                            <div class="row">
+                            <div class="col">
+                            <label for="stdntrlno">Student Roll No</label>
+                            </div>
+                            <div class="input_block">
+                            <input type="text" name="stdntrlno" placeholder="Roll No">
+                            <i class="fas fa-envelope"></i>
+                            </div>
+                            </div>
+                            <div class="row">
+                            <div class="col">
+                            <label for="stdntpsd">Password</label>
+                            </div>
+                            <div class="input_block">
+                            <input type="password" name="stdntpsd" placeholder="Password">
+                            <i class="fas fa-lock"></i>
+                            </div>
+                            </div>
+                            <div class="row">
+                            <button type="submit" name="login">Login</button>
+                            <button type="reset" name="cancel">Cancel</button>
+                            </div>
+                        </form>
+                        <p>Don't have an account? <a href="#">Register</a> here.</p>
+                        </div>
+
+                    <div class="parentlogin">
+                            <form>
+                                <div class="prntlgn">
+                                <h3><i class="fas fa-user-circle fa-2x"></i> Parent Login</h3>
+                                </div>    
+                                <div class="row">
+                                <div class="col">
+                                <label for="stdntrlno">Parent ID</label>
+                                </div>
+                                <div class="input_block">
+                                <input type="text" name="parntid" placeholder="Parent ID">
+                                <i class="fas fa-envelope"></i>
+                                </div>
+                                </div>
+                                <div class="row">
+                                <div class="col">
+                                <label for="stdntpsd">Password</label>
+                                </div>
+                                <div class="input_block">
+                                <input type="password" name="prntpsd" placeholder="Password">
+                                <i class="fas fa-lock"></i>
+                                </div>
+                                </div>
+                                <div class="row">
+                                <button type="submit" name="login">Login</button>
+                                <button type="reset" name="cancel">Cancel</button>
+                                </div>
+                            </form>
+                            <p>Don't have an account? <a href="#">Register</a> here.</p>
+                            </div>
+
+                            <div class="teacherlogin">
+                                <form action="" method="POST">
+                                    <div class="tchrlgn">
+                                    <h3><i class="fas fa-user fa-2x"></i> Teacher Login</h3>
+                                    </div>
+                                    <div class="row">
+                                    <div class="col">
+                                        <label for="tchrid">Teacher ID</label>
+                                    </div>
+                                    <div class="input_block">
+                                    <input type="text" name="tchrid" placeholder="Teacher ID"><i class="fas fa-envelope"></i>
+                                    </div>
+                                    </div>
+                                    <div class="row">
+                                    <div class="col">
+                                    <label for="tchrpsd">Password</label>
+                                    </div>
+                                    <div class="input_block">
+                                    <input type="password" name="tchrpsd" placeholder="Password"><i class="fas fa-lock"></i>
+                                    </div>
+                                    </div>
+                                    <div class="row">
+                                    <button type="submit" name="login">Login</button>
+                                    <button type="reset" name="cancel">Cancel</button>
+                                    </div>
+                                </form>
+                                <p>Don't have an account? <a href="#">Register</a> here.</p>
+                                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div>
+        <h1>Events</h1>
+        <ul>
+            <li><a href="#">asdmciejgvnsjg avknkanksfmofovm</a></li>
+            <li><a href="#">asdmciejgvnsjg avknkanksfmofovm</a></li>
+            <li><a href="#">asdmciejgvnsjg avknkanksfmofovm</a></li>
+            <li><a href="#">asdmciejgvnsjg avknkanksfmofovm</a></li>
+            <li><a href="#">asdmciejgvnsjg avknkanksfmofovm</a></li>
+            <li><a href="#">asdmciejgvnsjg avknkanksfmofovm</a></li>
+            <li><a href="#">asdmciejgvnsjg avknkanksfmofovm</a></li>
+        </ul>
+    </div>
+    
+    <div class="register">
+        <div class="rowp">
+            <div class="col-4 col-s-4">
+            <p>For Students, Register here to know your regular tasks and performance</p>
+            </div>
+    
+            <div class="col-4 col-s-4">
+            <p>For parents, Register here to access chidrens academic analysis</p>
+            </div>
+    
+            <div class="col-4 col-s-4">
+            <p>For teachers, Register here to start your classes</p>
+            </div>
+    
+        </div>
+        <div class="rowbtn">
+          <div class="col-4 col-s-4">
+          <button type="submit" onclick="window.location.href='./stdnt_registration.html'">Register</button>
+          </div>
+    
+          <div class="col-4 col-s-4">
+          <button type="submit" onclick="window.location.href='./prnt_reg.html'">Register</button>
+          </div>
+    
+          <div class="col-4 col-s-4">
+          <button type="submit" onclick="window.location.href='./tchr_registration.html'">Register</button>
+          </div>
+    
+      </div>
+      </div>
+
+    <div>
+        <div>
+            <h1>ABOUT US</h1>
+            <p></p>
+            <h3>Infrastructure</h3>
+            <p></p>
+            <h3>Certified Tutors</h3>
+            <p></p>
+            <h3>Playful Learning</h3>
+            <p></p>
+            <h3>Extracurricular Activities</h3>
+            <p></p>
+            <h3>Safety</h3>
+            <p></p>
+        </div>
+    </div>
+    <div>
+        <h2>OUR STAFF</h2>
+        <div class="d-flex">
+        <div class="flex-shrink-0">
+          <img src="..." alt="...">
+        </div>
+        <div class="flex-grow-1 ms-3">
+          This is some content from a media component. You can replace this with any content and adjust it as needed.
+        </div>
+    </div></div>
+
+    <div class="feedback">
+    <div class="fdbkhead">
+    <h3>FEEDBACK</h3>
+    </div>
+    <div class="fdbkfrm">
+    <form target="_blank">
+        <div class="col-3 col-s-12">
+        <div class="input_block">
+        <input type="text" placeholder="Name" required name="Name">
+        <i class="fas fa-user fa-2x"></i>
+        </div>
+        </div>
+        <div class="col-3 col-s-12">
+        <div class="input_block">
+        <input type="text" placeholder="Email" required name="Email">
+        <i class="fas fa-envelope fa-2x"></i>
+        </div>
+        </div>
+        <div class="col-4 col-s-12">
+        <div class="input_block">
+        <input type="text" placeholder="Message" required name="Message">
+        <i class="fas fa-comment fa-2x"></i>
+        </div>
+        </div>
+        <div class="col-2 col-s-12">
+        <button type="submit">SEND</button>
+        </div>
+    </form>
+    </div>
+    </div>
+</body>
+</html>

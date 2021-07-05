@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/7f77c9a430.js" crossorigin="anonymous"></script>
+    <title>Feedback</title>
+    <style>
+        body{
+            margin: 0%;
+        }
+        .col-4 {width: 33.33%; float:left}
+    .col-2 {width: 16.66%;float: left; }
+    .col-3 {width: 25%;float: left;}
+        .feedback,input, button{
+            font-family: 'Yomogi', cursive;
+        }
+    .fdbkhead{
+            padding: 2px 0px 2px 8px;
+            background-color:rgba(159, 245, 238, 0.425);
+            }
+        .feedback .input_block{
+            width: 100%;
+            display: flex;
+            margin:6px 0px 10px 0px;
+            float: left;
+            }
+        .fdbkfrm input{
+            width: 100%;
+            font-size: 20px;
+            font-style: italic;
+            padding:7px 0px 7px 5px;
+            margin-left: 10px;
+            border: 1px solid rgba(100, 102, 102, 0.342);
+            border-right: none;
+
+        }
+        .fdbkfrm .fa-user,.fdbkfrm .fa-envelope, .fdbkfrm .fa-comment{
+            padding:7px ;
+            background:rgba(73, 248, 219, 0.719);
+            color:rgba(251, 253, 251, 0.972);
+            text-align: center;
+            min-width: 30px;
+            margin-right: 10px;
+        }
+        .fdbkfrm button{
+            padding: 7px;
+            margin:6px 0px 10px 10px;
+            font-size: 20px;
+            background-color:rgba(197, 240, 243, 0.719);
+            border-radius: 7px;
+            border: none;
+        }
+        button:active,button:hover{
+            background-color: rgb(209, 227, 245);
+        }
+    </style>
+</head>
+<body>
+    <div class="feedback">
+    <div class="fdbkhead">
+    <h3>FEEDBACK</h3>
+    </div>
+    <div class="fdbkfrm">
+    <form target="_blank">
+        <div class="col-3">
+        <div class="input_block">
+        <input type="text" placeholder="Name" required name="Name">
+        <i class="fas fa-user fa-2x"></i>
+        </div>
+        </div>
+        <div class="col-3">
+        <div class="input_block">
+        <input type="text" placeholder="Email" required name="Email">
+        <i class="fas fa-envelope fa-2x"></i>
+        </div>
+        </div>
+        <div class="col-4">
+        <div class="input_block">
+        <input type="text" placeholder="Message" required name="Message">
+        <i class="fas fa-comment fa-2x"></i>
+        </div>
+        </div>
+        <div class="col-2">
+        <button type="submit">SEND</button>
+        </div>
+    </form>
+    </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="registerstyles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div class="parentreg">
+    <div class="prntreghead">
+        <h3>Parents Registration Form</h3>
+    </div>
+    <div class="prntregblk">
+    <form action="" method="POST">
+        <div class="row">
+            <div class="col-3"><label for="fname">FirstName</label></div>
+            <div class="col-9"><input type="text" name="fname" placeholder="enter your firstname"></div>
+        </div>
+        <div class="row">
+            <div class="col-3"><label for="lname">LastName</label></div>
+            <div class="col-9"><input type="text" name="lname" placeholder="enter your lastname"></div>
+        </div>
+        <div class="row">
+            <div class="col-3"><label for="prntid">Parent ID</label></div>
+            <div class="col-9"><input type="text" name="prntid" value=""></div>
+        </div>
+        <div class="row">
+            <div class="col-3"><label for="emailid">Email</label></div>
+            <div class="col-9"><input type="text" name="eamilid" placeholder="enter your email"></div>
+        </div>
+        <div class="row">
+            <div class="col-3"><label for="mobile">Mobile No.</label></div>
+            <div class="col-9"><div class="input_blk"><span>+91</span><input type="tel" name="mobile" pattern="[0-9]{10}" placeholder="XXXXXXXXXX"></div></div>
+        </div>
+        <div class="row">
+            <div class="col-3"><label for="stfpsd">Password</label></div>
+            <div class="col-9"><input type="password" name="stfpsd" placeholder="enter your password"></div>
+        </div>
+        <div class="row">
+            <button type="submit">Register</button>
+            <button type="reset">Cancel</button>
+        </div>
+    </form>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,144 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0%;
+}
+[class*="col-"] {
+    float: left;
+    width: 100%;
+    padding-right: 20px;
+} 
+[class*="col-"]:last-of-type {
+    padding-right: 0px;
+}
+.parentreg,.studentreg,.teacherreg,input,label,button{
+    font-family: 'Yomogi', cursive;
+ }
+.prntreghead,.stdntreghead,.tchrreghead{
+    padding: 5px 0px 5px 0px;
+    text-align: center;
+    }
+.prntregblk,.stdntregblk.tchrregblk{
+    padding:10px;
+}
+.prntregblk .row, .stdntregblk .row,.tchrregblk .row{
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+.parentreg button, .studentreg button, .teacherreg button{
+    padding: 5px 10px 5px 10px;
+    margin:5px 0px 0px 10px;
+    font-family: 'Yomogi', cursive;
+    font-size: 20px;
+    border-radius: 7px;
+    border: none;
+}
+input,label{
+    width: 100%;
+    font-size: 20px;
+    font-style: italic;
+    padding:7px 0px 7px 0px;
+   }
+/*for prnt,teacher*/
+.prntregblk .input_blk,.tchrregblk .input_blk{
+    display: flex;
+    width: 100%;
+    margin:6px 0px 10px 0px;
+    float: left;
+}
+.input_blk input{
+    margin-left: 0px;
+}
+.input_blk .num{
+    padding:7px ;
+    border:1px solid rgb(219, 214, 214);
+    text-align: center;
+    min-width: 30px;
+    margin-left: 0px;
+}
+/*------************--------*/
+
+/* colors*/
+.prntreghead{
+    background-color:rgba(35, 245, 227, 0.753);
+}
+.parentreg input{
+    border: 1px solid rgba(35, 245, 227, 0.753);
+}
+.parentreg button{
+    background-color:rgba(35, 245, 227, 0.753);
+
+}
+.stdntreghead{
+    background-color:rgba(117, 117, 252, 0.637);
+}
+.studentreg input{
+    border: 1px solid rgba(117, 117, 252, 0.637);
+}
+.studentreg button{
+    background-color:rgba(117, 117, 252, 0.637);
+
+}
+.tchrreghead{
+    background-color:rgb(140, 241, 211);
+}
+.teacherreg input{
+    border: 1px solid rgb(140, 241, 211);
+}
+.teacherreg button{
+    background-color:rgb(140, 241, 211);
+
+}
+/*-----------------***************/
+button:active,button:hover{
+    background-color: rgba(192, 222, 252, 0.712);
+}
+.row::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+@media only screen and (max-width: 600px) {
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+  }
+@media only screen and (min-width: 600px) {
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+  }
+@media only screen and (min-width:768px) {
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}     
+}

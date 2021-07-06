@@ -1,6 +1,3 @@
-*,*::after,*::before{
-    box-sizing: border-box;
-}
 body{
     margin: 0%;
 }
@@ -12,13 +9,65 @@ body{
 [class*="col-"]:last-of-type{
     padding-right: 0px;
 }
-
-.row::after,.aboutus .row2::after{
+.row::after{
     content: "";
     clear:both;
     display:table;
 }
+/*--------------*******************---------*/
+.feedback,input, button{
+    font-family: 'Yomogi', cursive;
+}
+.feedback{
+    border: 1px solid black;
+    display: block;
+    width: 100%;
+}
+.feedback [class*="col-"]{
+    padding-right: 0px;
+}
+.fdbkhead{
+    padding: 5px 0px 5px 15px;
+    font-size: 25px;
+    background-color:rgba(159, 245, 238, 0.425);
+    }
+.feedback .input_block{
+    width: 100%;
+    display: flex;
+    margin:6px 0px 10px 0px;
+    float: left;
+    }
+.fdbkfrm input,.fdbkfrm textarea{
+    width: 100%;
+    font-size: 20px;
+    font-style: italic;
+    padding:7px 0px 7px 5px;
+    margin-left: 10px;
+    border: 1px solid rgba(100, 102, 102, 0.342);
+    border-right: none;
 
+}
+.fdbkfrm .fa-user,.fdbkfrm .fa-envelope, .fdbkfrm .fa-comment{
+    padding:7px 15px 7px 9px;
+    background:rgba(73, 248, 219, 0.719);
+    color:rgba(251, 253, 251, 0.972);
+    text-align: center;
+    min-width: 30px;
+    margin-right: 10px;
+}
+.fdbkfrm button{
+    width:75%;
+    padding: 15px;
+    margin:6px 0px 10px 10px;
+    font-size: 20px;
+    background-color:rgba(197, 240, 243, 0.719);
+    border-radius: 7px;
+    border: none;
+}
+.fdbkfrm button:active,.fdbkfrm button:hover{
+    background-color: rgb(209, 227, 245);
+}
+/*------------------***************-----------*/
 @media only screen and (max-width: 600px) {
     .col-s-1 {width: 8.33%;}
     .col-s-2 {width: 16.66%;}

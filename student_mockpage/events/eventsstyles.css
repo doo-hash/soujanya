@@ -19,6 +19,7 @@ body{
 }
 .events{
 font-family: 'Yomogi', cursive;
+border: 1px solid black;
 }
 .events .col-3,.events .col-9{
     padding-right: 0px;

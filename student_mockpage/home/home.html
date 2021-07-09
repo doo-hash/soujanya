@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <script src="https://kit.fontawesome.com/7f77c9a430.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="newsloginstyles.css">
+
     <title>Home</title>
 </head>
 <body>
@@ -126,7 +126,7 @@
                       <button type="reset" name="cancel">Cancel</button>
                   </div>
                   </form>
-                  <p>Don't have an account? <a href="#">Register</a> here.</p>
+                  <p>Don't have an account? <a href="#" onclick="window.location.href='./register.html'">Register</a> here.</p>
                   </div>
 
               <div id="Student" class="studentlogin tabcontent">
@@ -157,7 +157,7 @@
                           <button type="reset" name="cancel">Cancel</button>
                           </div>
                       </form>
-                      <p>Don't have an account? <a href="#">Register</a> here.</p>
+                      <p>Don't have an account? <a href="" onclick="window.location.href='./register.html'">Register</a> here.</p>
                       </div>
 
                   <div id="Parent" class="parentlogin tabcontent">
@@ -188,7 +188,7 @@
                               <button type="reset" name="cancel">Cancel</button>
                               </div>
                           </form>
-                          <p>Don't have an account? <a href="#">Register</a> here.</p>
+                          <p>Don't have an account? <a href="" onclick="window.location.href='./register.html'">Register</a> here.</p>
                           </div>
 
                           <div id="Teacher" class="teacherlogin tabcontent">
@@ -217,7 +217,7 @@
                                   <button type="reset" name="cancel">Cancel</button>
                                   </div>
                               </form>
-                              <p>Don't have an account? <a href="#">Register</a> here.</p>
+                              <p>Don't have an account? <a href="register page" onclick="window.location.href='./register.html'">Register</a> here.</p>
                               </div>
                   </div>
               </div>
@@ -278,18 +278,7 @@
     
         </div>
         <div class="row">
-          <div class="col-4 col-s-4">
-          <button type="submit" class="stdntbtn" onclick="window.location.href='./stdnt_reg.html'">Register</button>
-          </div>
-    
-          <div class="col-4 col-s-4">
-          <button type="submit" class="prntbtn" onclick="window.location.href='./prnt_reg.html'">Register</button>
-          </div>
-    
-          <div class="col-4 col-s-4">
-          <button type="submit" class="tchrbtn" onclick="window.location.href='./tchr_reg.html'">Register</button>
-          </div>
-    
+          <button class="stdntbtn" onclick="window.location.href='./register.html'">Register</button>    
       </div>
       </div>
     <div>
@@ -449,7 +438,6 @@
                 <div class="col-3 col-s-3 col-m-3">
                 <h3>ABOUT US</h3>
                 <p> this provides you with lots of opputunities to study and play as you like.</p>
-                <p> this provides you with lots of opputunities to study and play as you like.</p>
                 </div>
                 
                 <div class="col-6 col-s-6 col-m-6">
@@ -489,7 +477,7 @@
 
 
 <script>
-    function tabopen(event, cityName) {
+    function tabopen(event, Name) {
         var i, tabcontent, tablink;
         tabcontent = document.getElementsByClassName("tabcontent");
         for (i = 0; i < tabcontent.length; i++) {
@@ -499,7 +487,7 @@
         for (i = 0; i < tablink.length; i++) {
             tablink[i].className = tablink[i].className.replace(" active", "");
         }
-        document.getElementById(cityName).style.display = "block";
+        document.getElementById(Name).style.display = "block";
         event.currentTarget.className += " active";
     }
 </script>

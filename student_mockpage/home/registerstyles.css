@@ -12,40 +12,59 @@ body{
 [class*="col-"]:last-of-type {
     padding-right: 0px;
 }
-.parentreg,.studentreg,.teacherreg,input,label,button{
+.reg,input,label,button{
     font-family: 'Yomogi', cursive;
  }
-.prntreghead,.stdntreghead,.tchrreghead{
+ .reg{
+     margin:20px auto 20px auto;
+     width:70%;
+     border: 2px solid hsl(240, 50%, 75%);
+ }
+.reghead{
     padding: 5px 0px 5px 0px;
+    font-size: 30px;
     text-align: center;
-    }
-.prntregblk,.stdntregblk.tchrregblk{
+}
+.users{
+    width:50%;
+    display:flex;
+    margin:20px auto 20px auto;
+}
+.users input{
+    width:0;
+    height:0;
+}
+.users .usr input{
+    width:15px;
+    height:16px;
+    margin-left:5px;
+}
+.regblk{
     padding:10px;
 }
-.prntregblk .row, .stdntregblk .row,.tchrregblk .row{
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 10px;
+.regblk .row{
+    margin: 1px auto 0px auto;
+    width: 90%;
+    padding: 10px;
 }
-.parentreg button, .studentreg button, .teacherreg button{
+.reg button{
     padding: 5px 10px 5px 10px;
-    margin:5px 0px 0px 10px;
+    margin:5px 20px 0px 10px;
     font-family: 'Yomogi', cursive;
     font-size: 20px;
     border-radius: 7px;
+    width:30%;
     border: none;
 }
 input,label{
-    width: 100%;
     font-size: 20px;
     font-style: italic;
     padding:7px 0px 7px 0px;
    }
 /*for prnt,teacher*/
-.prntregblk .input_blk,.tchrregblk .input_blk{
+.regblk .input_blk{
     display: flex;
-    width: 100%;
-    margin:6px 0px 10px 0px;
+    margin:3px 0px 0px 0px;
     float: left;
 }
 .input_blk input{
@@ -53,52 +72,44 @@ input,label{
 }
 .input_blk .num{
     padding:7px ;
-    border:1px solid rgb(219, 214, 214);
+    background-color: hsl(0, 50%, 100%);
+    border:2px solid hsl(240, 50%, 85%);
     text-align: center;
     min-width: 30px;
-    margin-left: 0px;
+    margin-right: 0px;
 }
 /*------************--------*/
 
 /* colors*/
-.prntreghead{
-    background-color:rgba(35, 245, 227, 0.753);
+.reghead{
+    background-color:hsl(240,50%,75%);
+    color: hsl(0, 50%, 100%);
 }
-.parentreg input{
-    border: 1px solid rgba(35, 245, 227, 0.753);
+.reg input{
+    border: 2px solid hsl(240,50%,85%);
+    width: 100%;
 }
-.parentreg button{
-    background-color:rgba(35, 245, 227, 0.753);
+.reg button{
+    background-color:hsl(240,50%,85%);
+    box-shadow: 6px 4px 6px 6px hsl(240, 50%, 85%);
 
 }
-.stdntreghead{
-    background-color:rgba(117, 117, 252, 0.637);
-}
-.studentreg input{
-    border: 1px solid rgba(117, 117, 252, 0.637);
-}
-.studentreg button{
-    background-color:rgba(117, 117, 252, 0.637);
 
-}
-.tchrreghead{
-    background-color:rgb(140, 241, 211);
-}
-.teacherreg input{
-    border: 1px solid rgb(140, 241, 211);
-}
-.teacherreg button{
-    background-color:rgb(140, 241, 211);
-
-}
 /*-----------------***************/
 button:active,button:hover{
-    background-color: rgba(192, 222, 252, 0.712);
+    background-color: hsl(240,50%,75%);
+    box-shadow: 6px 4px 6px 6px hsl(240, 50%, 75%);
+    color: hsl(0, 50%, 100%);
 }
 .row::after{
     content: "";
     display: table;
     clear: both;
+}
+@media only screen and (max-width:700px){
+    .reg .users{
+        width:100%;
+    }
 }
 @media only screen and (max-width: 600px) {
     .col-s-1 {width: 8.33%;}

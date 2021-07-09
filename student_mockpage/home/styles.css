@@ -3,13 +3,13 @@
 }
 body{
     margin: 0%;
-    background-color: rgba(159, 245, 238, 0.137);
 }
 /*HEADER*/
 .header{
     font-family: 'Indie Flower', cursive;
     font-size: 25px;
-    background-color:rgb(238, 244, 247);
+    background-color:hsl(240,90%,25%);
+    color: white;
     padding-top:10px;
 }
 h1{
@@ -24,22 +24,23 @@ h1{
 }
 
 .topnav{
-    background-color:rgb(228, 207, 243);
+    background-color:hsl(240, 90%, 25%);
     overflow: hidden;
 }
 .topnav .active{
-    background-color: rgba(241, 150, 150, 0.473);
-    color: chartreuse;
+    background-color: hsl(0, 50%, 100%);
+    border-radius: 15px;
+    color: hsl(0, 100%, 0%);
 }
 .active .fa-home{
-    color: chartreuse;
+    color: hsl(0, 100%, 0%);
 }
 .topnav i{
-    color: rgb(146, 122, 122);
+    color: hsl(0, 100%, 100%);
 }
 .topnav a:hover, .topnav a:active{
-    background-color: rgb(252, 237, 237);
-    color: black;
+    background-color:hsl(0, 100%, 100%);
+    color: hsl(0, 100%, 0%);
     border-radius: 15px;
 }
 .topnav a{
@@ -47,7 +48,7 @@ h1{
     display:block;
     padding:16px 16px;
     text-align: center;
-    color: blue;
+    color:hsl(0, 100%, 100%);
 }
 .dropdown{
     float: left;
@@ -56,9 +57,8 @@ h1{
 .drpmenu{
     display:none;
     position: absolute;
-    background-color: rgb(228, 207, 243);
+    background-color: hsl(240, 90%, 25%);
     min-width: fit-content;
-    box-shadow: 2px rgb(243, 240, 245);
     z-index: 1;
     border-radius:15px ;
 }
@@ -98,37 +98,39 @@ h1{
 }
 .srchblk input{
     width: 100%;
-    padding:20px ;
-    color: rgba(128, 255, 0, 0.418);
+    padding:10px ;
     font-size: 20px;
     margin: 0px;
-    border:4px solid rgba(0, 0, 255, 0.041); 
+    border:4px solid hsl(240, 90%, 90%); 
     border-right: none;
 }
 .srchblk .fa-search{
-    color: rgba(0, 0, 255, 0.534);
-    background-color: rgba(0, 0, 255, 0.041);
+    color: hsl(0, 100%, 100%);
+    background-color: hsl(240, 90%, 90%);
     margin: 0px;
-    padding: 22px;
+    padding: 12px;
 }
 .srchblk a{
     margin:0px;
 }
 .srchblk a .fa-search:hover{
-    color: rgba(80, 205, 255, 0.623);
+    background-color: hsl(0, 100%, 100%);
+    color: hsl(0, 100%, 0%);
+    border:4px solid hsl(240, 90%, 90%);
 }
+
 /*---------***********----------*/
 /*NEWS AND NOTIFICATIONS*/
 /*NEWSTAB*/
 .news_lgn{
-    border-bottom:1px solid rgb(238, 90, 119);
+    border-bottom:1px solid hsl(0, 100%, 0%);
     width:100%;
 }
 .newstab,.logintab{
     overflow-x: hidden;
 }
 .logintab{
-    border-left: 1px solid rgb(238, 90, 119);
+    border-left: 1px solid hsl(0, 100%, 0%);
 }
 .rownl .col-7{
     padding-right: 0px;
@@ -143,7 +145,7 @@ h1{
 }
 .newshd{
 padding: 5px 0px 5px 15px;
-background-color:rgba(159, 245, 238, 0.425);
+background-color:hsl(0, 0%, 75%);
 font-size: 25px;
 }
 .newstab li{
@@ -153,34 +155,197 @@ font-size: 25px;
     padding:7px 0px 7px 0px;
     margin-left: 10px;
    }
+   .stafflogin input,.teacherlogin input,.parentlogin input,.studentlogin input,
+   .stafflogin label,.parentlogin label,.teacherlogin label,.studentlogin label{
+       width: 100%;
+       font-size: 20px;
+       font-style: italic;
+       padding:7px 0px 7px 0px;
+       margin-left: 10px;
+      }
+      
+   /*-----------------*************--------------*/
+   /*logintab*/
+   .tabcontent:not(:first-child){
+       display:none;
+   }
+   /*LOGIN BUTTONS*/
+   
+   .lginbtns button{
+       padding: 5px;
+       margin: 0px 0px 15px 0px;
+       font-size: 20px;
+       background-color:hsl(0,40%,75%);
+       border: none;
+       float: left;
+   }
+   .lginbtns button.active{
+    background-color:hsl(0,40%,55%);
+       color: hsl(0,0%,100%);
+   }
+   
+   /*------------**********************---------------*/
+   /*colors*/
+   .stafflogin button:active,.stafflogin button:hover,
+   .teacherlogin button:active,.teacherlogin button:hover,
+   .parentlogin button:active,.parentlogin button:hover,
+   .studentlogin button:active,.studentlogin button:hover{
+       background-color:hsl(240, 90%, 75%);
+       box-shadow: 6px 4px 6px 6px hsl(240, 90%, 75%);
+       color: hsl(0, 50%, 100%);
+   }
+   .lginbtns button:active,.lginbtns button:hover{
+       background-color:hsl(0,40%,55%);
+       color: hsl(0,0%,100%);;
+   }
+   
+   /*STAFFLOGIN*/
+   .stflgn{
+       background-color:hsl(0,40%,75%);
+   }
+   .stafflogin input{
+       border: 1px solid hsl(0,40%,75%);
+       border-right: none;
+   }
+   .stafflogin .fa-user-circle{
+       display: block;
+       color: hsl(0,0%,100%);
+   }
+   .stafflogin .fa-envelope,.stafflogin .fa-lock{
+       background:hsl(0,40%,80%);
+       color:hsl(0,0%,100%);
+   }
+   .stafflogin button{
+       background-color:hsl(0,40%,75%);
+       box-shadow: 6px 4px 6px 4px hsl(0, 40%, 75%);
+   }
+   /*---------------***********-----------*/
+   /*TEACHERLOGIN*/
+   .tchrlgn{
+       background-color: hsl(140,40%,75%);
+   }
+   .teacherlogin input{
+       border: 2px solid  hsl(140,40%,75%);
+   }
+   .teacherlogin .fa-user{
+       display: block;
+       color:hsl(0, 50%, 100%);
+   }
+   .teacherlogin .fa-envelope,.teacherlogin .fa-lock{
+       background:hsl(140,40%,80%);
+       color: hsl(0, 50%, 100%);
+   }
+   .teacherlogin button{
+       background-color:hsl(140,40%,75%);
+       box-shadow: 6px 4px 6px 4px hsl(140, 40%, 75%);
+   }
+   /*---------------***********-----------*/
+   /*PARENTLOGIN*/
+   .prntlgn{
+       background-color:hsl(160, 50%, 75%);
+   }
+   .parentlogin input{
+       border: 1px solid hsl(160, 50%, 75%);
+       border-right: none;
+   }
+   .parentlogin .fa-user-circle{
+       display: block;
+       color:hsl(0, 50%, 100%);
+   }
+   .parentlogin .fa-envelope,.parentlogin .fa-lock{
+       background:hsl(160, 50%, 80%);
+       color: hsl(0, 100%, 100%);
+}
+   .parentlogin button{
+       background-color:hsl(160, 50%, 75%);
+       box-shadow: 6px 4px 6px 4px hsl(160, 50%, 75%);
+   }
+   /*---------------***********-----------*/
+   /*STUDENTLOGIN*/
+   .stdntlgn{
+       background-color:hsl(240, 90%, 90%);
+   }
+   .studentlogin input{
+       border: 1px solid hsl(240, 90%, 90%);
+       border-right: none;
+   }
+   .studentlogin .fa-user{
+       display: block;
+       color:hsl(0, 50%, 100%);
+   }
+   .studentlogin .fa-envelope,.studentlogin .fa-lock{
+       background:hsl(240, 90%, 85%);
+       color:hsl(0, 50%, 100%);
+   } 
+   .studentlogin button{
+       background-color:hsl(240, 90%, 90%);
+       box-shadow: 6px 4px 6px 4px hsl(240, 90%, 90%);
 
+   }   
+   /*---------------***********-----------*/
+   /*-------------****************---------------*/
+   .stflgn,.stdntlgn,.tchrlgn,.prntlgn{
+       padding: 5px 0px 5px 0px;
+       text-align: center;
+   }
+   .stafflogin .input_block,.teacherlogin .input_block,
+   .parentlogin .input_block,.studentlogin .input_block{
+       display: flex;
+       width: 100%;
+       margin:6px 0px 10px 0px;
+       float: left;
+       }
+   .stafflogin .fa-envelope,.stafflogin .fa-lock,
+   .teacherlogin .fa-envelope,.teacherlogin .fa-lock,
+   .parentlogin .fa-envelope,.parentlogin .fa-lock,
+   .studentlogin .fa-envelope,.studentlogin .fa-lock{
+       padding:7px ;
+       text-align: center;
+       min-width: 30px;
+       margin-right: 10px;
+   }
+   .stafflogin button,.teacherlogin button,
+   .parentlogin button,.studentlogin button{
+       padding: 15px;
+       margin:5px 0px 0px 10px;
+       font-size: 20px;
+       border-radius: 7px;
+       border: none;
+       width:30%;
+   }
+   .studentlogin p,.teacherlogin p,.stflgn p,.parentlogin{
+       font-size: 18px;
+       margin-left:10px;
+       padding-bottom: 5px;
+   }
 /*--------------************---------*/
 /*SIDE NAVBAR*/
 .sidenav{
     opacity: 0;
-    background-color: rgba(250, 242, 235, 0.863);
+    background-color: hsl(0, 80%, 90%);
     border-radius: 10px;
     position: absolute;
     z-index: 1;
 }
 .sidenav:hover{
-    background-color: rgba(212, 253, 251, 0.637);
+    background-color: hsl(240, 90%, 90%);
     opacity:0.9;
 }
 .sidenav a{
     display: block;
     text-align: center;
     padding: 5px;   
+    color: hsl(0, 50%, 100%);
 }
 .sidenav i:hover{
-    color:lightpink;
+    color:hsl(0, 100%, 0%);
 }
 /*--------------*****************---------*/
 
 /*----------------***************----------*/
 /*ABOUTUS*/
 .aboutus{
-    border-bottom:1px solid rgb(238, 90, 119);
+    border-bottom:1px solid hsl(0, 100%, 0%);
 }
 .aboutus .row .col-3{
     padding-right: 0px;
@@ -188,7 +353,7 @@ font-size: 25px;
 .aboutushd{
     padding: 5px 0px 5px 15px;
     font-size: 25px;
-    background-color:rgba(159, 245, 238, 0.425);
+    background-color:hsl(0, 0%, 75%);
     }
 .aboutusinfo{
     display: block;
@@ -206,14 +371,15 @@ font-size: 25px;
     padding: 5px 0px 5px 15px;
     margin-bottom: 0px;
     font-size: 20px;
-    background-color:rgba(235, 159, 245, 0.425);
+    background-color:hsl(160,100%,25%);
+    color: hsl(0,0%,100%);
 }
 .aboutuscntnt p{
     padding: 5px;
     font-size: 20px;
     margin-top: 0px;
     text-align: justify;
-    background-color:rgba(235, 159, 245, 0.164);
+    background-color:hsl(160,50%,90%);
 }
 .aboutuscntnt .col-4,.aboutuscntnt .col-6{
     padding-right: 20px;
@@ -222,13 +388,13 @@ font-size: 25px;
 /*EVENTS*/
 .events{
     z-index: 0;
-    border-bottom:1px solid rgb(238, 90, 119);
+    border-bottom:1px solid hsl(0, 100%, 0%);
 }
 .events .col-3,.events .col-9{
     padding-right: 0px;
 }
 .evnthead{
-    background-color:rgba(159, 245, 238, 0.425);
+    background-color:hsl(0, 0%, 75%);
     padding: 5px 0px 5px 15px;
     font-size: 25px;
 }
@@ -238,11 +404,12 @@ font-size: 25px;
 }
 .evntbtns a{
     display: block;
+    color: hsl(0, 100%, 0%);
     width: 50%;
     font-size: 20px;
     padding:7px 0px 7px 15px;
-    background-color: rgba(250, 175, 175, 0.582);
-    box-shadow: 6px 4px 6px 4px rgba(248, 216, 216, 0.582);
+    background-color: hsl(0, 0%, 90%);
+    box-shadow: 6px 4px 6px 4px hsl(0, 0%, 90%);
     margin: 20px 0px 10px 15px;
 }
 .evntnewslnk li{
@@ -251,38 +418,33 @@ font-size: 25px;
 }
 .evntbtns a:hover,.evntbtns a:active{
     display: block;
-    background-color: rgba(100, 148, 237, 0.637);
-    color: darkblue;
-    box-shadow: 6px 4px 6px 4px rgba(145, 198, 248, 0.288);
+    background-color: hsl(240, 90%, 75%);
+    color: hsl(0, 50%, 100%);
+    box-shadow: 6px 4px 6px 4px hsl(240, 90%, 75%);
 }
 /*-----------***************-----------*/
 /*REEGISTER*/
 .register{
-    border-bottom:1px solid rgb(238, 90, 119);
+    border-bottom:1px solid hsl(0, 100%, 0%);
 }
 .register .row{
     display: table;
     width:100%;
 }
 .register button{
-    padding: 7px;
-    margin:6px 0px 10px 10px;
+    display: block;
+    width:50%;
+    padding: 15px;
+    margin:6px auto 20px auto;
     font-size: 20px;
-    background-color:rgba(197, 240, 243, 0.719);
+    background-color:hsl(240, 90%, 90%);
+    box-shadow: 6px 4px 6px 6px hsl(240, 90%, 90%);
     border-radius: 7px;
     border: none;
 }
-.register .tchrbtn{
-    background-color: rgb(42, 250, 188);
-}
-.register .stdntbtn{
-    background-color: rgba(207, 207, 245, 0.521);
-}
-.register .prntbtn{
-    background-color: rgba(35, 245, 227, 0.753);
-}
 .register button:active,.register button:hover{
-    background-color: rgba(126, 128, 131, 0.753);
+    background-color: hsl(240, 90%, 75%);
+    box-shadow: 6px 4px 6px 6px hsl(240, 90%, 75%);
     color: white;
 }
 .register p{
@@ -294,7 +456,7 @@ font-size: 25px;
 /*OUR STAFF*/
 .ourstaff{
     font-family: 'Yomogi', cursive;
-    border-bottom:1px solid rgb(238, 90, 119);
+    border-bottom:1px solid hsl(0, 100%, 0%);
 }
 .ourstaff [class*="col-"]{
     padding-right: 0px;
@@ -302,7 +464,7 @@ font-size: 25px;
 .ourstfhd{
     padding: 5px 0px 5px 15px;
     font-size: 25px;
-    background-color:rgba(159, 245, 238, 0.425);
+    background-color:hsl(0, 0%, 75%);
 }
 .stfinfo{
     font-size: 20px;
@@ -330,7 +492,7 @@ font-size: 25px;
 }
 .stfpersons .row .row1{
     margin:5px;
-    background-color: rgba(255, 235, 205, 0.644);
+    background-color: hsl(160,50%,90%);
     border-radius: 25px;
     padding:5px;
 }
@@ -339,12 +501,12 @@ font-size: 25px;
 .feedback{
     display: block;
     width: 100%;
-    border-bottom:1px solid rgb(238, 90, 119);
+    border-bottom:1px solid hsl(0, 100%, 0%);
 }
 .fdbkhead{
     padding: 5px 0px 5px 15px;
     font-size: 25px;
-    background-color:rgba(159, 245, 238, 0.425);
+    background-color:hsl(0, 0%, 75%);
     }
 .feedback .input_block{
     width: 100%;
@@ -358,13 +520,13 @@ font-size: 25px;
     font-style: italic;
     padding:7px 0px 7px 5px;
     margin-left: 10px;
-    border: 1px solid rgba(100, 102, 102, 0.342);
+    border: 1px solid hsl(0, 0%, 90%);
     border-right: none;
 
 }
 .fdbkfrm .fa-user,.fdbkfrm .fa-envelope, .fdbkfrm .fa-comment{
     padding:7px 15px 7px 9px;
-    background:rgba(73, 248, 219, 0.719);
+    background:hsl(0, 100%, 0%);
     color:rgba(251, 253, 251, 0.972);
     text-align: center;
     min-width: 30px;
@@ -375,22 +537,24 @@ font-size: 25px;
     padding: 15px;
     margin:6px 0px 10px 10px;
     font-size: 20px;
-    background-color:rgba(197, 240, 243, 0.719);
+    background-color:hsl(240, 90%, 90%);
     border-radius: 7px;
     border: none;
 }
 .fdbkfrm button:active,.fdbkfrm button:hover{
-    background-color: rgb(209, 227, 245);
+    background-color: hsl(240, 90%, 75%);
+    box-shadow: 6px 4px 6px 6px hsl(240, 90%, 75%);
+    color: hsl(0,0%,100%);
 }
 /*-----------------********************-----------*/
 /*FOOTER*/
 
 .footer{
     width: 100%;
-    background-color:gainsboro;
+    background-color:hsl(0, 0%, 90%);
     color: firebrick;
-    font-size: 18px;
-    padding: 15px 5px 5px 20px;
+    font-size: 15px;
+    padding: 15px 5px 5px 10px;
     display: block;
     overflow-x: hidden;
 
@@ -405,6 +569,7 @@ font-size: 25px;
 .footer li{
     padding:3px;
 }
+
 /*--------------*********************------------*/
 .row::after{
     content: "";
@@ -466,7 +631,7 @@ a:visited,a:link,a:hover,a:active{
     .dropdown:hover .drpmenu{
         top: 300px;
         width: 100%;
-        background-color: aquamarine;
+        border: 2px solid hsl(0, 100%, 0%);
     }
     .footer ul{
         columns: 2 auto;

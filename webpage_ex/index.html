@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello world</h1>
+    <section>
+        <h1>A Beautiful Picture</h1>
+        <img id="first" src='http://unsplash.it/g/500/100?gravity=center' alt=''/>
+        <div id="quote">
+            <blockquote>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum quis nam 
+                iure mollitia consequuntur, iusto repellendus fuga sequi illum aliquid? Error repellendus 
+                consectetur deserunt non maxime exercitationem dolores doloribus dicta.</blockquote>
+        </div>
+        <p>A surprise picture for you. Beautiful scenes from unsplash. Can explore more from other websites too.</p>
+        <button onclick="coverimg()">Click for Image</button>
+        <button onclick="firstimg()">Another Image</button>
+    </section>
+
+
+    <script>
+        function firstimg(){
+            document.getElementById("first").src="http://unsplash.it/500/100";
+            document.getElementById("quote").style.display="block";
+        }
+        function coverimg(){
+            document.getElementById("first").src="http://unsplash.it/g/500/100?gravity=center";
+            document.getElementById("quote").style.display="block";
+        }
+    </script>
+</body>
+</html>

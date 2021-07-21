@@ -28,6 +28,7 @@ body {
   #nav-activities .bi:hover,.bi:active,.bi:focus{
       color: indigo;
   }
+  
 #scroll{
   white-space: nowrap;
   padding-left: 100%;
@@ -41,13 +42,16 @@ body {
     transform: translateX(-100%);
   }
 }
+@media only screen and (min-width: 992px) {
+	button:hover .dropdown-menu{ display: block; }
+}
 </style>
 </head>
 <body class="h-100">
 <!--news scroll-->
-  <div class="d-flex align-items-baseline my-0 container-fluid">
-    <div class="d-flex text-start text-xl-end d-none d-lg-block col-lg-1">
-      <span class="btn btn-lg">NEWS</span>
+  <div class="d-flex align-items-baseline my-0 container-md">
+    <div class="d-flex text-start d-none d-lg-block col-lg-1">
+      <p class="fs-5">NEWS</p>
     </div>
     <div class="d-flex overflow-hidden px-3 col-12 col-lg-11 fs-5" >
         <div class="d-flex" id="scroll">
@@ -67,7 +71,7 @@ body {
       <a href="/" class="d-flex align-items-center fw-bold px-2 fs-3 text-decoration-none">
         LOGO
       </a>
-      <a class="d-none d-lg-block px-2 text-dark nav-link fs-5" href="contactus.html">contact us</a>
+      <a class="d-none d-lg-block px-2 text-dark nav-link" href="contactus.html">CONTACT US</a>
     </header>
   </div>
 <!--******************************-->
@@ -75,7 +79,7 @@ body {
   <div class="container-fluid w-100 h-100">
     <div class="container-md sticky-top">
       <nav class="navbar navbar-expand-lg navbar-light bg-light container-fluid
-      border-3 border-bottom border-primary">
+      ">
       <!--small navbar + full navbar-->    
         <!--home icon-->
           <a class="d-flex navbar-brand mb-0 h1 d-block d-lg-none align-items-baseline"  
@@ -147,9 +151,9 @@ body {
           <!--********************************-->
           </div>
         </div>  
-        <div class="d-none d-lg-block w-25 text-end">
-          <button type="button" class="btn btn-outline-dark me-lg-2 fs-5" data-bs-toggle="modal" data-bs-target="#formModal">Sign-up</button>
-          <button class="btn btn-outline-dark dropdown-toggle fs-5" type="button" 
+        <div class="d-none d-lg-block">
+          <button type="button" class="btn btn-outline-dark px-4 fs-5" data-bs-toggle="modal" data-bs-target="#formModal">Sign-up</button>
+          <button class="btn btn-outline-dark px-4 fs-5 dropdown-toggle" type="button" 
           data-bs-toggle="dropdown" aria-expanded="false">Login</button>
           <ul class="dropdown-menu dropdown-menu-end fs-5">
               <li><button type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#loginModal">Student</button></li>
@@ -165,19 +169,23 @@ body {
       </nav>
     </div>
     <!--search bar-->
-    <div class="container my-3 ">
-      <form class="input-group">
-        <input type="search" class="form-control form-control-dark" 
+    <div class="container-md my-3">
+      <div class="row">
+      <div class="col-6 col-lg-12 mx-0">
+      <div class="input-group">
+        <input type="search" class="form-control form-control-md-lg form-control-dark" 
         placeholder="Search..." aria-label="Search"><span class="input-group-text">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" 
         class="bi bi-search" viewBox="0 0 16 16">
           <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 
           3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 
           1-11 0 5.5 5.5 0 0 1 11 0z"/></svg></span>
-      </form>
-      <div class="d-block d-lg-none text-end">
-        <button type="button" class="btn btn-outline-info btn-lg me-lg-2">Sign-up</button>
-        <button class="btn btn-lg btn-outline-info dropdown-toggle" type="button" 
+        </div>
+      </div>
+      <div class="col-6 col-lg-12">
+      <div class="d-flex d-lg-none float-start float-sm-end">
+        <button type="button" class="btn btn-md-lg btn-outline-dark px-1 mx-1 px-lg-4">Sign-up</button>
+        <button class="btn btn-md-lg btn-outline-dark px-1 px-lg-4 dropdown-toggle" type="button" 
         data-bs-toggle="dropdown" aria-expanded="false">Login</button>
         <ul class="dropdown-menu dropdown-menu-end fs-5">
           <li><a class="dropdown-item" href="#">Student</a></li>
@@ -186,6 +194,8 @@ body {
           <li><hr class="dropdown-divider"></li>
           <li><a class="dropdown-item" href="#">xxxx</a></li>
         </ul>
+      </div>
+      </div>
       </div>
     </div>
     <!--************************-->
@@ -196,7 +206,8 @@ body {
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <h4 class="modal-title text-center mb-3" id="formModalLabel">Sign Up</h4>
+            <h2 class="modal-title text-center mb-3 fw-bolder" id="formModalLabel">Sign Up</h2>
+            <p class="fs-5 text-center">Select your category</p>
             <div class="row p-3 mx-auto fs-5">
               <div class="form-check col">
                 <input class="form-check-input" type="radio" name="user" id="student" onchange="chkradio()" checked>
@@ -262,11 +273,11 @@ body {
                   <input type="checkbox" class="form-check-input" id="Check1" required>
                   <label class="form-check-label" for="Check1">Agree <a href="" >terms and conditions</a></label>
                 </div>
-                <button type="submit" class="btn btn-primary fs-5">Submit</button>
+                <button type="submit" class="btn btn-outline-primary px-4 fs-5">Submit</button>
               </form>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-outline-secondary px-4" data-bs-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
@@ -277,7 +288,7 @@ body {
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header bg-primary">
-            <h4 class="modal-title text-center mb-3 text-white" id="formModalLabel">Login</h4>        
+            <h2 class="modal-title text-center mb-3 text-white" id="formModalLabel">Login</h2>        
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
@@ -301,11 +312,11 @@ body {
                   <input type="checkbox" class="form-check-input" id="Check1">
                   <label class="form-check-label" for="Check1">Remember me</label>
                 </div>
-                <button type="submit" class="btn btn-primary w-25 text-white fs-5">Login</button>
+                <button type="submit" class="btn btn-outline-primary w-25 px-4 fs-5">Login</button>
               </form>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-outline-secondary px-4 fs-5" data-bs-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
@@ -324,21 +335,21 @@ body {
           </div>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="./flowers/images (4).jpg" class="d-block w-100" alt="...">
-              <div class="carousel-caption text-dark d-none d-md-block">
-                <h3>Best Learning atmosphere</h3>
-                <p class="lead">Some representative placeholder content for the first slide.</p>
+              <img src="https://source.unsplash.com/user/kellysikkema/RYABMCLP7aM/800x400" class="d-block w-100" alt="...">
+              <div class="carousel-caption text-white d-none d-md-block">
+                <h3>Stay Safe</h3>
+                <p class="lead"><strong>Wear Masks</strong>, <strong>Keep Social Distance</strong> and <strong>Wash Your Hands Frequently.</strong></p>
               </div>
             </div>
             <div class="carousel-item">
-              <img src="./flowers/images (3).jpg" class="d-block w-100" alt="...">
+              <img src="https://source.unsplash.com/user/noguidebook/U4zpPfvogJ4/800x400" class="d-block w-100" alt="...">
               <div class="carousel-caption d-none d-md-block">
                 <h3>Brain Storming Activities</h3>
                 <p class="lead">Some representative placeholder content for the second slide.</p>
               </div>
             </div>
             <div class="carousel-item">
-              <img src="./flowers/images (1).jpg" class="d-block w-100" alt="...">
+              <img src="https://source.unsplash.com/user/nci/N_aihp118p8/800x400" class="d-block w-100" alt="...">
               <div class="carousel-caption text-warning d-none d-md-block">
                 <h3>Discussions</h3>
                 <p class="lead">Some representative placeholder content for the third slide.</p>
@@ -359,7 +370,7 @@ body {
           <p class="lead text-wrap">Cover is a one-page template for building simple and beautiful home pages. 
           Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
           <p class="lead">
-            <button type="button" href="#" class="btn btn-lg btn-outline-warning fw-bold text-dark px-4">Get Started 
+            <button type="button" href="#" class="btn btn-lg btn-outline-warning fw-bold text-dark px-4 fs-5">Get Started 
               <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
               </svg>
@@ -580,7 +591,7 @@ body {
     <!--************************-->
     <!--calendar-->
     <div class="container-fluid my-4">
-      <div class="border border-end-0 border-success border-5 rounded-start rounded-3">
+      <div class="border border-success border-5 rounded rounded-3">
         <h2 class="text-success text-start px-5 mt-5">
           <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" 
           fill="currentColor" class="bi bi-calendar-event p-1" viewBox="0 0 16 16">

@@ -20,6 +20,16 @@
       body {
         box-shadow: inset 0 0 2rem rgba(0, 0, 0, .5);
       }
+      .dropdown{
+  position: relative;
+}
+.dropdown-menu{
+  position: absolute;
+  display: none;
+}
+.dropdown:hover .dropdown-menu{
+  display: block;
+}
       .piechart{
     border:1px solid white;
     border-radius: 50%;
@@ -86,9 +96,8 @@
                 <a class="nav-link" href="#">About Us</a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" 
-                role="button" data-bs-toggle="dropdown" aria-expanded="false">Academics</a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="nav-link dropdown-toggle">Academics</a>
+                <ul class="dropdown-menu fs-5">
                   <li><a class="dropdown-item" href="#">Courses</a></li>
                   <li><a class="dropdown-item" href="#">Departments</a></li>
                   <li><a class="dropdown-item" href="#">Resources</a></li>
@@ -199,14 +208,14 @@
         <div class="tab-pane fade p-2" id="testing" role="tabpanel" 
         aria-labelledby="testing-tab">
         <h3 class="p-3 mb-2 text-decoration-underline">WELCOME STUDENT</h3>
-            <p class="fs-5 p-2">Your test results for this semister are Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem eligendi at error explicabo qui a atque vero sunt ea ad minus quae laudantium tenetur, obcaecati consequuntur nesciunt quisquam asperiores. Sapiente!
+            <p class="fs-5 p-3">Your test results for this semister are Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem eligendi at error explicabo qui a atque vero sunt ea ad minus quae laudantium tenetur, obcaecati consequuntur nesciunt quisquam asperiores. Sapiente!
             </p>
         </div>
       <!--*************-->
         <div class="tab-pane fade p-2" id="profile" role="tabpanel" 
         aria-labelledby="profile-tab">
         <h3 class="p-3 mb-2 text-decoration-underline">WELCOME STUDENT</h3>
-            <table class="table table-bordered table-hover fs-5 mb-2 p-2">
+            <table class="table table-bordered table-hover fs-5 mb-2">
                 <tr class="table-dark"><th></th><th>Details</th></tr>
                 <tr><td>Name</td><td>xxxxxxxx</td></tr>
                 <tr><td>Class</td><td>xxxxxxxx</td></tr>
@@ -218,10 +227,10 @@
     <!--*************-->
         <div class="tab-pane fade p-2" id="classes" role="tabpanel" 
         aria-labelledby="classes-tab">
-          <h3 class="p-3 mb-2 text-decoration-underline">WELCOME STUDENT</h3>
-          <table class="table table-bordered table-striped fs-5 mb-2 p-2">
+          <h3 class="py-3 mb-2 text-decoration-underline">WELCOME STUDENT</h3>
+          <table class="table-responsive table-bordered fs-5 my-2 w-100 text-center">
             <thead>This semester classes</thead>
-            <tr class="table-info"><th>Attending Classes</th><th>Completed classes</th><th>Pending clases</th><th>Assignments pending</th></tr>
+            <tr class="p-2"><th>Attending Classes</th><th>Completed classes</th><th>Pending clases</th><th>Assignments pending</th></tr>
             <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
             <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>                
             <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
@@ -231,7 +240,7 @@
         <div class="tab-pane fade p-2" id="messages" role="tabpanel" 
         aria-labelledby="messages-tab">
         <h3 class="p-3 mb-2 text-decoration-underline">WELCOME STUDENT</h3>
-            <ul class="fs-5 p-2">
+            <ul class="fs-5 p-3">
                 <li>A reward for completing today's tasks</li>
                 <li>Not completed today's tasks</li>
             </ul>
@@ -240,15 +249,15 @@
         <div class="tab-pane fade p-2" id="immunization" role="tabpanel" 
         aria-labelledby="immunization-tab">
         <h3 class="p-3 mb-2 text-decoration-underline">WELCOME STUDENT</h3>
-            <p class="fs-5 p-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere dolore velit tempore neque error itaque repellat aliquid magni blanditiis eius molestias, inventore dolor ut ab et. Impedit expedita neque consectetur.
+            <p class="fs-5 p-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere dolore velit tempore neque error itaque repellat aliquid magni blanditiis eius molestias, inventore dolor ut ab et. Impedit expedita neque consectetur.
             </p>
         </div>
       <!--**********************-->
         <div class="tab-pane fade p-2" id="progressrprt" role="tabpanel" 
         aria-labelledby="progressrprt-tab">
         <h3 class="p-3 mb-2 text-decoration-underline">WELCOME STUDENT</h3>
-            <p class="fs-5 p-3 mx-2 my-2">Your grades for this semester are:</p>
-            <table class="table table-success table-hover table-bordered fs-5 p-2">
+            <p class="fs-5 p-3 my-2">Your grades for this semester are:</p>
+            <table class="table table-success table-hover table-bordered fs-5">
                 <tr class="table-dark"><th>Subject</th><th>Marks</th><th>Grade</th></tr>
                 <tr><td>xxxxx</td><td>xxx</td><td>A</td></tr>
                 <tr><td>xxxxx</td><td>xxx</td><td>B</td></tr>
@@ -263,8 +272,8 @@
         <div class="tab-pane fade p-2" id="rprtcard" role="tabpanel" 
         aria-labelledby="rprtcard-tab">
         <h3 class="p-3 mb-2 text-decoration-underline">WELCOME STUDENT</h3>
-            <p class="fs-5 p-2 mx-2 my-2">Your performance in this semister:</p>
-            <table class="table table-info table-hover table-bordered fs-5 p-2">
+            <p class="fs-5 p-3 my-2">Your performance in this semister:</p>
+            <table class="table table-info table-hover table-bordered fs-5">
                 <tr class="table-dark"><th>Subject</th><th>Performance</th></tr>
                 <tr><td>xxxxxx</td><td>Good</td></tr>
                 <tr><td>xxxxxx</td><td>Can Be Improved</td></tr>
@@ -278,13 +287,13 @@
         <div class="tab-pane fade p-2" id="assignments" role="tabpanel" 
         aria-labelledby="assignments-tab">
         <h3 class="p-3 mb-2 text-decoration-underline">WELCOME STUDENT</h3>
-            <table class="table table-striped table-bordered text-center fs-5 mb-3 p-2">
+            <table class="table table-striped table-bordered text-center fs-5 mb-3">
                 <tr><th>Assigned</th><th>Completed</th><th>Pending</th></tr>
                 <tr><td>7</td><td>5</td><td>2</td></tr>
             </table>
             <br>
-            <p class="fs-5">Current Assignments are:</p>
-            <ul class="fs-5 p-2">
+            <p class="fs-5 p-3">Current Assignments are:</p>
+            <ul class="fs-5 px-3">
                 <li>xxxxxx</li>
                 <li>xxxxxx</li>
             </ul>
@@ -292,9 +301,9 @@
       </div>
     </div>
 
-    <div class="container-md text-decoration-underline px-4 py-5">
-      <h2 class="text-center mb-5">Support us</h2>
-      <div class="text-center mb-5 ">
+    <div class="container-md px-4 py-5">
+      <h2 class="text-center mb-5 fw-bold">Support Us</h2>
+      <div class="text-center">
         <a href="#" class="px-2 text-secondary"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
         <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
         </svg></a>

@@ -42,9 +42,17 @@ body {
     transform: translateX(-100%);
   }
 }
-@media only screen and (min-width: 992px) {
-	button:hover .dropdown-menu{ display: block; }
+.dropdown{
+  position: relative;
 }
+.dropdown-menu{
+  position: absolute;
+  display: none;
+}
+.dropdown:hover .dropdown-menu{
+  display: block;
+}
+
 </style>
 </head>
 <body class="h-100">
@@ -78,8 +86,7 @@ body {
 <!--body-->
   <div class="container-fluid w-100 h-100">
     <div class="container-md sticky-top">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light container-fluid
-      ">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light container-fluid">
       <!--small navbar + full navbar-->    
         <!--home icon-->
           <a class="d-flex navbar-brand mb-0 h1 d-block d-lg-none align-items-baseline"  
@@ -104,7 +111,7 @@ body {
         <!--full nav-->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <div class="navbar-nav">
-            <div class="nav nav-tabs me-auto mb-2 mb-lg-0 fs-5" id="nav-tab" role="tablist">
+            <div class="nav nav-tabs mb-2 mb-lg-0 fs-5" id="nav-tab" role="tablist">
           <!--nav list-->
               <button class="nav-link active d-none d-lg-block text-dark col-12 col-lg-auto" 
               id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" 
@@ -136,9 +143,8 @@ body {
           <!--nav button dropdown-->
             </div>
             <li class="nav-item dropdown border-bottom text-center">
-                <a class="nav-link dropdown-toggle fs-5 text-dark" data-bs-toggle="dropdown" href="#" 
-                role="button" aria-expanded="false">  Academics</a>
-                <ul class="dropdown-menu text-dark fs-5" aria-labelledby="navbarDropdown">
+                <a class="nav-link dropdown-toggle fs-5 text-dark">  Academics</a>
+                <ul class="dropdown-menu text-dark fs-5">
                   <li><a class="dropdown-item" href="#">Courses</a></li>
                   <li><a class="dropdown-item" href="#">Departments</a></li>
                   <li><a class="dropdown-item" href="#">Resources</a></li>
@@ -184,8 +190,8 @@ body {
       </div>
       <div class="col-6 col-lg-12">
       <div class="d-flex d-lg-none float-start float-sm-end">
-        <button type="button" class="btn btn-md-lg btn-outline-dark px-1 mx-1 px-lg-4">Sign-up</button>
-        <button class="btn btn-md-lg btn-outline-dark px-1 px-lg-4 dropdown-toggle" type="button" 
+        <button type="button" class="btn btn-md-lg btn-outline-dark px-2 mx-1 px-sm-4">Sign-up</button>
+        <button class="btn btn-md-lg btn-outline-dark px-2 px-sm-4 dropdown-toggle" type="button" 
         data-bs-toggle="dropdown" aria-expanded="false">Login</button>
         <ul class="dropdown-menu dropdown-menu-end fs-5">
           <li><a class="dropdown-item" href="#">Student</a></li>
@@ -324,10 +330,10 @@ body {
     <!--**********************************-->
 <!--***********////////////*******************//////////************-->
     <!--content-->
-    <div class="tab-content" id="nav-tabContent">
+    <div class="tab-content container-fluid" id="nav-tabContent">
       <!--home-->
       <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-        <div id="carouselCaptions" class="carousel slide w-75 mx-auto" data-bs-ride="carousel">
+        <div id="carouselCaptions" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -356,14 +362,6 @@ body {
               </div>
             </div>
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden"></span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden"></span>
-          </button>
         </div>
         <main class="text-center text-dark px-3 h-100 my-5">
           <h1>Welcome </h1>
@@ -381,26 +379,24 @@ body {
       <!--********************-->
       <!--aboutus-->
       <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-        <h1 class="text-center my-auto" >About Us</h1>
-        <div class="p-1">
+        <h1 class="text-center" >About Us</h1>
+        <div class="container-fluid">
           <div class="row bg-success text-light">
             <div class="row w-100 align-items-center">
-              <div class="col w-100 p-3 ">
-                <img src="./flowers/about.jpg" class="img-fluid" alt="about">
+              <div class="col-12 col-lg-8 p-2">
+                <img src="https://source.unsplash.com/user/anniespratt/hCb3lIB8L8E/1000x800" class="img-fluid" alt="about">
               </div>
-              <div class="col fs-3 p-5">
-                <h3 class="">what do we DO?</h3>
-                <p class="mb-5">we will provide students a lot of resources and real-time problems to explore.</p>
-                <h3 class="">what we offer students?</h3>
-                <p>Best Education with practical examples. Brain Storming activities. Sports and arts.
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur eligendi praesentium incidunt quia, tempore atque dolorum blanditiis quibusdam dolorem 
-                  repellat ipsum autem illum. Aperiam itaque, expedita suscipit et repellat natus.
+              <div class="col-12 col-lg-4 text-center">
+                <h2 class="fw-bold">What Do We Do?</h2>
+                <p class="fs-5">we will provide students a lot of resources and real-time problems to explore.</p>
+                <h2 class="fw-bold">What We Offer Students?</h2>
+                <p class="fs-5">Best Education with practical examples. Brain Storming activities. Sports and arts.
                 </p>
               </div>
             </div>
-            <div class="row w-100 fs-3 p-2">
-              <h3 class="">what we offer students?</h3>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus ullam magnam doloremque laboriosam repellendus porro ducimus veritatis ipsam aperiam cupiditate!
+            <div class="row w-100 text-center">
+              <h2 class="fw-bold">What We Offer Students?</h2>
+              <p class="fs-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus ullam magnam doloremque laboriosam repellendus porro ducimus veritatis ipsam aperiam cupiditate!
                  At corrupti sed reprehenderit quasi ab itaque deserunt consequuntur harum!</p>
             </div>
           </div>            
@@ -409,29 +405,29 @@ body {
       <!--*****************-->
       <!--admissions-->
       <div class="tab-pane fade" id="nav-admissions" role="tabpanel" aria-labelledby="nav-admissions-tab">
-        <h1 class="text-white text-center my-auto">Admissions</h1>
-        <p class="text-white text-center my-auto fs-4">We welcome students from different places in xxxxxx xxxxxxxxx xxxxxxx,xxxxxxxx.</p>
-        <div class="p-5 fs-5 bg-light">
+        <h1 class="text-center">Admissions</h1>
+        <p class="text-center my-auto fs-5">We welcome students from different places in xxxxxx xxxxxxxxx xxxxxxx,xxxxxxxx.</p>
+        <div class="p-5 fs-5">
           <ul>
             <li><a href="#" class="text-decoration-none text-danger">We welcome students from different places in xxxxxx xxxxxxxxx xxxxxxx,xxxxxxxx.</a></li>
             <li><a href="#" class="text-decoration-none text-danger">We welcome students from different places in xxxxxx xxxxxxxxx xxxxxxx,xxxxxxxx.</a></li>
             <li><a href="#" class="text-decoration-none text-danger">We welcome students from different places in xxxxxx xxxxxxxxx xxxxxxx,xxxxxxxx.</a></li>
           </ul>
-          <table class="table table-hover table-bordered fs-5 mt-3 text-center">
-            <tr class="table-secondary"><th>Departments</th><th>Admission dates</th><th>Seats alloted</th><th>Seats filled</th><th>Remaining</th></tr>
-            <tr><th>Languages</th><th>1st june to 25th august</th><th>500</th><th>260</th><th>240</th></tr>
-            <tr><th>Science</th><th>1st june to 25th august</th><th>500</th><th>260</th><th>240</th></tr>
-            <tr><th>Mathematics</th><th>1st june to 25th august</th><th>500</th><th>260</th><th>240</th></tr>
-            <tr><th>Arts</th><th>1st june to 25th august</th><th>500</th><th>260</th><th>240</th></tr>
-          </table>
         </div>
+          <table class="table-responsive table-bordered w-100 mx-auto fs-5 text-center">
+            <tr class="text-danger"><th>Departments</th><th>Admission dates</th><th>Seats alloted</th><th>Seats filled</th><th>Remaining</th></tr>
+            <tr><td>Languages</td><td>1st june to 25th august</td><td>500</td><td>260</td><td>240</td></tr>
+            <tr><td>Science</td><td>1st june to 25th august</td><td>500</td><td>260</td><td>240</td></tr>
+            <tr><td>Mathematics</td><td>1st june to 25th august</td><td>500</td><td>260</td><td>240</td></tr>
+            <tr><td>Arts</td><td>1st june to 25th august</td><td>500</td><td>260</td><td>240</td></tr>
+          </table>
       </div>
       <!---*********************-->
       <!--team-->
       <div class="tab-pane fade" id="nav-team" role="tabpanel" aria-labelledby="nav-team-tab">
-        <h1 class="text-center my-auto">Our Team</h1>
-        <p class="text-center fs-5 my-auto">Our teachers and staff are selected xxxx xxxxx xxxxxx xxxxxxxx xxxxxx</p>
-        <div class="my-4 p-4 bg-light">
+        <h1 class="text-center">Our Team</h1>
+        <p class="text-center fs-5">Our teachers and staff are selected xxxx xxxxx xxxxxx xxxxxxxx xxxxxx</p>
+        <div class="my-4 p-4">
           <div class="row">
             <div class="col-6 col-lg-4">
               <img src="./flowers/team-1.jpg" class="img-fluid" alt="xxx">
@@ -482,7 +478,7 @@ body {
       <!--activities-->
       <div class="tab-pane fade" id="nav-activities" role="tabpanel" aria-labelledby="nav-activities-tab">
         <div>
-          <h1 class="text-center my-3">Activities</h1>
+          <h1 class="text-center">Activities</h1>
           <div class="container">
             <div class="row">
               <div class="col col-lg-4 p-5 text-center">
@@ -558,7 +554,7 @@ body {
       <!--*******************-->
       <!--contact us-->
       <div class="tab-pane fade d-lg-none" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-        <h1 class="text-center my-auto">Contact Us</h1>
+        <h1 class="text-center">Contact Us</h1>
         <div class="d-lg-flex align-items-center mb-3 p-3 mx-auto">
           <div class="text-center p-4 mb-2 mb-lg-0">
               <h4 class="text-decoration-underline py-2">Address</h4>
@@ -581,7 +577,7 @@ body {
                 <input type="email" class="form-control" placeholder="Email" aria-label="Email">
                 <input type="text" class="form-control" placeholder="Subject" aria-label="Subject">
                 <textarea class="form-control" placeholder="Message" rows="5" aria-label="Message"></textarea>
-                <button type="submit" class="btn btn-outline-dark w-25 mx-lg-auto">Send</button>
+                <button type="submit" class="btn btn-outline-dark px-4 fs-5">Send</button>
               </div>
           </div>
         </div>
@@ -612,21 +608,21 @@ body {
         <div class="row my-2 px-3 fs-5">
           <div class="col-12 col-lg-3 mx-lg-5 rounded-3 shadow p-3 mb-5 bg-body rounded">
             <h5 class="py-2 text-center">On July 27th</h5>
-            <a href="#" class="text-decoration-none">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, accusantium impedit repudiandae eligendi fuga ut consectetur consequuntur quaerat, dignissimos dolorem voluptatem sapiente voluptate ducimus veritatis odio quae quasi quibusdam cum?</a>
+            <a href="#" class="text-decoration-none lh-sm">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, accusantium impedit repudiandae eligendi fuga ut consectetur consequuntur quaerat, dignissimos dolorem voluptatem sapiente voluptate ducimus veritatis odio quae quasi quibusdam cum?</a>
           </div>
           <div class="col-12 col-lg-3 mx-lg-5 rounded-3 shadow p-3 mb-5 bg-body rounded">
             <h5 class="py-2 text-center">On July 27th</h5>
-            <a href="#" class="text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit labore harum aliquam exercitationem sint facilis adipisci, placeat sapiente molestiae asperiores minima nobis quam dolorum debitis unde odio cumque? Molestias, consequatur.</a>
+            <a href="#" class="text-decoration-none lh-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit labore harum aliquam exercitationem sint facilis adipisci, placeat sapiente molestiae asperiores minima nobis quam dolorum debitis unde odio cumque? Molestias, consequatur.</a>
           </div>
           <div class="col-12 col-lg-3 mx-lg-5 rounded-3 shadow p-3 mb-5 bg-body rounded">
             <h5 class="py-2 text-center">On July 27th</h5>
-            <a href="#" class="text-decoration-none">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt error accusamus modi eos repellendus temporibus ex exercitationem nobis, voluptatem laborum repellat quia quae repudiandae, neque minima molestiae aut placeat tempora.</a>
+            <a href="#" class="text-decoration-none lh-sm">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt error accusamus modi eos repellendus temporibus ex exercitationem nobis, voluptatem laborum repellat quia quae repudiandae, neque minima molestiae aut placeat tempora.</a>
           </div>
         </div>
       </div>
     </div>
     <div class="container px-4 py-5">
-      <h3 class="text-center mb-5">Support us</h3>
+      <h3 class="text-center mb-5 fw-bold">Support Us</h3>
       <div class="text-center">
         <a href="#" class="px-2 text-secondary">
           <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" 

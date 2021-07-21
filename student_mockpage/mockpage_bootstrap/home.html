@@ -28,7 +28,7 @@ body {
   #nav-activities .bi:hover,.bi:active,.bi:focus{
       color: indigo;
   }
-  
+
 #scroll{
   white-space: nowrap;
   padding-left: 100%;
@@ -42,6 +42,7 @@ body {
     transform: translateX(-100%);
   }
 }
+
 .dropdown{
   position: relative;
 }
@@ -57,11 +58,11 @@ body {
 </head>
 <body class="h-100">
 <!--news scroll-->
-  <div class="d-flex align-items-baseline my-0 container-md">
+  <div class="d-flex align-items-baseline my-0 container-md border-1 border-bottom">
     <div class="d-flex text-start d-none d-lg-block col-lg-1">
-      <p class="fs-5">NEWS</p>
+      <p>NEWS</p>
     </div>
-    <div class="d-flex overflow-hidden px-3 col-12 col-lg-11 fs-5" >
+    <div class="d-flex overflow-hidden px-3 col-12 col-lg-11" >
         <div class="d-flex" id="scroll">
         <a href="#" class="text-nowrap text-decoration-none text-dark px-3">This is scrolling text. It will scroll for a while. Enjoy!!</a>
         <a href="#" class="text-nowrap text-decoration-none text-dark px-3">This is scrolling text. It will scroll for a while. Enjoy!!</a>
@@ -75,7 +76,7 @@ body {
 <!--***************************-->
 <!--header-->
   <div class="container-md">
-    <header class="d-flex align-items-baseline justify-content-center justify-content-lg-between px-1 py-2 mb-0 border-bottom">
+    <header class="d-flex align-items-baseline justify-content-center justify-content-lg-between px-1 mb-0">
       <a href="/" class="d-flex align-items-center fw-bold px-2 fs-3 text-decoration-none">
         LOGO
       </a>
@@ -86,7 +87,7 @@ body {
 <!--body-->
   <div class="container-fluid w-100 h-100">
     <div class="container-md sticky-top">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-light container-fluid">
       <!--small navbar + full navbar-->    
         <!--home icon-->
           <a class="d-flex navbar-brand mb-0 h1 d-block d-lg-none align-items-baseline"  
@@ -111,39 +112,38 @@ body {
         <!--full nav-->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <div class="navbar-nav">
-            <div class="nav nav-tabs mb-2 mb-lg-0 fs-5" id="nav-tab" role="tablist">
+            <div class="nav nav-tabs mb-2 mb-lg-0 fs-5 border-0" id="nav-tab" role="tablist">
           <!--nav list-->
-              <button class="nav-link active text-dark col-12 col-lg-auto" 
+              <button class="nav-link active border-2 btn-outline-dark rounded-0 text-dark px-xl-5 col-12 col-lg-auto" 
               id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" 
               role="tab" aria-controls="nav-home" aria-selected="true">Home</button>
 
-              <button class="nav-link text-dark col-12 col-lg-auto" id="nav-profile-tab"
+              <button class="nav-link text-dark border-0 btn-outline-dark rounded-0 col-12 px-xl-5 col-lg-auto" id="nav-profile-tab"
               data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" 
               aria-controls="nav-profile" aria-selected="false">About Us</button>
 
-              <button class="nav-link text-dark col-12 col-lg-auto" id="nav-admissions-tab" 
+              <button class="nav-link text-dark px-xl-5 border-0 btn-outline-dark rounded-0 col-12 col-lg-auto" id="nav-admissions-tab" 
               data-bs-toggle="tab" 
               data-bs-target="#nav-admissions" type="button" role="tab" aria-controls="nav-admissions" 
               aria-selected="false">Admissions</button>
 
-              <button class="nav-link text-dark col-12 col-lg-auto" id="nav-team-tab" 
+              <button class="nav-link text-dark px-xl-5 border-0 btn-outline-dark rounded-0 col-12 col-lg-auto" id="nav-team-tab" 
               data-bs-toggle="tab" 
               data-bs-target="#nav-team" type="button" role="tab" aria-controls="nav-team" 
               aria-selected="false">Our Team</button>
 
-              <button class="nav-link text-dark col-12 col-lg-auto" id="nav-activities-tab"
+              <button class="nav-link text-dark border-0 btn-outline-dark rounded-0 px-xl-5 col-12 col-lg-auto" id="nav-activities-tab"
                data-bs-toggle="tab" 
               data-bs-target="#nav-activities" type="button" role="tab" 
               aria-controls="nav-activities" aria-selected="false">Activities</button>
 
-              <button class="nav-link d-block d-lg-none text-dark col-12 col-lg-auto" 
+              <button class="nav-link d-block d-lg-none border-0 btn-outline-dark rounded-0 text-dark px-xl-5 col-12 col-lg-auto" 
               id="nav-contact-tab"
               data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" 
               role="tab" aria-controls="nav-contact" aria-selected="false">Contact Us</button>
           <!--nav button dropdown-->
-            </div>
-            <li class="nav-item dropdown border-bottom text-center">
-                <a class="nav-link dropdown-toggle fs-5 text-dark">  Academics</a>
+            <li class="nav-item dropdown text-center px-xl-3 ">
+                <a class="nav-link dropdown-toggle fs-5 text-dark border-0 btn-outline-dark rounded-0">Academics</a>
                 <ul class="dropdown-menu text-dark fs-5">
                   <li><a class="dropdown-item" href="#">Courses</a></li>
                   <li><a class="dropdown-item" href="#">Departments</a></li>
@@ -152,14 +152,15 @@ body {
                   <li><a class="dropdown-item" href="#">Calender</a></li>
                 </ul>
             </li>
+          </div>
           <!--**************-->
           
           <!--********************************-->
           </div>
         </div>  
         <div class="d-none d-lg-block">
-          <button type="button" class="btn btn-outline-dark px-4 fs-5" data-bs-toggle="modal" data-bs-target="#formModal">Sign-up</button>
-          <button class="btn btn-outline-dark px-4 fs-5 dropdown-toggle" type="button" 
+          <button type="button" class="btn btn-outline-dark mx-lg-2 px-4 fw-bold" data-bs-toggle="modal" data-bs-target="#formModal">Sign-up</button>
+          <button class="btn btn-outline-dark px-4 fw-bold dropdown-toggle" type="button" 
           data-bs-toggle="dropdown" aria-expanded="false">Login</button>
           <ul class="dropdown-menu dropdown-menu-end fs-5">
               <li><button type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#loginModal">Student</button></li>
@@ -190,8 +191,8 @@ body {
       </div>
       <div class="col-6 col-lg-12">
       <div class="d-flex d-lg-none float-start float-sm-end">
-        <button type="button" class="btn btn-md-lg btn-outline-dark px-2 mx-1 px-sm-4">Sign-up</button>
-        <button class="btn btn-md-lg btn-outline-dark px-2 px-sm-4 dropdown-toggle" type="button" 
+        <button type="button" class="btn btn-md-lg btn-outline-dark fw-bold px-2 mx-1 px-sm-4">Sign-up</button>
+        <button class="btn btn-md-lg btn-outline-dark px-2 px-sm-4 fw-bold dropdown-toggle" type="button" 
         data-bs-toggle="dropdown" aria-expanded="false">Login</button>
         <ul class="dropdown-menu dropdown-menu-end fs-5">
           <li><a class="dropdown-item" href="#">Student</a></li>
@@ -367,8 +368,8 @@ body {
           <h1>Welcome </h1>
           <p class="lead text-wrap">Cover is a one-page template for building simple and beautiful home pages. 
           Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
-          <p class="lead">
-            <button type="button" href="#" class="btn btn-lg btn-outline-warning fw-bold text-dark px-4 fs-5">Get Started 
+          <p>
+            <button href="#" class="btn btn-lg btn-outline-warning fw-bold text-dark px-4">Get Started 
               <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
               </svg>

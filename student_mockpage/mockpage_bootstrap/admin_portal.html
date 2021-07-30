@@ -9,13 +9,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
-    <title>Parent Portal</title>
+    <title>Admin Portal</title>
     <style>
       body{
         font-family: 'Cairo', sans-serif;
       }
       a:hover, .nav-tabs button:hover{
         text-decoration: underline;
+      }
+      .tab-content .tab-pane li p:hover{
+          text-decoration: underline;
       }
       body {
         box-shadow: inset 0 0 1rem rgba(0, 0, 0, .5);
@@ -66,7 +69,7 @@
 </head>
 <body>
   <!--header-->
-  <div class="container-md sticky-top">
+  <div class="container-md sticky-top mb-5">
     <header class="d-flex align-items-baseline bg-light sticky-top justify-content-between px-1 py-2 mb-0 border-bottom">
       <a href="/" class="d-flex fw-bold px-2 fs-3 text-decoration-none">
         LOGO
@@ -91,26 +94,23 @@
  <!--body-->
   <div class="container-fluid h-100">
 
-    <div class="row border-top border-3 mx-lg-1 bg-light mt-5">
+    <div class="row border-top border-3 bg-light mx-lg-1">
   <!--sidebar-->
-    <div class="col-12 col-lg-3 border border-3 border-top-0 border-start-0 bg-white">
-      <nav class="navbar navbar-expand-lg">
+    <div class="col-12 col-lg-3 m-0 border border-3 border-start-0 border-top-0 bg-white">
+      <nav class="navbar navbar-expand-lg m-0">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
           data-bs-target="#navbarContent" aria-controls="navbarSupportedContent"
            aria-expanded="false" aria-label="Toggle navigation">
          <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse p-2 p-lg-0" id="navbarContent">
+        <div class="collapse navbar-collapse" id="navbarContent">
           <div class="nav flex-column nav-item fs-5 w-100 " id="tab" role="tablist" aria-orientation="vertical">
             <button class="nav-link active text-start" id="all-tab" data-bs-toggle="pill" data-bs-target="#all" type="button" role="tab" aria-controls="all" aria-selected="true">All</button>
-            <button class="nav-link text-start" id="testing-tab" data-bs-toggle="pill" data-bs-target="#testing" type="button" role="tab" aria-controls="testing" aria-selected="false">Testing</button>
+            <button class="nav-link text-start" id="teachers-tab" data-bs-toggle="pill" data-bs-target="#teachers" type="button" role="tab" aria-controls="teachers" aria-selected="false">My Teachers</button>
+            <button class="nav-link text-start" id="students-tab" data-bs-toggle="pill" data-bs-target="#students" type="button" role="tab" aria-controls="students" aria-selected="false">My Students</button>
+            <button class="nav-link text-start" id="reports-tab" data-bs-toggle="pill" data-bs-target="#reports" type="button" role="tab" aria-controls="reports" aria-selected="false">Reports</button>
+            <button class="nav-link text-start" id="announcements-tab" data-bs-toggle="pill" data-bs-target="#announcements" type="button" role="tab" aria-controls="announcements" aria-selected="false">Announcements</button>
             <button class="nav-link text-start" id="profile-tab" data-bs-toggle="pill" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
-            <button class="nav-link text-start" id="classes-tab" data-bs-toggle="pill" data-bs-target="#classes" type="button" role="tab" aria-controls="classes" aria-selected="false">Classes</button>
-            <button class="nav-link text-start" id="messages-tab" data-bs-toggle="pill" data-bs-target="#messages" type="button" role="tab" aria-controls="messages" aria-selected="false">Messages</button>
-            <button class="nav-link text-start" id="immunization-tab" data-bs-toggle="pill" data-bs-target="#immunization" type="button" role="tab" aria-controls="immunization" aria-selected="false">Immunization</button>
-            <button class="nav-link text-start" id="progressrprt-tab" data-bs-toggle="pill" data-bs-target="#progressrprt" type="button" role="tab" aria-controls="progressrprt" aria-selected="false">Progress Report</button>
-            <button class="nav-link text-start" id="rprtcard-tab" data-bs-toggle="pill" data-bs-target="#rprtcard" type="button" role="tab" aria-controls="rprtcard" aria-selected="false">Annual Analysis</button>
-            <button class="nav-link text-start" id="assignments-tab" data-bs-toggle="pill" data-bs-target="#assignments" type="button" role="tab" aria-controls="assignments" aria-selected="false">Assignments</button>
           </div>
         </div>
       </nav>
@@ -120,18 +120,18 @@
       <div class="tab-content col-12 col-lg-9 px-3 py-3 fs-5 " id="tabContent">
         <div class="tab-pane fade show active" id="all" role="tabpanel" 
         aria-labelledby="all-tab">
-        <h3 class="p-3 mb-2 text-decoration-underline">WELCOME STUDENT</h3>
+        <h3 class="p-3 mb-2 text-decoration-underline">WELCOME ADMIN</h3>
             <table class="table table-striped text-center mb-3 p-2">
                 <tr>
-                    <th>Number of classes registered</th><th>Messages</th><th>Attendance</th></tr>
-                <tr class="fs-4"><td><span>8</span></td>
-                    <td><span>4</span></td>
-                    <td>full</td>
+                    <th>Number of teachers</th><th>Number of students</th><th>Messages</th></tr>
+                <tr class="fs-4"><td><span>80</span></td>
+                    <td><span>1000</span></td>
+                    <td>10</td>
                 </tr>
             </table>
             <div class="row">
             <div class="col-12 col-lg-5">
-                <h4 class="p-2 text-decoration-underline">YOUR GRADES</h4>
+                <h4 class="p-2 text-decoration-underline">Overall Performance of Students</h4>
                 <div class="d-flex align-items-center w-100 justify-content-center">
                     <div class="piechart"></div>
                     <ul class="text-center text-light"><li style="background-color: pink;">A</li>
@@ -144,110 +144,97 @@
                 </div>
             </div>
             <div class="col-12 col-lg-7">
-                <h4 class="p-2 text-decoration-underline">REMARKS</h4>
+                <h4 class="p-2 text-decoration-underline">Recent Events</h4>
                 <ul class="fs-5 p-3 mx-2">
-                    <li><p>He/She is doing good in xxxx,xxxx,xxxx.</p></li>
-                    <li><p>He/She should improve in these subjects xxxx,xxx.</p></li>
-                    <li><p>He/She has been showing interest in these xxxx,xxxx,xxxxx</p></li>
-                    <li><p>Can refer these for further improvement: <a href="">xxxxx</a>, <a href="">xxxxx</a>.</p></li>
+                    <li><p><a href="#" class="text-decoration-none fs-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit, facilis.</a></p></li>
+                    <li><p><a href="#" class="text-decoration-none fs-5">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a></p></li>
+                    <li><p><a href="#" class="text-decoration-none fs-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, aspernatur!</a></p></li>
+                    <li><p><a href="#" class="text-decoration-none fs-5">Lorem ipsum dolor sit amet consectetur.</a></p></li>
                 </ul>
             </div>
             </div>
         </div>
       <!--*********-->  
-        <div class="tab-pane fade p-2" id="testing" role="tabpanel" 
-        aria-labelledby="testing-tab">
-        <h3 class="p-3 mb-2 text-decoration-underline">WELCOME STUDENT</h3>
-            <p class="fs-5 p-3">Your test results for this semister are Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem eligendi at error explicabo qui a atque vero sunt ea ad minus quae laudantium tenetur, obcaecati consequuntur nesciunt quisquam asperiores. Sapiente!
-            </p>
+        <div class="tab-pane fade p-2" id="teachers" role="tabpanel" 
+        aria-labelledby="teachers-tab">
+        <table class="table table-bordered table-hover fs-5 my-2 w-100 text-center">
+            <tr class="p-2 table-dark"><th>ID</th><th>Teacher Name</th><th>Personnal details</th><th>Education</th><th>Experience</th><th>Year</th><th>Performance</th></tr>
+            <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
+            <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>                
+            <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
+            <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
+            <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>                
+            <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
+            <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
+            <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>                
+            <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
+          </table>
         </div>
       <!--*************-->
         <div class="tab-pane fade p-2" id="profile" role="tabpanel" 
         aria-labelledby="profile-tab">
-        <h3 class="p-3 mb-2 text-decoration-underline">WELCOME STUDENT</h3>
             <table class="table table-bordered table-hover fs-5 mb-2">
                 <tr class="table-dark"><th></th><th>Details</th></tr>
-                <tr><td>Name</td><td>xxxxxxxx</td></tr>
-                <tr><td>Class</td><td>xxxxxxxx</td></tr>
-                <tr><td>Name</td><td>xxxxxxxx</td></tr>
-                <tr><td>Name</td><td>xxxxxxxx</td></tr>
-                <tr><td>Name</td><td>xxxxxxxx</td></tr>
+                <tr><td>Full Name</td><td>xxxxxxxx</td></tr>
+                <tr><td>Designation</td><td>xxxxxxxx</td></tr>
+                <tr><td>Email id</td><td>xxxxxxxx</td></tr>
+                <tr><td>Mobile Number</td><td>xxxxxxxx</td></tr>
+                <tr><td>xxxxx</td><td>xxxxxxxx</td></tr>
             </table>
         </div>
     <!--*************-->
-        <div class="tab-pane fade p-2" id="classes" role="tabpanel" 
-        aria-labelledby="classes-tab">
-          <h3 class="py-3 mb-2 text-decoration-underline">WELCOME STUDENT</h3>
-          <table class="table-responsive table-bordered fs-5 my-2 w-100 text-center">
-            <thead>This semester classes</thead>
-            <tr class="p-2"><th>Attending Classes</th><th>Completed classes</th><th>Pending clases</th><th>Assignments pending</th></tr>
-            <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
-            <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>                
-            <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
+        <div class="tab-pane fade p-2" id="students" role="tabpanel" 
+        aria-labelledby="students-tab">
+          <table class="table table-bordered table-hover fs-5 my-2 w-100 text-center">
+            <tr class="p-2 table-dark"><th>Roll no.</th><th>Student Name</th><th>Class</th><th>Year</th><th>Performance</th></tr>
+            <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
+            <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>                
+            <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
+            <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
+            <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>                
+            <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
+            <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
+            <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>                
+            <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
           </table>
         </div>
       <!--****************-->
-        <div class="tab-pane fade p-2" id="messages" role="tabpanel" 
-        aria-labelledby="messages-tab">
-        <h3 class="p-3 mb-2 text-decoration-underline">WELCOME STUDENT</h3>
+        <div class="tab-pane fade p-2" id="announcements" role="tabpanel" 
+        aria-labelledby="announcements-tab">
+        <h3 class="p-3 mb-2 text-decoration-underline text-center">Announcements</h3>
             <ul class="fs-5 p-3">
-                <li>A reward for completing today's tasks</li>
-                <li>Not completed today's tasks</li>
+                <li><p><a href="#" class="text-decoration-none fs-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, molestias.</a></p></li>
+                <li><p><a href="#" class="text-decoration-none fs-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut, sed.</a></p></li>
+                <li><p><a href="#" class="text-decoration-none fs-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut, sed.</a></p></li>
+                <li><p><a href="#" class="text-decoration-none fs-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut, sed.</a></p></li>
             </ul>
+            <a href="#" class="text-decoration-none">View past announcements 
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
+                    <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
+                  </svg>
+            </a>
         </div>
       <!--*************-->
-        <div class="tab-pane fade p-2" id="immunization" role="tabpanel" 
-        aria-labelledby="immunization-tab">
-        <h3 class="p-3 mb-2 text-decoration-underline">WELCOME STUDENT</h3>
+        <div class="tab-pane fade p-2" id="reports" role="tabpanel" 
+        aria-labelledby="reports-tab">
+        <h3 class="p-3 mb-2 text-decoration-underline">Reports</h3>
             <p class="fs-5 p-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere dolore velit tempore neque error itaque repellat aliquid magni blanditiis eius molestias, inventore dolor ut ab et. Impedit expedita neque consectetur.
             </p>
+            <table class="table table-bordered table-hover fs-5 my-2 w-100 text-center">
+                <tr class="p-2 table-dark"><th>Roll no.</th><th>Student Name</th><th>Class</th><th>Marks</th><th>Grade</th></tr>
+                <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
+                <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>                
+                <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
+                <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
+                <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>                
+                <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
+                <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
+                <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>                
+                <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
+            </table>
         </div>
       <!--**********************-->
-        <div class="tab-pane fade p-2" id="progressrprt" role="tabpanel" 
-        aria-labelledby="progressrprt-tab">
-        <h3 class="p-3 mb-2 text-decoration-underline">WELCOME STUDENT</h3>
-            <p class="fs-5 p-3 my-2">Your grades for this semester are:</p>
-            <table class="table table-success table-hover table-bordered fs-5">
-                <tr class="table-dark"><th>Subject</th><th>Marks</th><th>Grade</th></tr>
-                <tr><td>xxxxx</td><td>xxx</td><td>A</td></tr>
-                <tr><td>xxxxx</td><td>xxx</td><td>B</td></tr>
-                <tr><td>xxxxx</td><td>xxx</td><td>C</td></tr>
-                <tr><td>xxxxx</td><td>xxx</td><td>D</td></tr>
-                <tr><td>xxxxx</td><td>xxx</td><td>E</td></tr>
-                <tr><td>xxxxx</td><td>xxx</td><td>F</td></tr>
-                <tr class="table-secondary"><td>overall grade</td><td></td><td>C</td></tr>
-            </table>
-        </div>
-      <!--************-->
-        <div class="tab-pane fade p-2" id="rprtcard" role="tabpanel" 
-        aria-labelledby="rprtcard-tab">
-        <h3 class="p-3 mb-2 text-decoration-underline">WELCOME STUDENT</h3>
-            <p class="fs-5 p-3 my-2">Your performance in this semister:</p>
-            <table class="table table-info table-hover table-bordered fs-5">
-                <tr class="table-dark"><th>Subject</th><th>Performance</th></tr>
-                <tr><td>xxxxxx</td><td>Good</td></tr>
-                <tr><td>xxxxxx</td><td>Can Be Improved</td></tr>
-                <tr><td>xxxxxx</td><td>Continue like this</td></tr>
-                <tr><td>xxxxxx</td><td>Learn Basics</td></tr>
-                <tr><td>xxxxxx</td><td>Best</td></tr>
-                <tr><td>xxxxxx</td><td>Better</td></tr>
-            </table>
-        </div>
-      <!--*************-->
-        <div class="tab-pane fade p-2" id="assignments" role="tabpanel" 
-        aria-labelledby="assignments-tab">
-        <h3 class="p-3 mb-2 text-decoration-underline">WELCOME STUDENT</h3>
-            <table class="table table-striped table-bordered text-center fs-5 mb-3">
-                <tr><th>Assigned</th><th>Completed</th><th>Pending</th></tr>
-                <tr><td>7</td><td>5</td><td>2</td></tr>
-            </table>
-            <br>
-            <p class="fs-5 p-3">Current Assignments are:</p>
-            <ul class="fs-5 px-3">
-                <li>xxxxxx</li>
-                <li>xxxxxx</li>
-            </ul>
-        </div>
       </div>
     </div>
 

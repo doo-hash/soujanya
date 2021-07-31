@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-100">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,9 +20,7 @@
       .tab-content .tab-pane li p:hover{
           text-decoration: underline;
       }
-      body {
-        box-shadow: inset 0 0 1rem rgba(0, 0, 0, .5);
-      }
+      
       .dropdown{
   position: relative;
 }
@@ -72,9 +70,9 @@
         }
     </style>
 </head>
-<body>
+<body class="d-flex flex-column h-100">
   <!--header-->
-  <div class="container-md sticky-top">
+  <div class="container-md sticky-top mb-lg-5">
     <header class="d-flex align-items-baseline bg-light sticky-top justify-content-between px-1 py-2 mb-0 border-bottom">
       <a href="/" class="d-flex fw-bold px-2 fs-3 text-decoration-none">
         LOGO
@@ -97,12 +95,12 @@
   </div>
   <!--****************-->
  <!--body-->
-  <div class="container-fluid h-100">
+  <div class="container-fluid">
 
-    <div class="row border-top border-3 bg-light mx-lg-1 mt-5">
+    <div class="row border-top border-3 bg-light mx-lg-1">
   <!--sidebar-->
-    <div class="col-12 col-lg-3 border border-3 border-top-0 border-start-0 bg-white">
-      <nav class="navbar navbar-expand-lg">
+    <div class="col-12 col-lg-3 border border-3 border-top-0  bg-white">
+      <nav class="navbar navbar-expand-lg navbar-light">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
           data-bs-target="#navbarContent" aria-controls="navbarSupportedContent"
            aria-expanded="false" aria-label="Toggle navigation">
@@ -887,13 +885,13 @@
               </div>
               <div class="col-12 col-lg-4">
                   <h4 class="text-center p-2">Events</h4>
-                  <ul class="fs-5 p-2">
+                  <ul class="fs-5 px-5">
                       <li>Lorem ipsum dolor sit amet.</li>
                       <li>Lorem ipsum dolor sit amet.</li>
                       <li>Lorem ipsum dolor sit amet.</li>
                       <li>Lorem ipsum dolor sit amet.</li>
                   </ul>
-                  <div class=" m-2">
+                  <div class=" mx-5 float-end">
                       <button class="btn btn-outline-dark px-3 fs-5" onclick="">Add Task</button>
                       <input type="text" class="" id="addtask" hidden> 
                   </div>

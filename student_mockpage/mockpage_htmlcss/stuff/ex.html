@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ccc;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+</style>
+</head>
+<body>
+
+<h2>Tabs</h2>
+<p>Click on the buttons inside the tabbed menu:</p>
+
+<div class="tab">
+  <button class="tablnk" onclick="tabopen(event, 'London')">London</button>
+  <button class="tablnk" onclick="tabopen(event, 'Paris')">Paris</button>
+  <button class="tablnk" onclick="tabopen(event, 'Tokyo')">Tokyo</button>
+</div>
+
+<div id="London" class="tabcontent">
+    <div class="stafflogin">
+        <form action="#" method="POST">
+            <div class="stflgn">
+                <h3><i class="fas fa-user-circle fa-2x"></i> Admin/Staff Login</h3>
+            </div>    
+            <div class="row">
+                <div class="col">
+                    <label for="stdntrlno">Admin/Staff ID</label>
+                </div>
+                <div class="input_block">
+                    <input type="text" name="stfid" placeholder="Admin/Staff ID">
+                    <i class="fas fa-envelope"></i>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="stfpsd">Password</label>
+                </div>
+                <div class="input_block">
+                    <input type="password" name="stfpsd" placeholder="Password">
+                    <i class="fas fa-lock"></i>
+                </div>
+            </div>
+            <div class="row">
+                <button type="submit" name="login">Login</button>
+                <button type="reset" name="cancel">Cancel</button>
+            </div>
+            </form>
+            <p>Don't have an account? <a href="#">Register</a> here.</p>
+            </div>
+</div>
+
+<div id="Paris" class="tabcontent">
+    <div class="studentlogin">
+        <form>
+            <div class="stdntlgn">
+            <h3><i class="fas fa-user fa-2x"></i> Student Login</h3>
+            </div>    
+            <div class="row">
+            <div class="col">
+            <label for="stdntrlno">Student Roll No</label>
+            </div>
+            <div class="input_block">
+            <input type="text" name="stdntrlno" placeholder="Roll No">
+            <i class="fas fa-envelope"></i>
+            </div>
+            </div>
+            <div class="row">
+            <div class="col">
+            <label for="stdntpsd">Password</label>
+            </div>
+            <div class="input_block">
+            <input type="password" name="stdntpsd" placeholder="Password">
+            <i class="fas fa-lock"></i>
+            </div>
+            </div>
+            <div class="row">
+            <button type="submit" name="login">Login</button>
+            <button type="reset" name="cancel">Cancel</button>
+            </div>
+        </form>
+        <p>Don't have an account? <a href="#">Register</a> here.</p>
+    </div> 
+</div>
+
+<div id="Tokyo" class="tabcontent">
+    <div class="parentlogin">
+        <form>
+            <div class="prntlgn">
+            <h3><i class="fas fa-user-circle fa-2x"></i> Parent Login</h3>
+            </div>    
+            <div class="row">
+            <div class="col">
+            <label for="stdntrlno">Parent ID</label>
+            </div>
+            <div class="input_block">
+            <input type="text" name="parntid" placeholder="Parent ID">
+            <i class="fas fa-envelope"></i>
+            </div>
+            </div>
+            <div class="row">
+            <div class="col">
+            <label for="stdntpsd">Password</label>
+            </div>
+            <div class="input_block">
+            <input type="password" name="prntpsd" placeholder="Password">
+            <i class="fas fa-lock"></i>
+            </div>
+            </div>
+            <div class="row">
+            <button type="submit" name="login">Login</button>
+            <button type="reset" name="cancel">Cancel</button>
+            </div>
+        </form>
+        <p>Don't have an account? <a href="#">Register</a> here.</p>
+</div>
+</div>
+
+<script>
+function tabopen(event, cityName) {
+  var i, tabcontent, tablink;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablink = document.getElementsByClassName("tablnk");
+  for (i = 0; i < tablink.length; i++) {
+    tablink[i].className = tablink[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  event.currentTarget.className += " active";
+}
+</script>
+   
+</body>
+</html> 

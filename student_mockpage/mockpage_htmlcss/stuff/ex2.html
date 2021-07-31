@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/7f77c9a430.js" crossorigin="anonymous"></script>
+    <title></title>
+    <style>
+        .lgn{
+            font-family: 'Yomogi', cursive;
+            border:1px solid rgb(238, 90, 119);
+         }
+         div .logintab{
+             display:block;
+             background-color: gainsboro;
+         }
+         .logintab button{
+            float:left;
+        }
+
+        .stflgn{
+            padding: 5px 0px 5px 0px;
+            background-color:rgb(238, 90, 119);
+            text-align: center;
+            }
+        [class*="col-"] {
+            width:100%
+        }
+        .input_block{
+            display: flex;
+            width: 100%;
+            margin:6px 0px 10px 0px;
+            float: left;
+            }
+        input[type=text],[type=password],label{
+            width: 100%;
+            font-size: 20px;
+            font-style: italic;
+            padding:7px 0px 7px 0px;
+            margin-left: 10px;
+           }
+           label{
+               display: inline-block;
+           }
+        input[type="text"]:focus,[type="password"]:focus{
+            border: 2px solid rgb(243, 122, 147);
+        }
+        .fa-envelope,.fa-lock{
+            padding:7px ;
+            background:rgb(243, 122, 147);
+            color:honeydew;
+            text-align: center;
+            min-width: 30px;
+            margin-right: 10px;
+        }
+        .stflgn .fa-user-circle{
+            display: block;
+            color: darkblue;
+        }
+        button{
+            padding: 5px;
+            margin:5px 0px 0px 10px;
+            font-family: 'Yomogi', cursive;
+            font-size: 20px;
+            background-color:rgb(243, 122, 147);
+            border-radius: 7px;
+            border: none;
+        }
+        button:active,button:hover{
+            background-color: dodgerblue;
+        }
+        p{
+            font-size: 18px;
+            margin-left:10px;
+            padding-bottom: 5px;
+        }
+        .row:after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+        @media screen and (max-width:600px){
+            .col,.input_block{
+                width:100%;
+                margin:0px;
+            }
+        }        
+        @media only screen and (min-width: 600px) {
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+  }
+@media only screen and (min-width:768px) {
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}     
+}
+</style>
+</head>
+<body>
+    <div class="row">
+    <div class="col-7 col-s-12">
+        <div class="newstab">
+        <h3>News and Notifications</h3>
+        <ul>
+        <li><a href="#">asdmciejgvnsjg avknkanksfmofovm</a></li>
+        <li><a href="#">asdmciejgvnsjg avknkanksfmofovm</a></li>
+        <li><a href="#">asdmciejgvnsjg avknkanksfmofovm</a></li>
+        <li><a href="#">asdmciejgvnsjg avknkanksfmofovm</a></li>
+        <li><a href="#">asdmciejgvnsjg avknkanksfmofovm</a></li>
+        <li><a href="#">asdmciejgvnsjg avknkanksfmofovm</a></li>
+        <li><a href="#">asdmciejgvnsjg avknkanksfmofovm</a></li>
+        </ul>
+        </div>
+    </div>
+
+    <div class="col-5 col-s-12">
+    <div class="lgn">
+        <div class="logintab">
+            <button class="stdnttab" onclick="opentab(event,'student')">Student</button>
+            <button class="parenttab" onclick="opentab(event,'parent')">Parent</button>
+            <button class="stftab" onclick="opentab(event,'staff')">Staff</button>
+            <button class="tchrtab" onclick="opentab(event,'teacher')">Teacher</button>
+        </div>
+        <div class="stf">
+            <form action="#" method="POST">
+            <div class="stflgn">
+                <h3><i class="fas fa-user-circle fa-2x"></i> Admin/Staff Login</h3>
+            </div>    
+            <div class="row">
+                <div class="col">
+                    <label for="stdntrlno">Admin/Staff ID</label>
+                </div>
+                <div class="input_block">
+                    <input type="text" name="stfid" placeholder="Admin/Staff ID">
+                    <i class="fas fa-envelope"></i>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="stfpsd">Password</label>
+                </div>
+                <div class="input_block">
+                    <input type="password" name="stdntpsd" placeholder="Password">
+                    <i class="fas fa-lock"></i>
+                </div>
+            </div>
+            <div class="row">
+                <button type="submit" name="login">Login</button>
+                <button type="reset" name="cancel">Cancel</button>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>

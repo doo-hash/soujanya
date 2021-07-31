@@ -6,7 +6,7 @@ body{
 }
 /*HEADER*/
 .header{
-    font-family: 'Indie Flower', cursive;
+    font-family: 'Cairo', sans-serif;
     font-size: 25px;
     background-color:hsl(240,90%,25%);
     color: white;
@@ -76,7 +76,7 @@ h1{
 /*---------*****************----------*/
 /*FONT FAMILY*/
 .aboutus,.news_lgn,.searchbar,.footer,.events,.register,.feedback,input,label,button{
-    font-family: 'Yomogi', cursive;
+    font-family: 'Cairo', sans-serif;
 }
 /*------------**********-----------*/
 [class*="col-"] {
@@ -557,6 +557,7 @@ font-size: 25px;
     padding: 15px 5px 5px 10px;
     display: block;
     overflow-x: hidden;
+    margin-top: -200px;
 
 }
 .footer h3{

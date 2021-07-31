@@ -1,0 +1,16 @@
+header
+slideshow images
+on images search bar
+news and notifications block
+login block(student,parent,staff,teacher)
+events
+report us
+footer
+
+registration page(student,parent,staff,teacher)
+
+AFTER LOGIN
+student portal
+teacher portal
+staff portal
+parent portal

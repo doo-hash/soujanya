@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/7f77c9a430.js" crossorigin="anonymous"></script>
+    <title></title>
+    <style>
+        .studentlogin{
+            font-family: 'Yomogi', cursive;
+            outline-style: double;
+            outline-color:black;
+         }
+        .stdntlgn{
+            padding: 5px 0px 5px 0px;
+            background-color:rgba(58, 58, 223, 0.753);
+            text-align: center;
+            }
+        .studentlogin .input_block{
+            display: flex;
+            width: 100%;
+            margin:6px 0px 10px 0px;
+            float: left;
+            }
+        .studentlogin input[type=text],[type=password],label{
+            width: 100%;
+            font-size: 20px;
+            font-style: italic;
+            padding:7px 0px 7px 0px;
+            margin-left: 10px;
+           }
+        .studentlogin input[type="text"]:focus,[type="password"]:focus{
+            border: 2px solid rgb(192, 192, 241);
+        }
+        .studentlogin .fa-envelope,.studentlogin .fa-lock{
+            padding:7px ;
+            background:rgb(192, 192, 241);
+            color:rgb(124, 131, 124);
+            text-align: center;
+            min-width: 30px;
+            margin-right: 10px;
+        }
+        .studentlogin .fa-user-circle{
+            display: block;
+            color:rgb(62, 71, 69);
+        }
+        .studentlogin button{
+            padding: 5px;
+            margin:5px 0px 0px 10px;
+            font-family: 'Yomogi', cursive;
+            font-size: 20px;
+            background-color:rgb(192, 192, 241);
+            border-radius: 7px;
+            border: none;
+
+        }
+        button:active,button:hover{
+            background-color: dodgerblue;
+        }
+        p{
+            font-size: 18px;
+            margin-left:10px;
+            padding-bottom: 5px;
+        }
+        .row:after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+        @media screen and (max-width:600px){
+            .col,.input_block{
+                width:100%;
+                margin:0px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="studentlogin">
+    <form>
+        <div class="stdntlgn">
+        <h3><i class="fas fa-user-circle fa-2x"></i> Student Login</h3>
+        </div>    
+        <div class="row">
+        <div class="col">
+        <label for="stdntrlno">Student Roll No</label>
+        </div>
+        <div class="input_block">
+        <input type="text" name="stdntrlno" placeholder="Roll No">
+        <i class="fas fa-envelope"></i>
+        </div>
+        </div>
+        <div class="row">
+        <div class="col">
+        <label for="stdntpsd">Password</label>
+        </div>
+        <div class="input_block">
+        <input type="password" name="stdntpsd" placeholder="Password">
+        <i class="fas fa-lock"></i>
+        </div>
+        </div>
+        <div class="row">
+        <button type="submit" name="login">Login</button>
+        <button type="reset" name="cancel">Cancel</button>
+        </div>
+    </form>
+    <p>Don't have an account? <a href="#">Register</a> here.</p>
+    </div>
+</body>
+</html>

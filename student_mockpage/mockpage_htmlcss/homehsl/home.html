@@ -1,0 +1,495 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://kit.fontawesome.com/7f77c9a430.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Home</title>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <h1>LOGO</h1>
+            <address>                
+                <i class="fas fa-phone-alt"></i> Phone: +91 xxxxxxxxxx<br>
+                <i class="fas fa-envelope"></i> Email: mail@mail.com<br>
+                <i>Working Days: Mon-Sat</i><br>
+                <i>Timings: 8:00 AM to 10:00 PM</i>
+            </address>
+        </div>
+
+
+        <div class="topnav" id="topnav">
+        <a class="active" href="#"><i class="fas fa-home"></i> Home</a>
+        <a href="#"><i class="fas fa-images"></i> About Us</a>
+        <div class="dropdown">
+            <a href="#" class="drpbtn">
+            <i class="fas fa-book-reader"></i> Academics</a>
+            <div class="drpmenu">
+                <a href="#"> Courses</a>
+                <a href="#"> Departments</a>
+                <a href="#"> Resources</a>
+                <a href="#"> Calender</a>
+            </div>
+        </div>        
+        <a href="#"><i class="fas fa-school"></i> Admissions</a>
+        <a href="#"><i class="fas fa-users"></i> Our Staff</a>
+        <a href="#"><i class="fas fa-icons"></i> Activities</a>
+        <a href="#"><i class="fas fa-comment"></i> Comments</a>
+        <a href="#"><i class="fas fa-map-marker-alt"></i> Contact Us</a>
+    </div>
+    </div>        
+
+    <div class="sidenav">
+        <a href="#"><i class="fas fa-home fa-2x"></i></a><hr>
+        <a href="#"><i class="fas fa-images fa-2x"></i></a><hr>
+        <a href="#"><i class="fas fa-atlas fa-2x"></i></a><hr>
+        <a href="#"><i class="fas fa-icons fa-2x"></i></a><hr>
+        <a href="#"><i class="fas fa-users fa-2x"></i></a><hr>
+        <a href="#"><i class="fas fa-comment fa-2x"></i></a><hr>
+        <a href="#"><i class="fas fa-envelope fa-2x"></i></a><hr>
+        <a href="#"><i class="fas fa-question fa-2x"></i></a>
+    </div>
+
+
+    <div class="searchbar">
+        <div class="srchblk">
+        <input type="text" name="search" placeholder="Search here">
+        <a href="#"><i class="fas fa-search fa-2x"></i></a>
+        </div>
+    </div>
+
+
+    <div class="news_lgn">
+      <div class="rownl">
+          <div class="col-7 col-s-12">
+              <div class="newstab">
+                  <div class="newshd"><h3>News and Notifications</h3></div>
+                  <div class="newslnk">
+                      <ul>
+                <li><a href="#">asdmciejgvnsjg avknkanksfmofovm</a></li>
+                <li><a href="#">asdmciejgvnsjg avknkanksfmofovm</a></li>
+                <li><a href="#">asdmciejgvnsjg avknkanksfmofovm</a></li>
+                <li><a href="#">asdmciejgvnsjg avknkanksfmofovm</a></li>
+                <li><a href="#">asdmciejgvnsjg avknkanksfmofovm</a></li>
+                <li><a href="#">asdmciejgvnsjg avknkanksfmofovm</a></li>
+                <li><a href="#">asdmciejgvnsjg avknkanksfmofovm</a></li>
+                <li><a href="#">asdmciejgvnsjg avknkanksfmofovm</a></li>
+                <li><a href="#">asdmciejgvnsjg avknkanksfmofovm</a></li>
+                <li><a href="#">asdmciejgvnsjg avknkanksfmofovm</a></li>
+                <li><a href="#">asdmciejgvnsjg avknkanksfmofovm</a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+          <div class="col-5 col-s-12">
+              <div class="logintab">
+                  <div class="lginbtns">
+              <button class="col-3 tablnk" onclick="tabopen(event,'Staff')">Staff</button>
+              <button class="col-3 tablnk" onclick="tabopen(event,'Student')">Student</button>
+              <button class="col-3 tablnk" onclick="tabopen(event,'Parent')">Parent</button>
+              <button class="col-3 tablnk" onclick="tabopen(event,'Teacher')">Teacher</button>
+                  </div>
+                  <div class="login">
+
+              <div id="Staff" class="stafflogin tabcontent">
+              <form action="#" method="POST">
+                  <div class="stflgn">
+                      <h3><i class="fas fa-user-circle fa-2x"></i> Admin/Staff Login</h3>
+                  </div>    
+                  <div class="row">
+                      <div class="col">
+                          <label for="stdntrlno">Admin/Staff ID</label>
+                      </div>
+                      <div class="input_block">
+                          <input type="text" name="stfid" placeholder="Admin/Staff ID">
+                          <i class="fas fa-envelope"></i>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col">
+                          <label for="stfpsd">Password</label>
+                      </div>
+                      <div class="input_block">
+                          <input type="password" name="stfpsd" placeholder="Password">
+                          <i class="fas fa-lock"></i>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <button type="submit" name="login">Login</button>
+                      <button type="reset" name="cancel">Cancel</button>
+                  </div>
+                  </form>
+                  <p>Don't have an account? <a href="#" onclick="window.location.href='./register.html'">Register</a> here.</p>
+                  </div>
+
+              <div id="Student" class="studentlogin tabcontent">
+                      <form>
+                          <div class="stdntlgn">
+                          <h3><i class="fas fa-user fa-2x"></i> Student Login</h3>
+                          </div>    
+                          <div class="row">
+                          <div class="col">
+                          <label for="stdntrlno">Student Roll No</label>
+                          </div>
+                          <div class="input_block">
+                          <input type="text" name="stdntrlno" placeholder="Roll No">
+                          <i class="fas fa-envelope"></i>
+                          </div>
+                          </div>
+                          <div class="row">
+                          <div class="col">
+                          <label for="stdntpsd">Password</label>
+                          </div>
+                          <div class="input_block">
+                          <input type="password" name="stdntpsd" placeholder="Password">
+                          <i class="fas fa-lock"></i>
+                          </div>
+                          </div>
+                          <div class="row">
+                          <button type="submit" name="login">Login</button>
+                          <button type="reset" name="cancel">Cancel</button>
+                          </div>
+                      </form>
+                      <p>Don't have an account? <a href="" onclick="window.location.href='./register.html'">Register</a> here.</p>
+                      </div>
+
+                  <div id="Parent" class="parentlogin tabcontent">
+                          <form>
+                              <div class="prntlgn">
+                              <h3><i class="fas fa-user-circle fa-2x"></i> Parent Login</h3>
+                              </div>    
+                              <div class="row">
+                              <div class="col">
+                              <label for="stdntrlno">Parent ID</label>
+                              </div>
+                              <div class="input_block">
+                              <input type="text" name="parntid" placeholder="Parent ID">
+                              <i class="fas fa-envelope"></i>
+                              </div>
+                              </div>
+                              <div class="row">
+                              <div class="col">
+                              <label for="stdntpsd">Password</label>
+                              </div>
+                              <div class="input_block">
+                              <input type="password" name="prntpsd" placeholder="Password">
+                              <i class="fas fa-lock"></i>
+                              </div>
+                              </div>
+                              <div class="row">
+                              <button type="submit" name="login">Login</button>
+                              <button type="reset" name="cancel">Cancel</button>
+                              </div>
+                          </form>
+                          <p>Don't have an account? <a href="" onclick="window.location.href='./register.html'">Register</a> here.</p>
+                          </div>
+
+                          <div id="Teacher" class="teacherlogin tabcontent">
+                              <form action="" method="POST">
+                                  <div class="tchrlgn">
+                                  <h3><i class="fas fa-user fa-2x"></i> Teacher Login</h3>
+                                  </div>
+                                  <div class="row">
+                                  <div class="col">
+                                      <label for="tchrid">Teacher ID</label>
+                                  </div>
+                                  <div class="input_block">
+                                  <input type="text" name="tchrid" placeholder="Teacher ID"><i class="fas fa-envelope"></i>
+                                  </div>
+                                  </div>
+                                  <div class="row">
+                                  <div class="col">
+                                  <label for="tchrpsd">Password</label>
+                                  </div>
+                                  <div class="input_block">
+                                  <input type="password" name="tchrpsd" placeholder="Password"><i class="fas fa-lock"></i>
+                                  </div>
+                                  </div>
+                                  <div class="row">
+                                  <button type="submit" name="login">Login</button>
+                                  <button type="reset" name="cancel">Cancel</button>
+                                  </div>
+                              </form>
+                              <p>Don't have an account? <a href="register page" onclick="window.location.href='./register.html'">Register</a> here.</p>
+                              </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div> 
+    <div class="events">
+        <div class="evnthead">
+          <h3>Events</h3>
+        </div>
+        <div class="row">
+          <div class="col-3">
+            <div class="evntbtns">
+              <a href="#">Sports</a>
+              <a href="#">Puzzles</a>
+              <a href="#">Maths Quiz</a>
+              <a href="#">Science Quiz</a>
+              <a href="#">Arts</a>
+            </div>
+          </div>
+        
+          <div class="col-9">
+            <div class="eventnews">
+              <div class="evntnewshd">
+                <h4>Upcoming Events</h4>
+              </div>
+          
+              <div class="evntnewslnk">
+                <ul>
+                <li><a href="#">asdmciejgvnsjg avknkanksfmofovm</a></li>
+                <li><a href="#">asdmciejgvnsjg avknkanksfmofovm</a></li>
+                <li><a href="#">asdmciejgvnsjg avknkanksfmofovm</a></li>
+                <li><a href="#">asdmciejgvnsjg avknkanksfmofovm</a></li>
+                <li><a href="#">asdmciejgvnsjg avknkanksfmofovm</a></li>
+                <li><a href="#">asdmciejgvnsjg avknkanksfmofovm</a></li>
+                <li><a href="#">asdmciejgvnsjg avknkanksfmofovm</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      <div class="register">
+        <div class="row">
+            <div class="col-4 col-s-4">
+            <p>For Students, Register here to know your regular tasks and performance</p>
+            </div>
+    
+            <div class="col-4 col-s-4">
+            <p>For parents, Register here to access chidrens academic analysis</p>
+            </div>
+    
+            <div class="col-4 col-s-4">
+            <p>For teachers, Register here to start your classes</p>
+            </div>
+    
+        </div>
+        <div class="row">
+          <button class="stdntbtn" onclick="window.location.href='./register.html'">Register</button>    
+      </div>
+      </div>
+    <div>
+      <div class="aboutus">
+        <div class="aboutushd">
+            <h3>ABOUT US</h3>
+        </div>
+        <div class="row">
+            <div class="col-3 col-s-12">
+            <div class="aboutusinfo">
+            <p> wrerff feeeeeeeeee cxxxxxxxxx ffffffffs sssssssssssss fsddd cxxxxxxs sdcv wdsc dfsdv</p>
+            </div>
+            </div>
+            <div class="col-9 col-m-12 col-s-12">
+                <div class="aboutuscntnt">
+                <div class="col-4 col-m-6 col-s-12"><h4>Infrastructure</h4>
+                <p>wrerff feeeeeeeeee cxxxxxxxxx ffffffffs sssssssssssss fsddd cxxxxxxs sdcv wdsc dfsdv</p>
+                </div>
+                <div class="col-4 col-m-6 col-s-12">
+                <h4>Certified Tutors</h4>
+                <p>wrerff feeeeeeeeee cxxxxxxxxx ffffffffs sssssssssssss fsddd cxxxxxxs sdcv wdsc dfsdv</p>
+                </div>
+                <div class="col-4 col-m-6 col-s-12">
+                <h4>Playful Learning</h4>
+                <p>wrerff feeeeeeeeee cxxxxxxxxx ffffffffs sssssssssssss fsddd cxxxxxxs sdcv wdsc dfsdv</p>
+                </div>
+                <div class="col-6 col-m-6 col-s-12">
+                <h4>Extracurricular Activities</h4>
+                <p>wrerff feeeeeeeeee cxxxxxxxxx ffffffffs sssssssssssss fsddd cxxxxxxs sdcv wdsc dfsdv</p>
+                </div>
+                <div class="col-6 col-m-12 col-s-12">
+                <h4>Safety</h4>
+                <p>wrerff feeeeeeeeee cxxxxxxxxx ffffffffs sssssssssssss fsddd cxxxxxxs sdcv wdsc dfsdv</p>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+    <div class="ourstaff">
+        <div class="ourstfhd">
+         <h3>OUR STAFF</h3>
+        </div>
+
+        <div class="ourstfcntnt">
+            <div class="stfinfo">
+            <p>We have excellent staff and teachers.</p>
+            </div>
+
+            <div class="stfpersons">
+                <div class="row">
+                <div class="col-4 col-m-6 col-s-6">
+                    <div class="row1">
+                    <div class="col-4 col-m-2"><img src="person.png" alt="staff1"></div>
+
+                    <div class="col-8 col-m-10">
+                    <p>XXXXX XXXXXXXXX<br>
+                    qwsefev qqqqv wsdc dffffff saxc sdc dcv asdxc sdc.daaa df dfcvdsc dsfcv ijhiuj ijnj.</p>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col-4 col-m-6 col-s-6">
+                    <div class="row1">
+                    <div class="col-4 col-m-2"><img src="person.png" alt="staff1"></div>
+
+                    <div class="col-8 col-m-10">
+                    <p>XXXXX XXXXXXXXX<br>
+                    qwsefev qqqqv wsdc dffffff saxc sdc dcv asdxc sdc.daaa df dfcvdsc dsfcv ijhiuj ijnj.</p>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col-4 col-m-6 col-s-6">
+                    <div class="row1">
+                    <div class="col-4 col-m-2"><img src="person.png" alt="staff1"></div>
+
+                    <div class="col-8 col-m-10">
+                    <p>XXXXX XXXXXXXXX<br>
+                    qwsefev qqqqv wsdc dffffff saxc sdc dcv asdxc sdc.daaa df dfcvdsc dsfcv ijhiuj ijnj.</p>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col-4 col-m-6 col-s-6">
+                    <div class="row1">
+                    <div class="col-4 col-m-2"><img src="person.png" alt="staff1"></div>
+
+                    <div class="col-8 col-m-10">
+                    <p>XXXXX XXXXXXXXX<br>
+                    qwsefev qqqqv wsdc dffffff saxc sdc dcv asdxc sdc.daaa df dfcvdsc dsfcv ijhiuj ijnj.</p>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col-4 col-m-6 col-s-6">
+                    <div class="row1">
+                    <div class="col-4 col-m-2"><img src="person.png" alt="staff1"></div>
+
+                    <div class="col-8 col-m-10">
+                    <p>XXXXX XXXXXXXXX<br>
+                    qwsefev qqqqv wsdc dffffff saxc sdc dcv asdxc sdc.daaa df dfcvdsc dsfcv ijhiuj ijnj.</p>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col-4 col-m-6 col-s-6">
+                    <div class="row1">
+                    <div class="col-4 col-m-2"><img src="person.png" alt="staff1"></div>
+
+                    <div class="col-8 col-m-10">
+                    <p>XXXXX XXXXXXXXX
+                    <br>qwsefev qqqqv wsdc dffffff saxc sdc dcv asdxc sdc.daaa df dfcvdsc dsfcv ijhiuj ijnj.</p>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="feedback">
+        <div class="fdbkhead"><h3>FEEDBACK</h3></div>
+
+        <div class="fdbkfrm">
+            <form action="" method="POST">
+                <div class="row">
+                <div class="col-3 col-m-6 col-s-12">
+                    <div class="input_block"><input type="text" placeholder="Name" required name="Name" />
+                        <i class="fas fa-user fa-2x"></i>
+                    </div>
+                </div>
+        
+                <div class="col-3 col-m-6 col-s-12">
+                    <div class="input_block"><input type="text" placeholder="Email" required name="Email"/>
+                        <i class="fas fa-envelope fa-2x"></i>
+                    </div>
+                </div>
+                
+                <div class="col-4 col-m-6 col-s-12">
+                    <div class="input_block"><textarea placeholder="Message" required name="Message"></textarea>
+                        <i class="fas fa-comment fa-2x"></i>
+                    </div>
+                </div>
+                
+                <div class="col-2 col-m-6 col-s-12">
+                    <button type="submit">SEND</button>
+                </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    
+        <div class="footer">
+            <div class="row">
+                <div class="col-3 col-s-3 col-m-3">
+                <h3>ABOUT US</h3>
+                <p> this provides you with lots of opputunities to study and play as you like.</p>
+                </div>
+                
+                <div class="col-6 col-s-6 col-m-6">
+                <h3>LINKS</h3>
+                <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Academics</a></li>
+                <li><a href="#">Admissions</a></li>
+                <li><a href="#">Our Staff</a></li>
+                <li><a href="#">Activities</a></li>
+                <li><a href="#">Comments</a></li>
+                <li><a href="#">Contact Us</a></li>
+                </ul>
+                </div>
+                
+                <div class="col-3 col-s-3 col-m-3">
+                <h3>CONTACT US</h3>
+                <address>
+                <i class="fas fa-map-marker-alt"></i> xxxxx, xxx<br>
+                <i class="fas fa-phone-alt"></i> Phone: +91 xxxxxxxxxx<br>
+                <i class="fas fa-envelope"></i> Email: mail@mail.com<br>
+                </address>
+                <i class="fab fa-facebook fa-1x"></i>
+                <i class="fab fa-github"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-youtube"></i>
+                <i class="fab fa-google"></i>
+                <i class="fab fa-linkedin"></i>
+                <i class="fab fa-telegram"></i>
+                </div>
+            </div>
+            <div class="row">
+            <hr>Copyright <i class="copyright"></i> XXXX. All rights reserved.
+            </div>
+            </div>
+
+
+<script>
+    function tabopen(event, Name) {
+        var i, tabcontent, tablink;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablink = document.getElementsByClassName("tablnk");
+        for (i = 0; i < tablink.length; i++) {
+            tablink[i].className = tablink[i].className.replace(" active", "");
+        }
+        document.getElementById(Name).style.display = "block";
+        event.currentTarget.className += " active";
+    }
+</script>
+</body>
+</html>

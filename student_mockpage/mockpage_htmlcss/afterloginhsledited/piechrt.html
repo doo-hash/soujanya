@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+    box-sizing: border-box;
+}
+body{
+    margin:0px;
+    font-family: 'Otomanopee One', sans-serif;
+}
+.grade{
+    border:1px solid black;
+    margin:50px;display: flex;
+            justify-content: center;
+            align-items: center;
+}
+.piechart{
+    border:2px solid black;
+    border-radius: 50%;
+    width:200px;
+    height: 200px;
+    background-image: conic-gradient(
+                pink 0deg 60deg, 
+                violet 60deg 120deg,
+                orange 120deg 180deg,
+                blue 180deg 240deg,
+                green 240deg 300deg,
+                red 300deg 360deg);
+    
+}
+.grade li{
+    font-size: 18px;
+    padding: 2px;
+    margin:5px;
+    color: white;
+}
+
+    </style>
+</head>
+<body>
+    <div class="grade">
+        <div class="piechart"></div>
+        
+        <ul><li style="background-color: pink;">A</li>
+            <li style="background-color: violet;">B</li>
+            <li style="background-color: orange;">C</li>
+            <li style="background-color: blue;">D</li>
+            <li style="background-color: green;">E</li>
+            <li style="background-color: red;">F</li>
+        </ul>
+    </div>
+</body>
+</html>

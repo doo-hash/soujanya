@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/7f77c9a430.js" crossorigin="anonymous"></script>
+  <title>Register</title>
+  <style>
+body{
+  margin: 0%;
+}
+[class*="col-"] {
+            float: left;
+        }
+
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+    .register{
+      font-family: 'Yomogi', cursive;
+      background-color: rgba(159, 245, 238, 0.137);
+      border: 1px solid black;
+    } 
+    .register .row{
+      display: table;
+      width:100%;
+    }
+    .register button{
+            padding: 7px;
+            margin:6px 0px 10px 10px;
+            font-size: 20px;
+            background-color:rgba(197, 240, 243, 0.719);
+            border-radius: 7px;
+            border: none;
+        }
+        .register button:active,.register button:hover{
+            background-color: rgba(231, 241, 252, 0.61);
+        }
+        .register p{
+            font-size: 18px;
+            margin-left:10px;
+            padding-bottom: 5px;
+        }
+        @media screen and (max-width:600px) {
+            .register .col-s-4{
+                width: 33.33%;
+            }            
+        }
+  </style>
+</head>
+<body>
+  <div class="register">
+    <div class="row">
+        <div class="col-4 col-s-4">
+        <p>For Students, Register here to know your regular tasks and performance</p>
+        </div>
+
+        <div class="col-4 col-s-4">
+        <p>For parents, Register here to access chidrens academic analysis</p>
+        </div>
+
+        <div class="col-4 col-s-4">
+        <p>For teachers, Register here to start your classes</p>
+        </div>
+
+    </div>
+    <div class="row">
+      <div class="col-4 col-s-4">
+      <button type="submit" class="stdntbtn" onclick="window.location.href='./stdnt_reg.html'">Register</button>
+      </div>
+
+      <div class="col-4 col-s-4">
+      <button type="submit" class="prntbtn" onclick="window.location.href='./prnt_reg.html'">Register</button>
+      </div>
+
+      <div class="col-4 col-s-4">
+      <button type="submit" class="tchrbtn" onclick="window.location.href='./tchr_reg.html'">Register</button>
+      </div>
+
+  </div>
+  </div>
+</body>
+</html>

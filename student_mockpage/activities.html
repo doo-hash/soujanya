@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+    .bi {
+    box-shadow: inset 0 0 2rem hsl(240, 83%, 80%);
+    border-radius: 25px;
+  }
+  .bi:hover,.bi:active,.bi:focus{
+      color: indigo;
+  }
+    </style>
+</head>
+<body>
+  <nav>
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+      <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Home</button>
+      <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</button>
+      <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</button>
+    </div>
+  </nav>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">
+  Login
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-info">
+        <h4 class="modal-title text-center mb-3 text-danger" id="formModalLabel">Login Block</h4>        
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+          <form class="mt-3" action="portal.html" target="parent" method="POST">
+            <div class="mb-1">
+              <label for="rlno" class="form-label">Student Roll No/Parent ID/Teacher ID</label>
+              <input type="text" class="form-control" name="rlno" id="rlno" required>
+            </div>
+            <div class="mb-1">
+              <label for="mobile" class="form-label">Mobile Number</label>
+              <div class="input-group">
+                <span class="btn btn-outline-dark">+91</span>
+                <input type="number" class="form-control" name="mobile" id="mobile" pattern="[0-9]{10}" required>
+              </div>
+            </div>
+            <div class="mb-1">
+              <label for="InputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" name="InputPassword1" id="InputPassword1" required>
+            </div>
+            <div class="mb-1 form-check">
+              <input type="checkbox" class="form-check-input" id="Check1">
+              <label class="form-check-label" for="Check1">Remember me</label>
+            </div>
+            <button type="submit" class="btn btn-primary w-50">Login</button>
+          </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#formModal">
+  Sign-up
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="formModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-header">        
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h4 class="modal-title text-center mb-3" id="formModalLabel">Sign-up Block</h4>
+        <div class="row p-3 mx-auto">
+          <div class="form-check col">
+            <input class="form-check-input" type="radio" name="user" id="student" onchange="chkradio()" checked>
+            <label class="form-check-label" for="student">Student</label>
+          </div>
+          <div class="form-check col">
+            <input class="form-check-input" type="radio" name="user" id="teacher" onchange="chkradio()">
+            <label class="form-check-label" for="teacher"> Teacher</label>
+          </div>
+          <div class="form-check col">
+            <input class="form-check-input" type="radio" name="user" id="parent"  onchange="chkradio()">
+            <label class="form-check-label" for="parent">Parent</label>
+          </div>
+        </div>
+          <form class="mt-3" action="portal.html" target="parent" method="POST">
+            <div class="mb-1">
+              <label for="fname" class="form-label">First Name</label>
+              <input type="text" class="form-control" name="fname" id="fname" required>
+            </div>
+            <div class="mb-1">
+              <label for="lname" class="form-label">Last Name</label>
+              <input type="text" class="form-control" name="lname" id="lname" required>
+            </div>
+            <div class="mb-1">
+              <label for="rlno" class="form-label">Student Roll No</label>
+              <input type="text" class="form-control" name="rlno" id="rlno" required onchange="setpsd(rlno.value)">
+            </div>
+            <div class="mb-1">
+              <label for="parentid" class="col-form-label col-lg-2">Parent ID</label>
+              <input type="text" class="form-control" name="parentid" id="parentid" required disabled>
+            </div>
+            <div class="mb-1">
+              <label for="teacherid" class="form-label">Teacher ID</label>
+              <input type="text" class="form-control" name="teacherid" id="teacherid" disabled required>
+            </div>
+            <div class="mb-1">
+              <label for="InputEmail1" class="form-label">Email</label>
+              <input type="email" class="form-control" name="teacherid" id="InputEmail1" required>
+            </div>
+            <div class="mb-1">
+              <label for="mobile" class="form-label">Mobile Number</label>
+              <div class="input-group">
+                <span class="btn btn-outline-dark">+91</span>
+                <input type="number" class="form-control" name="mobile" id="mobile" pattern="[0-9]{10}" required>
+              </div>
+            </div>
+            <div class="mb-1">
+              <label for="stdntclass" class="form-label">Student Class</label>
+              <input type="text" class="form-control" name="stdntclass" id="stdntclass" required>
+            </div>
+            <div class="mb-1">
+              <label for="InputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" name="InputPassword1" id="InputPassword1" required>
+            </div>
+            <div class="mb-1">
+              <label for="tchrwrk" class="form-label">Work Experience</label>
+              <textarea class="form-control" name="tchrwrk" id="tchrwrk" rows="5" required placeholder="Your experience in teaching....." disabled></textarea>
+            </div>
+            <div class="mb-1 form-check">
+              <input type="checkbox" class="form-check-input" id="Check1" required>
+              <label class="form-check-label" for="Check1">Agree to our <a href="" >terms and conditions</a></label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" 
+    aria-labelledby="nav-home-tab">
+    <h1 class="text-white text-center my-auto">Admissions</h1>
+    <p class="text-white text-center my-auto fs-4">We welcome students from different places in xxxxxx xxxxxxxxx xxxxxxx,xxxxxxxx.</p>
+    <div class="container p-5 fs-5 bg-light">
+      <ul>
+        <li><a href="#" class="text-decoration-none text-danger">We welcome students from different places in xxxxxx xxxxxxxxx xxxxxxx,xxxxxxxx.</a></li>
+        <li><a href="#" class="text-decoration-none text-danger">We welcome students from different places in xxxxxx xxxxxxxxx xxxxxxx,xxxxxxxx.</a></li>
+        <li><a href="#" class="text-decoration-none text-danger">We welcome students from different places in xxxxxx xxxxxxxxx xxxxxxx,xxxxxxxx.</a></li>
+      </ul>
+      <table class="table table-hover table-bordered fs-5 mt-3 text-center">
+        <tr class="table-secondary"><th>Departments</th><th>Admission dates</th><th>Seats alloted</th><th>Seats filled</th><th>Remaining</th></tr>
+        <tr><th>Languages</th><th>1st june to 25th august</th><th>500</th><th>260</th><th>240</th></tr>
+        <tr><th>Science</th><th>1st june to 25th august</th><th>500</th><th>260</th><th>240</th></tr>
+        <tr><th>Mathematics</th><th>1st june to 25th august</th><th>500</th><th>260</th><th>240</th></tr>
+        <tr><th>Arts</th><th>1st june to 25th august</th><th>500</th><th>260</th><th>240</th></tr>
+      </table>
+    </div>
+  </div>
+    <div class="tab-pane fade" id="nav-profile" role="tabpanel" 
+    aria-labelledby="nav-profile-tab">
+    <h1 class="text-white text-center my-auto">Admissions</h1>
+    <p class="text-white text-center my-auto fs-4">We welcome students from different places in xxxxxx xxxxxxxxx xxxxxxx,xxxxxxxx.</p>
+    <div class="container p-5 fs-5 bg-light">
+      <ul>
+        <li><a href="#" class="text-decoration-none text-danger">We welcome students from different places in xxxxxx xxxxxxxxx xxxxxxx,xxxxxxxx.</a></li>
+        <li><a href="#" class="text-decoration-none text-danger">We welcome students from different places in xxxxxx xxxxxxxxx xxxxxxx,xxxxxxxx.</a></li>
+        <li><a href="#" class="text-decoration-none text-danger">We welcome students from different places in xxxxxx xxxxxxxxx xxxxxxx,xxxxxxxx.</a></li>
+      </ul>
+      <table class="table table-hover table-bordered fs-5 mt-3 text-center">
+        <tr class="table-secondary"><th>Departments</th><th>Admission dates</th><th>Seats alloted</th><th>Seats filled</th><th>Remaining</th></tr>
+        <tr><th>Languages</th><th>1st june to 25th august</th><th>500</th><th>260</th><th>240</th></tr>
+        <tr><th>Science</th><th>1st june to 25th august</th><th>500</th><th>260</th><th>240</th></tr>
+        <tr><th>Mathematics</th><th>1st june to 25th august</th><th>500</th><th>260</th><th>240</th></tr>
+        <tr><th>Arts</th><th>1st june to 25th august</th><th>500</th><th>260</th><th>240</th></tr>
+      </table>
+    </div>
+  </div>
+    <div class="tab-pane fade" id="nav-contact" role="tabpanel" 
+    aria-labelledby="nav-contact-tab">
+  </div>
+  </div>
+    <div class="container bg-dark p-5">
+        <h1 class="text-white text-center my-3">Activities</h1>
+        <div class="bg-light">
+        <div class="row">
+          <div class="col col-lg-4 p-5 text-center">
+          <a href="#" class="text-white bg-info shadow-lg p-5 rounded">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor"
+             class="bi bi-puzzle-fill" viewBox="0 0 16 16">
+              <path d="M3.112 3.645A1.5 1.5 0 0 1 4.605 2H7a.5.5 0 0 1 .5.5v.382c0 .696-.497 1.182-.872 1.469a.459.459 0 0 0-.115.118.113.113 0 0 0-.012.025L6.5 4.5v.003l.003.01c.004.01.014.028.036.053a.86.86 0 0 0 .27.194C7.09 4.9 7.51 5 8 5c.492 0 .912-.1 1.19-.24a.86.86 0 0 0 .271-.194.213.213 0 0 0 .036-.054l.003-.01v-.008a.112.112 0 0 0-.012-.025.459.459 0 0 0-.115-.118c-.375-.287-.872-.773-.872-1.469V2.5A.5.5 0 0 1 9 2h2.395a1.5 1.5 0 0 1 1.493 1.645L12.645 6.5h.237c.195 0 .42-.147.675-.48.21-.274.528-.52.943-.52.568 0 .947.447 1.154.862C15.877 6.807 16 7.387 16 8s-.123 1.193-.346 1.638c-.207.415-.586.862-1.154.862-.415 0-.733-.246-.943-.52-.255-.333-.48-.48-.675-.48h-.237l.243 2.855A1.5 1.5 0 0 1 11.395 14H9a.5.5 0 0 1-.5-.5v-.382c0-.696.497-1.182.872-1.469a.459.459 0 0 0 .115-.118.113.113 0 0 0 .012-.025L9.5 11.5v-.003l-.003-.01a.214.214 0 0 0-.036-.053.859.859 0 0 0-.27-.194C8.91 11.1 8.49 11 8 11c-.491 0-.912.1-1.19.24a.859.859 0 0 0-.271.194.214.214 0 0 0-.036.054l-.003.01v.002l.001.006a.113.113 0 0 0 .012.025c.016.027.05.068.115.118.375.287.872.773.872 1.469v.382a.5.5 0 0 1-.5.5H4.605a1.5 1.5 0 0 1-1.493-1.645L3.356 9.5h-.238c-.195 0-.42.147-.675.48-.21.274-.528.52-.943.52-.568 0-.947-.447-1.154-.862C.123 9.193 0 8.613 0 8s.123-1.193.346-1.638C.553 5.947.932 5.5 1.5 5.5c.415 0 .733.246.943.52.255.333.48.48.675.48h.238l-.244-2.855z"/>
+            </svg>
+          </a>
+          </div>
+          <div class="col col-lg-4 p-5 text-center">
+          <a href="#" class="text-white bg-info shadow-lg p-5 rounded">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
+              <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/>
+            </svg>
+          </a>
+          </div>
+          <div class="col col-lg-4 p-5 text-center">
+          <a href="#" class="text-white bg-info shadow-lg p-5 rounded">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-book-fill" viewBox="0 0 16 16">
+              <path d="M8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+            </svg>
+          </a>
+          </div>
+          <div class="col col-lg-4 p-5 text-center">
+          <a href="#" class="text-white bg-info shadow-lg p-5 rounded">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-box" viewBox="0 0 16 16">
+              <path d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5 8 5.961 14.154 3.5 8.186 1.113zM15 4.239l-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923l6.5 2.6zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464L7.443.184z"/>
+            </svg>
+          </a>
+          </div>
+          <div class="col col-lg-4 p-5 text-center">
+          <a href="#" class="text-white bg-info shadow-lg p-5 rounded">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-palette-fill" viewBox="0 0 16 16">
+              <path d="M12.433 10.07C14.133 10.585 16 11.15 16 8a8 8 0 1 0-8 8c1.996 0 1.826-1.504 1.649-3.08-.124-1.101-.252-2.237.351-2.92.465-.527 1.42-.237 2.433.07zM8 5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm4.5 3a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM5 6.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm.5 6.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+            </svg>
+          </a>
+          </div>
+          <div class="col col-lg-4 p-5 text-center">
+          <a href="#" class="text-white bg-info shadow-lg p-5 rounded">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-clipboard-check" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+              <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+              <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+            </svg>
+          </a>
+          </div>
+          <div class="col col-lg-4 p-5 text-center">
+          <a href="#" class="text-white bg-info shadow-lg p-5 rounded">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-laptop-fill" viewBox="0 0 16 16">
+              <path d="M2.5 2A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2h-11zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5z"/>
+            </svg>
+          </a>
+          </div>
+          <div class="col col-lg-4 p-5 text-center">
+          <a href="#" class="text-white bg-info shadow-lg p-5 rounded">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-bicycle" viewBox="0 0 16 16">
+              <path d="M4 4.5a.5.5 0 0 1 .5-.5H6a.5.5 0 0 1 0 1v.5h4.14l.386-1.158A.5.5 0 0 1 11 4h1a.5.5 0 0 1 0 1h-.64l-.311.935.807 1.29a3 3 0 1 1-.848.53l-.508-.812-2.076 3.322A.5.5 0 0 1 8 10.5H5.959a3 3 0 1 1-1.815-3.274L5 5.856V5h-.5a.5.5 0 0 1-.5-.5zm1.5 2.443-.508.814c.5.444.85 1.054.967 1.743h1.139L5.5 6.943zM8 9.057 9.598 6.5H6.402L8 9.057zM4.937 9.5a1.997 1.997 0 0 0-.487-.877l-.548.877h1.035zM3.603 8.092A2 2 0 1 0 4.937 10.5H3a.5.5 0 0 1-.424-.765l1.027-1.643zm7.947.53a2 2 0 1 0 .848-.53l1.026 1.643a.5.5 0 1 1-.848.53L11.55 8.623z"/>
+            </svg>
+          </a>
+          </div>
+          <div class="col col-lg-4 p-5 text-center">
+          <a href="#" class="text-white bg-info shadow-lg p-5 rounded">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-shield-fill-plus" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M8 0c-.69 0-1.843.265-2.928.56-1.11.3-2.229.655-2.887.87a1.54 1.54 0 0 0-1.044 1.262c-.596 4.477.787 7.795 2.465 9.99a11.777 11.777 0 0 0 2.517 2.453c.386.273.744.482 1.048.625.28.132.581.24.829.24s.548-.108.829-.24a7.159 7.159 0 0 0 1.048-.625 11.775 11.775 0 0 0 2.517-2.453c1.678-2.195 3.061-5.513 2.465-9.99a1.541 1.541 0 0 0-1.044-1.263 62.467 62.467 0 0 0-2.887-.87C9.843.266 8.69 0 8 0zm-.5 5a.5.5 0 0 1 1 0v1.5H10a.5.5 0 0 1 0 1H8.5V9a.5.5 0 0 1-1 0V7.5H6a.5.5 0 0 1 0-1h1.5V5z"/>
+            </svg>
+          </a>
+          </div>
+        </div>
+        </div>
+    </div>
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Contact</button>
+      </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
+      <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+      <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+    </div>
+    <script>
+      function setpsd(psd){
+        var rlno=document.getElementById("rlno").value;
+        var psd=document.getElementById("InputPassword1");
+        psd.value=rlno;
+        psd.readonly=true;
+      }
+      
+      function chkradio(){
+          var stdnt=document.getElementById("student");
+          var prnt=document.getElementById("parent");
+          var tchr=document.getElementById("teacher");
+      
+          var stdntid=document.getElementById("rlno");
+          var tchrid=document.getElementById("teacherid");
+          var prntid=document.getElementById("parentid");
+          var stdntcls=document.getElementById("stdntclass");
+          var tchrwrk=document.getElementById("tchrwrk");
+          var psd=document.getElementById("InputPassword1");
+      
+              if(stdnt.checked){
+                  tchrid.disabled=true;prntid.disabled=true;
+                  tchrid.required=false;prntid.required=false;
+                  tchrwrk.disabled=true;tchrwrk.required=false;
+                  stdntcls.disabled=false;stdntcls.required=true;
+                  stdntid.disabled=false;stdntid.required=true;
+              }
+              else if(tchr.checked){
+                  stdntid.disabled=true;stdntid.required=false;tchrid.required=true;
+                  prntid.disabled=true;prntid.required=false;tchrid.disabled=false;
+                  tchrwrk.disabled=false;tchrwrk.required=true;
+                  stdntcls.disabled=true;stdntcls.required=false;
+                  psd.readonly=false;
+              }
+              else if(prnt.checked){
+                  stdntid.disabled=false;stdntid.required=true;
+                  tchrid.disabled=true;tchrid.required=false;prntid.disabled=false;
+                  tchrwrk.disabled=true;tchrwrk.required=false;
+                  stdntcls.disabled=false;stdntcls.required=true;
+                  psd.readonly=false;
+              }
+          }
+      </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

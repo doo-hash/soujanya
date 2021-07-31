@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .content{
+            display: flex;
+            margin-top: 5rem;
+            padding: 5rem;
+            background-color: lightpink;
+            background-image: linear-gradient(-60deg,#fde0be,#f189af);
+        }
+        .skew1, .skew2,.skew3,.skew4,.skew5,.skew6{
+            display: flex;
+            align-items: center;
+            padding: 0.2rem;
+            width: 15rem; 
+            height: 15rem;
+            padding: 0.5rem;
+            background-color: darkblue;
+            color: white;
+            text-align: center;
+        }
+        .skew1{
+            animation: skew 3s infinite;
+            transform: skew(30deg);
+            animation-direction: alternate;
+            font-size: 1rem;
+        }
+        .skew2{
+            animation: skew 3s infinite;
+            transform: skew(0deg);
+            animation-direction: alternate;
+            margin-left: 4rem;
+            font-size: 1rem;
+        }
+        .skew3{
+            animation: skew 3s infinite;
+            transform: skew(-30deg);
+            animation-direction: alternate;
+            margin-left: 4rem;
+            font-size: 1rem;
+            
+        }
+        .skew4{
+            animation: skewr 5s infinite;
+        }
+        .skew5{
+            animation: skewr 5s infinite;
+            margin-left: 8rem;
+        }
+        .skew6{
+            animation: skewr 5s infinite;
+            margin-left: 8rem;
+        }
+  
+  */      .skew1:hover,.skew2:hover{
+            overflow-x: hidden;
+        }
+        @keyframes skew{
+            0%{
+                background-color: black;
+                color: white;
+                transform: skew(30deg,20deg);
+            }
+            100%{
+                background-color:white;
+                color: black;
+                transform: skew(-30deg,-20deg);
+            }
+        }
+        @keyframes skewr{
+            0%{
+                background-color: black;
+                color: white;
+                transform: rotate(-45deg);
+            }
+            50%{
+                background-color:white;
+                color: black;
+                transform: rotate(45deg);
+            }
+            100%{
+                background-color:white;
+                color: black;
+                transform: rotate(-45deg);
+            }
+        }
+        @keyframes skewtrnslte{
+            0%{
+                background-color: black;
+                color: white;
+                transform: rotate(-45deg);
+                transform: translate(0,0);
+            }
+            50%{
+                background-color:white;
+                color: black;
+                transform: rotate(45deg);
+                transform: translate(10px,10px);
+            }
+            100%{
+                background-color:white;
+                color: black;
+                transform: rotate(-45deg);
+                transform: translate(0,0);
+            }
+        }
+        p:hover{
+            transform: scale(1,1.5);
+            overflow-wrap: break-word;
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="content1">
+        <div class="skew1">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat, nihil 
+                veniam ipsum iure quo facilis hic voluptas nisi minima.</p>
+        </div>
+        <div class="skew2">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat, nihil 
+                veniam ipsum iure quo facilis hic voluptas nisi minima.</p>
+        </div>
+        <div class="skew3">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat, nihil 
+                veniam ipsum iure quo facilis hic voluptas nisi minima.</p>
+        </div>
+        </div>
+    <div class="content">
+    <div class="skew1">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat, nihil 
+            veniam ipsum iure quo facilis hic voluptas nisi minima.</p>
+    </div>
+    <div class="skew2">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat, nihil 
+            veniam ipsum iure quo facilis hic voluptas nisi minima.</p>
+    </div>
+    <div class="skew3">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat, nihil 
+            veniam ipsum iure quo facilis hic voluptas nisi minima.</p>
+    </div>
+    </div>
+    <div class="content">
+    <div class="skew4">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat, nihil 
+            veniam ipsum iure quo facilis hic voluptas nisi minima.</p>
+    </div>
+    <div class="skew5">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat, nihil 
+            veniam ipsum iure quo facilis hic voluptas nisi minima.</p>
+    </div>
+    <div class="skew6">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat, nihil 
+            veniam ipsum iure quo facilis hic voluptas nisi minima.</p>
+    </div>-->
+    </div>
+</body>
+</html>

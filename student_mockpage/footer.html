@@ -13,8 +13,183 @@
       }
     </style>
 </head>
-<body class="d-flex flex-column h-100">
-  
+<body class="d-flex flex-column h-100 m-0">
+  <div class="container-fluid">
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Contact</button>
+    </li>
+  </ul>
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+  </div>
+  </div>
+  <div class="container-md">
+    <div class="d-flex align-items-start">
+      <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</button>
+        <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</button>
+        <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</button>
+        <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</button>
+      </div>
+      <div class="tab-content" id="v-pills-tabContent">
+        <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">...</div>
+        <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">...</div>
+        <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">...</div>
+        <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div>
+      </div>
+    </div>
+    <div class="row border-top border-3 bg-light mx-lg-1">
+      <!--sidebar-->
+        <div class="col-12 col-lg-3 m-0 border border-3 border-top-0 bg-white">
+          <nav class="navbar navbar-expand-lg m-0 navbar-light">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+              data-bs-target="#navbarContent" aria-controls="navbarSupportedContent"
+               aria-expanded="false" aria-label="Toggle navigation">
+             <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+              <div class="nav flex-column nav-item fs-5 w-100 " id="tab" role="tablist" aria-orientation="vertical">
+                <button class="nav-link active text-start" id="all-tab" data-bs-toggle="pill" data-bs-target="#all" type="button" role="tab" aria-controls="all" aria-selected="true">All</button>
+                <button class="nav-link text-start" id="teachers-tab" data-bs-toggle="pill" data-bs-target="#teachers" type="button" role="tab" aria-controls="teachers" aria-selected="false">My Teachers</button>
+                <button class="nav-link text-start" id="students-tab" data-bs-toggle="pill" data-bs-target="#students" type="button" role="tab" aria-controls="students" aria-selected="false">My Students</button>
+                <button class="nav-link text-start" id="reports-tab" data-bs-toggle="pill" data-bs-target="#reports" type="button" role="tab" aria-controls="reports" aria-selected="false">Reports</button>
+                <button class="nav-link text-start" id="announcements-tab" data-bs-toggle="pill" data-bs-target="#announcements" type="button" role="tab" aria-controls="announcements" aria-selected="false">Announcements</button>
+                <button class="nav-link text-start" id="profile-tab" data-bs-toggle="pill" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
+              </div>
+            </div>
+          </nav>
+        </div>
+      <!--***********************-->
+      <!--sidebarcontent-->
+          <div class="tab-content col-12 col-lg-9 px-3 py-3 fs-5" id="tabContent">
+            <div class="tab-pane fade show active" id="all" role="tabpanel" 
+            aria-labelledby="all-tab">
+            <h3 class="p-3 mb-2 text-decoration-underline">WELCOME ADMIN</h3>
+                <table class="table table-striped text-center mb-3 p-2">
+                    <tr>
+                        <th>Number of teachers</th><th>Number of students</th><th>Messages</th></tr>
+                    <tr class="fs-4"><td><span>80</span></td>
+                        <td><span>1000</span></td>
+                        <td>10</td>
+                    </tr>
+                </table>
+                <div class="row">
+                <div class="col-12 col-lg-5">
+                    <h4 class="p-2 text-decoration-underline">Overall Performance of Students</h4>
+                    <div class="d-flex align-items-center w-100 justify-content-center">
+                        <div class="piechart"></div>
+                        <ul class="text-center text-light"><li style="background-color: pink;">A</li>
+                            <li class="p-1" style="background-color: green;">B</li>
+                            <li style="background-color: orange;">C</li>
+                            <li style="background-color: blue;">D</li>
+                            <li style="background-color:violet;">E</li>
+                            <li style="background-color: red;">F</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-7">
+                    <h4 class="p-2 text-decoration-underline">Recent Events</h4>
+                    <ul class="fs-5 p-3 mx-2">
+                        <li><p><a href="#" class="text-decoration-none fs-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit, facilis.</a></p></li>
+                        <li><p><a href="#" class="text-decoration-none fs-5">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a></p></li>
+                        <li><p><a href="#" class="text-decoration-none fs-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, aspernatur!</a></p></li>
+                        <li><p><a href="#" class="text-decoration-none fs-5">Lorem ipsum dolor sit amet consectetur.</a></p></li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+          <!--*********-->  
+            <div class="tab-pane fade p-2" id="teachers" role="tabpanel" 
+            aria-labelledby="teachers-tab">
+            <table class="table table-bordered table-hover fs-5 my-2 w-100 text-center">
+                <tr class="p-2 table-dark"><th>ID</th><th>Teacher Name</th><th>Personnal details</th><th>Education</th><th>Experience</th><th>Year</th><th>Performance</th></tr>
+                <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
+                <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>                
+                <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
+                <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
+                <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>                
+                <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
+                <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
+                <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>                
+                <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
+              </table>
+            </div>
+          <!--*************-->
+            <div class="tab-pane fade p-2" id="profile" role="tabpanel" 
+            aria-labelledby="profile-tab">
+                <table class="table table-bordered table-hover fs-5 mb-2">
+                    <tr class="table-dark"><th></th><th>Details</th></tr>
+                    <tr><td>Full Name</td><td>xxxxxxxx</td></tr>
+                    <tr><td>Designation</td><td>xxxxxxxx</td></tr>
+                    <tr><td>Email id</td><td>xxxxxxxx</td></tr>
+                    <tr><td>Mobile Number</td><td>xxxxxxxx</td></tr>
+                    <tr><td>xxxxx</td><td>xxxxxxxx</td></tr>
+                </table>
+            </div>
+        <!--*************-->
+            <div class="tab-pane fade p-2" id="students" role="tabpanel" 
+            aria-labelledby="students-tab">
+              <table class="table table-bordered table-hover fs-5 my-2 w-100 text-center">
+                <tr class="p-2 table-dark"><th>Roll no.</th><th>Student Name</th><th>Class</th><th>Year</th><th>Performance</th></tr>
+                <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
+                <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>                
+                <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
+                <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
+                <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>                
+                <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
+                <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
+                <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>                
+                <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
+              </table>
+            </div>
+          <!--****************-->
+            <div class="tab-pane fade p-2" id="announcements" role="tabpanel" 
+            aria-labelledby="announcements-tab">
+            <h3 class="p-3 mb-2 text-decoration-underline text-center">Announcements</h3>
+                <ul class="fs-5 p-3">
+                    <li><p><a href="#" class="text-decoration-none fs-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, molestias.</a></p></li>
+                    <li><p><a href="#" class="text-decoration-none fs-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut, sed.</a></p></li>
+                    <li><p><a href="#" class="text-decoration-none fs-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut, sed.</a></p></li>
+                    <li><p><a href="#" class="text-decoration-none fs-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut, sed.</a></p></li>
+                </ul>
+                <a href="#" class="text-decoration-none">View past announcements 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
+                        <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
+                      </svg>
+                </a>
+            </div>
+          <!--*************-->
+            <div class="tab-pane fade p-2" id="reports" role="tabpanel" 
+            aria-labelledby="reports-tab">
+            <h3 class="p-3 mb-2 text-decoration-underline">Reports</h3>
+                <p class="fs-5 p-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere dolore velit tempore neque error itaque repellat aliquid magni blanditiis eius molestias, inventore dolor ut ab et. Impedit expedita neque consectetur.
+                </p>
+                <table class="table table-bordered table-hover fs-5 my-2 w-100 text-center">
+                    <tr class="p-2 table-dark"><th>Roll no.</th><th>Student Name</th><th>Class</th><th>Marks</th><th>Grade</th></tr>
+                    <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
+                    <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>                
+                    <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
+                    <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
+                    <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>                
+                    <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
+                    <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
+                    <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>                
+                    <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
+                </table>
+            </div>
+          <!--**********************-->
+          </div>
+  </div>
     <footer class="footer mt-auto py-3 text-center bg-light">
         <div class="container">
           <span class="text-muted">&copy; Copyright 

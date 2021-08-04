@@ -31,8 +31,8 @@
       .piechart{
     border:1px solid white;
     border-radius: 50%;
-    width:250px;
-    height: 250px;
+    width:12.5rem;
+    height: 12.5rem;
     background-image: conic-gradient(
                 pink 0deg 45deg, 
                 violet 45deg 140deg,
@@ -60,12 +60,17 @@
     color: blue !important;
     background-color: white;
 }
+@media (min-width: 992px){
+.side-nav-scroll{
+    overflow-y: scroll !important;
+}
+}
     </style>
 </head>
 <body class="d-flex flex-column h-100 bg-light">
   <!--header-->
-  <div class="container-fluid sticky-top">
-    <header class="d-flex align-items-baseline sticky-top justify-content-between px-1 py-2 mb-0">
+  <div class="container-fluid sticky-top bg-light">
+    <header class="d-flex align-items-baseline justify-content-between px-1 py-2 mb-0">
       <a href="/" class="d-flex fw-bold px-2 fs-3 text-decoration-none">
         LOGO
       </a>
@@ -88,16 +93,16 @@
   <!--****************-->
  <!--body-->
     <div class="d-flex flex-fill">
-    <div class="row border-top border-2 border-dark border-end border-bottom w-100 mx-auto">
+    <div class="row border-top border-2 border-dark w-100 mx-auto">
   <!--sidebar-->
-    <div class="col-12 col-lg-2 border border-dark border-3 border-top-0 border-bottom-0">
+    <div class="col-12 col-lg-2 side-nav-scroll flex-fill">
       <nav class="navbar navbar-expand-lg navbar-light">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
           data-bs-target="#navbarContent" aria-controls="navbarSupportedContent"
            aria-expanded="false" aria-label="Toggle navigation">
          <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse p-2 p-lg-0" id="navbarContent">
+        <div class="collapse navbar-collapse p-2  m-1 p-lg-0" id="navbarContent">
           <div class="nav flex-column nav-item fs-5 w-100 " id="tab" role="tablist" aria-orientation="vertical">
             <button class="nav-link active text-start bg-light" id="all-tab" data-bs-toggle="pill" data-bs-target="#all" type="button" role="tab" aria-controls="all" aria-selected="true">All</button>
             <button class="nav-link text-start bg-light" id="testing-tab" data-bs-toggle="pill" data-bs-target="#testing" type="button" role="tab" aria-controls="testing" aria-selected="false">Testing</button>
@@ -114,22 +119,22 @@
     </div>
   <!--***********************-->
   <!--sidebarcontent-->
-      <div class="tab-content col-12 col-lg-9 px-3 fs-5 w-75 mx-auto" id="tabContent">
+      <div class="tab-content col-12 col-lg-10 px-3  w-75 mx-auto" id="tabContent">
         <div class="tab-pane fade show active" id="all" role="tabpanel" 
         aria-labelledby="all-tab">
         <h3 class="p-3 mb-2 text-center">WELCOME PARENT</h3>
             <table class="table table-bordered table-striped text-center mb-4 p-2">
                 <tr>
                     <th>Number of classes registered</th><th>Messages</th><th>Attendance</th></tr>
-                <tr class="fs-4"><td><span>8</span></td>
+                <tr><td><span>8</span></td>
                     <td><span>4</span></td>
                     <td>full</td>
                 </tr>
             </table>
             <div class="row">
             <div class="col-12 col-lg-5">
-              <div class="card">
-                <h4 class="card-title card-header">YOUR GRADES</h4>
+              <div class="card shadow mb-2 bg-body rounded">
+                <div class="card-title card-header">YOUR GRADES</div>
                 <div class="card-body d-flex align-items-center justify-content-center">
                     <div class="piechart"></div>
                     <ul class="text-center text-light">
@@ -147,8 +152,8 @@
               </div>
             </div>
             <div class="col-12 col-lg-7">
-              <div class="card">
-                <h4 class="card-title card-header">REMARKS</h4>
+              <div class="card shadow mb-2 bg-body rounded">
+                <div class="card-title card-header">REMARKS</div>
                 <div class="card-blody">
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">He/She is doing good in xxxx,xxxx,xxxx.</li>
@@ -170,14 +175,14 @@
         <div class="tab-pane fade p-2" id="testing" role="tabpanel" 
         aria-labelledby="testing-tab">
         <h3 class="p-3 mb-2 text-center">Testing</h3>
-            <p class="fs-5 py-3">Your test results for this semister are Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem eligendi at error explicabo qui a atque vero sunt ea ad minus quae laudantium tenetur, obcaecati consequuntur nesciunt quisquam asperiores. Sapiente!
+            <p class="py-3">Your test results for this semister are Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem eligendi at error explicabo qui a atque vero sunt ea ad minus quae laudantium tenetur, obcaecati consequuntur nesciunt quisquam asperiores. Sapiente!
             </p>
         </div>
       <!--*************-->
         <div class="tab-pane fade p-2" id="profile" role="tabpanel" 
         aria-labelledby="profile-tab">
         <h3 class="p-3 mb-2 text-center">My Profile</h3>
-            <table class="table table-bordered table-hover fs-5 mb-2">
+            <table class="table table-bordered table-hover mb-2">
                 <tr class="table-dark"><th></th><th>Details</th></tr>
                 <tr><td>Name</td><td>xxxxxxxx</td></tr>
                 <tr><td>Class</td><td>xxxxxxxx</td></tr>
@@ -190,7 +195,7 @@
         <div class="tab-pane fade p-2" id="classes" role="tabpanel" 
         aria-labelledby="classes-tab">
           <h3 class="p-3 mb-2 text-center">Schedule for this semester</h3>
-          <table class="table-responsive table-bordered fs-5 my-2 w-100 text-center">
+          <table class="table-responsive table-bordered my-2 w-100 text-center">
             <tr class="p-2"><th>Attending Classes</th><th>Completed classes</th><th>Pending clases</th><th>Assignments pending</th></tr>
             <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
             <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>                
@@ -210,15 +215,15 @@
         <div class="tab-pane fade p-2" id="immunization" role="tabpanel" 
         aria-labelledby="immunization-tab">
         <h3 class="p-3 mb-2 text-center">Immunization</h3>
-            <p class="fs-5 py-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere dolore velit tempore neque error itaque repellat aliquid magni blanditiis eius molestias, inventore dolor ut ab et. Impedit expedita neque consectetur.
+            <p class="py-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere dolore velit tempore neque error itaque repellat aliquid magni blanditiis eius molestias, inventore dolor ut ab et. Impedit expedita neque consectetur.
             </p>
         </div>
       <!--**********************-->
         <div class="tab-pane fade p-2" id="progressrprt" role="tabpanel" 
         aria-labelledby="progressrprt-tab">
         <h3 class="p-3 mb-2 text-center">Report Card</h3>
-            <p class="fs-5 py-3">Your grades for this semester are:</p>
-            <table class="table table-success table-hover table-bordered fs-5">
+            <p class="lead">Your grades for this semester are:</p>
+            <table class="table table-success table-hover table-bordered">
                 <tr class="table-dark"><th>Subject</th><th>Marks</th><th>Grade</th></tr>
                 <tr><td>xxxxx</td><td>xxx</td><td>A</td></tr>
                 <tr><td>xxxxx</td><td>xxx</td><td>B</td></tr>
@@ -233,8 +238,8 @@
         <div class="tab-pane fade p-2" id="rprtcard" role="tabpanel" 
         aria-labelledby="rprtcard-tab">
         <h3 class="p-3 mb-2 text-center">Remarks</h3>
-            <p class="fs-5">Your performance in this semister:</p>
-            <table class="table table-info table-hover table-bordered fs-5">
+            <p class="lead">Your performance in this semister:</p>
+            <table class="table table-info table-hover table-bordered">
                 <tr class="table-dark"><th>Subject</th><th>Performance</th></tr>
                 <tr><td>xxxxxx</td><td>Good</td></tr>
                 <tr><td>xxxxxx</td><td>Can Be Improved</td></tr>
@@ -248,26 +253,28 @@
         <div class="tab-pane fade p-2" id="assignments" role="tabpanel" 
         aria-labelledby="assignments-tab">
         <h3 class="p-3 mb-2 text-center">Assignments</h3>
-            <table class="table table-striped table-bordered text-center fs-5 mb-3">
+            <table class="table table-striped table-bordered text-center mb-3">
                 <tr><th>Assigned</th><th>Completed</th><th>Pending</th></tr>
                 <tr><td>7</td><td>5</td><td>2</td></tr>
             </table>
             <br>
-            <p class="fs-5">Current Assignments are:</p>
+            <p class="lead">Current Assignments are:</p>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">xxxxxx</li>
                 <li class="list-group-item">xxxxxx</li>
             </ul>
         </div>
+        
       </div>
+      <footer class="footer mt-auto text-center border-top p-1">
+        <div class="container">
+          <small class="text-muted">&copy; Copyright 
+             XXXX. All rights reserved.</small>
+        </div>
+      </footer>
     </div>
   </div>
-  <footer class="footer mt-auto text-center">
-    <div class="container">
-      <span class="text-muted">&copy; Copyright 
-         XXXX. All rights reserved.</span>
-    </div>
-  </footer>
+  
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 

@@ -1,79 +1,70 @@
 <!DOCTYPE html>
 <html lang="en" class="h-100">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+    crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" 
+    rel="stylesheet" />
     <title>Teacher Portal</title>
     <style>
-      body{
-        font-family: 'Cairo', sans-serif;
-      }
-      a:hover, .nav-tabs button:hover{
-        text-decoration: underline;
-      }
-      .tab-content .tab-pane li p:hover{
-          text-decoration: underline;
-      }
-      
-      .dropdown{
-  position: relative;
-}
-.dropdown-menu{
-  position: absolute;
-  display: none;
-}
-.dropdown:hover .dropdown-menu{
-  display: block;
-}
-      .piechart{
-    border:1px solid white;
-    border-radius: 50%;
-    width:12.5rem;
-    height: 12.5rem;
-    background-image: conic-gradient(
-                pink 0deg 45deg, 
-                violet 45deg 140deg,
-                orange 140deg 175deg,
-                blue 175deg 220deg,
-                green 220deg 315deg,
-                red 315deg 360deg);
-    
-}
-.nav-item{
-  background-color: white;
-}
-.nav-item button{
-  color: black;
-  background-color: white;
-  border: none;
-}
-
-.nav-item button:hover
-{
-  background-color: orange !important;
-  color: white;
-}
-.nav-item .active, .nav-item button:focus,.nav-item button:active{
-    color: blue ;
-    background-color: white !important;
-}
-#mycalendar .list-group .list-group-item:active,#mycalendar .list-group .list-group-item:hover,
-        #mycalendar .list-group .list-group-item:focus,#mycalendar .list-group .list-group-item .active{
+        body{
+            font-family: 'Cairo', sans-serif;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+        .tab-content .tab-pane li p:hover{
+            text-decoration: underline;
+        }
+        .piechart{
+            border:1px solid white;
+            border-radius: 50%;
+            width:12.5rem;
+            height: 12.5rem;
+            background-image: conic-gradient(
+            pink 0deg 45deg, 
+            violet 45deg 140deg,
+            orange 140deg 175deg,
+            blue 175deg 220deg,
+            green 220deg 315deg,
+            red 315deg 360deg);
+        }
+        .nav-item{
+            background-color: white;
+        }
+        .nav-item button{
+            color: black;
+            background-color: white;
+            border: none;
+        }
+        .nav-item button:hover{
+            background-color: orange !important;
+            color: white;
+        }
+        .nav-item .active, .nav-item button:focus,.nav-item button:active{
+            color: blue ;
+            background-color: white !important;
+        }
+        #mycalendar .list-group .list-group-item:active,
+        #mycalendar .list-group .list-group-item:hover,
+        #mycalendar .list-group .list-group-item:focus,
+        #mycalendar .list-group .list-group-item .active{
             background-color: black;
             color: white;
         }
-@media (min-width: 992px){
-.side-nav-scroll{
-    overflow-y: scroll;
-    min-height: 100% !important;
-}
-}
+        @media (min-width: 992px){
+            .side-nav-scroll{
+            overflow-y: scroll;
+            min-height: 100% !important;
+        }
+    }
     </style>
 </head>
 <body class="d-flex flex-column h-100 bg-light">
@@ -85,9 +76,11 @@
       </a>
       <button class="btn dropdown-toggle" type="button" 
       data-bs-toggle="dropdown" aria-expanded="false">
-        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white" class="bi bi-person-circle" viewBox="0 0 16 16">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white" 
+        class="bi bi-person-circle" viewBox="0 0 16 16">
           <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-          <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+          <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 
+          0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
         </svg>
       </button>
       <ul class="dropdown-menu dropdown-menu-end">
@@ -99,10 +92,10 @@
       </ul>
     </header>
   </div>
-  <!--****************-->
- <!--body-->
+
+<!--body-->
   <div class="d-flex flex-fill row w-100 mx-auto align-content-start">
-  <!--sidebar-->
+    <!--sidebar-->
     <div class="col-12 col-lg-3 side-nav-scroll">
       <nav class="navbar navbar-expand-lg navbar-light">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
@@ -111,93 +104,103 @@
          <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse p-2 p-lg-0 bg-white m-1" id="navbarContent">
-          <div class="nav flex-column nav-item fs-5 w-100" id="tab" role="tablist" aria-orientation="vertical">
-            <button class="nav-link active text-start bg-light" id="all-tab" data-bs-toggle="pill" data-bs-target="#all" type="button" role="tab" aria-controls="all" aria-selected="true">All</button>
-            <button class="nav-link text-start bg-light" id="classes-tab" data-bs-toggle="pill" data-bs-target="#classes" type="button" role="tab" aria-controls="classes" aria-selected="false">My Classes</button>
-            <button class="nav-link text-start bg-light" id="students-tab" data-bs-toggle="pill" data-bs-target="#students" type="button" role="tab" aria-controls="students" aria-selected="false">My Students</button>
-            <button class="nav-link text-start bg-light" id="calendar-tab" data-bs-toggle="pill" data-bs-target="#calendar" type="button" role="tab" aria-controls="calendar" aria-selected="false">Calendar</button>
-            <button class="nav-link text-start bg-light" id="schedule-tab" data-bs-toggle="pill" data-bs-target="#schedule" type="button" role="tab" aria-controls="schedule" aria-selected="false">Schedule</button>
-            <button class="nav-link text-start bg-light" id="reports-tab" data-bs-toggle="pill" data-bs-target="#reports" type="button" role="tab" aria-controls="reports" aria-selected="false">Reports</button>
-            <button class="nav-link text-start bg-light" id="grades-tab" data-bs-toggle="pill" data-bs-target="#grades" type="button" role="tab" aria-controls="grades" aria-selected="false">Grades and Exams</button>
-            <button class="nav-link text-start bg-light" id="profile-tab" data-bs-toggle="pill" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
+          <div class="nav flex-column nav-item fs-5 w-100" id="tab" role="tablist" 
+          aria-orientation="vertical">
+            <button class="nav-link active text-start bg-light" id="all-tab" 
+            data-bs-toggle="pill" data-bs-target="#all" type="button" role="tab"
+             aria-controls="all" aria-selected="true">All</button>
+            <button class="nav-link text-start bg-light" id="classes-tab" 
+            data-bs-toggle="pill" data-bs-target="#classes" type="button" role="tab" 
+            aria-controls="classes" aria-selected="false">My Classes</button>
+            <button class="nav-link text-start bg-light" id="students-tab" 
+            data-bs-toggle="pill" data-bs-target="#students" type="button" role="tab" 
+            aria-controls="students" aria-selected="false">My Students</button>
+            <button class="nav-link text-start bg-light" id="calendar-tab" 
+            data-bs-toggle="pill" data-bs-target="#calendar" type="button" role="tab" 
+            aria-controls="calendar" aria-selected="false">Calendar</button>
+            <button class="nav-link text-start bg-light" id="schedule-tab" 
+            data-bs-toggle="pill" data-bs-target="#schedule" type="button" role="tab" 
+            aria-controls="schedule" aria-selected="false">Schedule</button>
+            <button class="nav-link text-start bg-light" id="reports-tab" 
+            data-bs-toggle="pill" data-bs-target="#reports" type="button" role="tab" 
+            aria-controls="reports" aria-selected="false">Reports</button>
+            <button class="nav-link text-start bg-light" id="grades-tab" 
+            data-bs-toggle="pill" data-bs-target="#grades" type="button" role="tab" 
+            aria-controls="grades" aria-selected="false">Grades and Exams</button>
+            <button class="nav-link text-start bg-light" id="profile-tab" 
+            data-bs-toggle="pill" data-bs-target="#profile" type="button" role="tab" 
+            aria-controls="profile" aria-selected="false">Profile</button>
           </div>
         </div>
       </nav>
     </div>
-  <!--***********************-->
-  <!--sidebarcontent-->
-      <div class="tab-content col-12 col-lg-9" id="tabContent">
+    <!--sidebarcontent-->
+    <div class="tab-content col-12 col-lg-9" id="tabContent">
         <div class="tab-pane fade show active" id="all" role="tabpanel" 
         aria-labelledby="all-tab">
         <h3 class="p-3 mb-2 text-center">WELCOME TEACHER</h3>
-            <table class="table table-bordered table-striped text-center mb-5 p-2">
-                <tr>
-                    <th>Number of students enrolled</th><th>Messages</th><th>Reminders</th></tr>
-                <tr><td><span>40</span></td>
-                    <td><span>5</span></td>
-                    <td>5</td>
-                </tr>
-            </table>
-            <div class="row">
+        <table class="table table-bordered table-striped text-center mb-5 p-2">
+            <tr><th>Number of students enrolled</th>
+                <th>Messages</th><th>Reminders</th></tr>
+            <tr><td><span>40</span></td><td><span>5</span></td><td>5</td></tr>
+        </table>
+        <div class="row">
             <div class="col-12 col-lg-5">
                 <div class="card shadow mb-5 bg-body rounded">
-                <div class="card-title card-header">Overall Performance of Students</div>
-                <div class="card-body d-flex align-items-center w-100 justify-content-center">
-                    <div class="piechart"></div>
-                    <ul class="text-center text-light"><li style="background-color: pink;">A</li>
-                        <li class="p-1" style="background-color: green;">B</li>
-                        <li style="background-color: orange;">C</li>
-                        <li style="background-color: blue;">D</li>
-                        <li style="background-color:violet;">E</li>
-                        <li style="background-color: red;">F</li>
-                    </ul>
-                </div>
-                <div class="card-footer text-muted">
-                    2021 overall performance
-                  </div>
+                    <div class="card-title card-header">Overall Performance of Students</div>
+                    <div class="card-body d-flex align-items-center w-100 justify-content-center">
+                        <div class="piechart"></div>
+                        <ul class="text-center text-light">
+                            <li style="background-color: pink;">A</li>
+                            <li class="p-1" style="background-color: green;">B</li>
+                            <li style="background-color: orange;">C</li>
+                            <li style="background-color: blue;">D</li>
+                            <li style="background-color:violet;">E</li>
+                            <li style="background-color: red;">F</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer text-muted">2021 overall performance</div>
                 </div>
             </div>
             <div class="col-12 col-lg-7">
                 <div class="card shadow mb-4 bg-body rounded">
-                <div class="card-title card-header">SCHEDULE</div>
-                
-                <table class="card-body table table-bordered table-hover text-center m-0">
-                  <tr class="table-dark"><th>Timing</th><th>Subject</th></tr>
-                  <tr><td>Lorem</td><td>lorem</td></tr>
-                  <tr><td>Lorem</td><td>lorem</td></tr>
-                  <tr><td>Lorem</td><td>lorem</td></tr>
-                  <tr><td>Lorem</td><td>lorem</td></tr>
-                  <tr><td>Lorem</td><td>lorem</td></tr>
-                  <tr><td>Lorem</td><td>lorem</td></tr>
-                </table>
-                <div class="card-footer text-muted" id="crntdate">
-                  </div>
-            </div>
-            </div>
+                    <div class="card-title card-header">SCHEDULE</div>                
+                    <table class="card-body table table-bordered table-hover text-center m-0">
+                        <tr class="table-dark"><th>Timing</th><th>Subject</th></tr>
+                        <tr><td>Lorem</td><td>lorem</td></tr>
+                        <tr><td>Lorem</td><td>lorem</td></tr>
+                        <tr><td>Lorem</td><td>lorem</td></tr>
+                        <tr><td>Lorem</td><td>lorem</td></tr>
+                        <tr><td>Lorem</td><td>lorem</td></tr>
+                        <tr><td>Lorem</td><td>lorem</td></tr>
+                    </table>
+                    <div class="card-footer text-muted" id="crntdate"></div>
+                </div>
             </div>
         </div>
-      <!--*********-->  
+        </div>
+        <!--Classes-->  
         <div class="tab-pane fade p-2" id="classes" role="tabpanel" 
         aria-labelledby="classes-tab">
-        <h4 class="d-inline-block">Today's Schedule</h4>
-        <p id="crntdate1" class="float-end btn-lg btn-dark rounded-0 px-3 d-inline-block"></p>
-        <table class="table table-bordered table-hover my-2 w-100 text-center">
-            <tr class="p-2 table-dark"><th>Timing</th><th>Subject</th><th>No. of students</th><th>Assignments</th><th>Exams</th></tr>
-            <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
-            <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>                
-            <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
-            <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
-            <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>                
-            <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
-            <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
-            <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>                
-            <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
-          </table>
+            <h4 class="d-inline-block">Today's Schedule</h4>
+            <p id="crntdate1" class="float-end btn-lg btn-dark rounded-0 px-3 d-inline-block"></p>
+            <table class="table table-bordered table-hover my-2 w-100 text-center">
+                <tr class="p-2 table-dark"><th>Timing</th><th>Subject</th><th>No. of students</th><th>Assignments</th><th>Exams</th></tr>
+                <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
+                <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>                
+                <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
+                <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
+                <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>                
+                <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
+                <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
+                <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>                
+                <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
+            </table>
         </div>
-      <!--*************-->
+        <!--Profile-->
         <div class="tab-pane fade p-2" id="profile" role="tabpanel" 
         aria-labelledby="profile-tab">
-        <h3 class="text-center p-3">My Profile</h3>
+            <h3 class="text-center p-3">My Profile</h3>
             <table class="table table-bordered table-hover mb-2">
                 <tr class="table-dark"><th></th><th>Details</th></tr>
                 <tr><td>Full Name</td><td>xxxxxxxx</td></tr>
@@ -207,30 +210,30 @@
                 <tr><td>Teaching Subjects</td><td>xxxxxxxx</td></tr>
             </table>
         </div>
-    <!--*************-->
+        <!--students-->
         <div class="tab-pane fade p-2" id="students" role="tabpanel" 
         aria-labelledby="students-tab">
-        <h3 class="text-center p-3">Students</h3>
-          <table class="table table-bordered table-hover mb-4 w-100 text-center">
-            <tr class="p-2 table-dark"><th>Roll no.</th><th>Student Name</th><th>Class</th><th>Year</th><th>Grades</th><th>Performance</th></tr>
-            <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxx</td></tr>
-            <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxx</td></tr>                
-            <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxx</td></tr>
-            <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxx</td></tr>
-            <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxx</td></tr>                
-            <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxx</td></tr>
-            <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxx</td></tr>
-            <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxx</td></tr>                
-            <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxx</td></tr>
-          </table>
+            <h3 class="text-center p-3">Students</h3>
+            <table class="table table-bordered table-hover mb-4 w-100 text-center">
+                <tr class="p-2 table-dark"><th>Roll no.</th><th>Student Name</th><th>Class</th><th>Year</th><th>Grades</th><th>Performance</th></tr>
+                <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxx</td></tr>
+                <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxx</td></tr>                
+                <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxx</td></tr>
+                <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxx</td></tr>
+                <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxx</td></tr>                
+                <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxx</td></tr>
+                <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxx</td></tr>
+                <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxx</td></tr>                
+                <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxx</td></tr>
+            </table>
         </div>
-      <!--****************-->
+        <!--calender-->
         <div class="tab-pane fade p-2" id="calendar" role="tabpanel" 
         aria-labelledby="calendar-tab">
-        <h3 class="p-3 mb-2 text-center">Calendar</h3>
-        <div class="bg-light">
-          <div class="row">
-              <div class="col-12 col-lg-8">
+            <h3 class="p-3 mb-2 text-center">Calendar</h3>
+            <div class="bg-light">
+              <div class="row">
+                  <div class="col-12 col-lg-8">
                   <div class="border">
                   <div class="fs-4 d-flex">
                       <p class="text-start col-1 bg-secondary text-center text-white p-1" onclick="prevyr()">
@@ -899,7 +902,7 @@
                       </div>
                   </div>
                   </div>
-              </div>
+                    </div>
               <div class="col-12 col-lg-4">
                   <h4 class="text-center p-2">Events</h4>
                   <ul class="list-group list-group-flush">
@@ -922,10 +925,10 @@
                   </svg>
             </a>
         </div>
-      <!--*************-->
+        <!--Reports-->
         <div class="tab-pane fade p-2" id="reports" role="tabpanel" 
         aria-labelledby="reports-tab">
-        <h3 class="p-3 mb-2 text-center">Reports</h3>
+            <h3 class="p-3 mb-2 text-center">Reports</h3>
             <table class="table table-bordered table-hover my-2 w-100 text-center">
                 <tr class="p-2 table-dark"><th>Roll no.</th><th>Student Name</th><th>Class</th><th>Grades</th><th>Performance</th></tr>
                 <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
@@ -939,55 +942,54 @@
                 <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
             </table>
         </div>
-      <!--**********************-->
-      <div class="tab-pane fade p-2" id="grades" role="tabpanel" 
-      aria-labelledby="grades-tab">
-      <h3 class="p-3 mb-2 text-center">Grades and Exams</h3>
-          <p class="py-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere dolore velit tempore neque error itaque repellat aliquid magni blanditiis eius molestias, inventore dolor ut ab et. Impedit expedita neque consectetur.
-          </p>
-          <table class="table table-bordered table-hover my-2 w-100 text-center">
-              <tr class="p-2 table-dark"><th>Roll no.</th><th>Student Name</th><th>Class</th><th>Exams</th><th>Grade</th></tr>
-              <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
-              <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>                
-              <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
-              <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
-              <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>                
-              <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
-              <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
-              <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>                
-              <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
-          </table>
-      </div>
-<!--***********************************-->
-<div class="tab-pane fade p-2" id="schedule" role="tabpanel" 
-aria-labelledby="schedule-tab">
-<h3 class="p-3 mb-2 text-decoration-underline">Schedule</h3>
-    <p class="py-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere dolore velit tempore neque error itaque repellat aliquid magni blanditiis eius molestias, inventore dolor ut ab et. Impedit expedita neque consectetur.
-    </p>
-    <table class="table table-bordered table-hover my-2 w-100 text-center">
-        <tr class="p-2 table-dark"><th>timing</th><th>Subject</th><th>Class</th><th>Other tasks</th><th>Attendance</th></tr>
-        <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
-        <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>                
-        <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
-        <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
-        <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>                
-        <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
-        <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
-        <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>                
-        <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
-    </table>
-    <a href="#" class="text-decoration-none py-2 float-end">View previous month schedule 
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
-          <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
-          <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
-        </svg>
-  </a>
-</div>
-
+        <!--Grades-->
+        <div class="tab-pane fade p-2" id="grades" role="tabpanel" 
+          aria-labelledby="grades-tab">
+            <h3 class="p-3 mb-2 text-center">Grades and Exams</h3>
+            <p class="py-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere dolore velit tempore neque error itaque repellat aliquid magni blanditiis eius molestias, inventore dolor ut ab et. Impedit expedita neque consectetur.
+            </p>
+            <table class="table table-bordered table-hover my-2 w-100 text-center">
+                <tr class="p-2 table-dark"><th>Roll no.</th><th>Student Name</th><th>Class</th><th>Exams</th><th>Grade</th></tr>
+                <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
+                <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>                
+                <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
+                <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
+                <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>                
+                <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
+                <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
+                <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>                
+                <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
+            </table>
+        </div>
+        <!--schedule-->
+        <div class="tab-pane fade p-2" id="schedule" role="tabpanel" 
+        aria-labelledby="schedule-tab">
+            <h3 class="p-3 mb-2 text-decoration-underline">Schedule</h3>
+            <p class="py-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere dolore velit tempore neque error itaque repellat aliquid magni blanditiis eius molestias, inventore dolor ut ab et. Impedit expedita neque consectetur.
+            </p>
+            <table class="table table-bordered table-hover my-2 w-100 text-center">
+                <tr class="p-2 table-dark"><th>timing</th><th>Subject</th><th>Class</th><th>Other tasks</th><th>Attendance</th></tr>
+                <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
+                <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>                
+                <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
+                <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
+                <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>                
+                <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
+                <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
+                <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>                
+                <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
+            </table>
+            <a href="#" class="text-decoration-none py-2 float-end">View previous month schedule 
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
+              <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
+            </svg>
+            </a>
+        </div>
       </div>
     </div>
-  </div>
-
+    </div>
+    <!--Footer-->
   <footer class="footer mt-auto text-center border-top p-1">
     <div class="container">
       <small class="text-muted">&copy; Copyright 
@@ -999,15 +1001,17 @@ aria-labelledby="schedule-tab">
     document.getElementById("crntdate").innerHTML = d.toDateString();
     document.getElementById("crntdate1").innerHTML = d.toDateString();
     function prevyr(){
-            document.getElementById("year").innerHTML=document.getElementById("year").innerHTML-1;
-        }
-        function nextyr(){
-            document.getElementById("year").innerHTML=parseInt(document.getElementById("year").innerHTML)+1;
-        }
+    document.getElementById("year").innerHTML=document.getElementById("year").innerHTML-1;
+    }
+    function nextyr(){
+    document.getElementById("year").innerHTML=parseInt(document.getElementById("year").innerHTML)+1;
+    }
   </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+     crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+    crossorigin="anonymous"></script>
 </body>
 </html>

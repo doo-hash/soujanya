@@ -1,72 +1,60 @@
 <!DOCTYPE html>
 <html lang="en" class="h-100">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
-    <title>Parent Portal</title>
-    <style>
-      body{
-        font-family: 'Cairo', sans-serif;
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+  rel="stylesheet" 
+  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+  crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet" />
+  <title>Parent Portal</title>
+  <style>
+    body{
+      font-family: 'Cairo', sans-serif;
+    }
+    a:hover{
+      text-decoration: underline;
+    } 
+    .piechart{
+      border:1px solid white;
+      border-radius: 50%;
+      width:12.5rem;
+      height: 12.5rem;
+      background-image: conic-gradient(
+        pink 0deg 45deg, 
+        violet 45deg 140deg,
+        orange 140deg 175deg,
+        blue 175deg 220deg,
+        green 220deg 315deg,
+        red 315deg 360deg);    
+    }
+    .nav-item{
+      background-color: white;
+    }
+    .nav-item button{
+      color: black;
+      background-color: white;
+      border: none;
+    }
+    .nav-item button:hover{
+      background-color: orange !important;
+      color: white;
+    }
+    .nav-item .active, .nav-item button:focus,.nav-item button:active{
+      color: blue ;
+      background-color: white !important;
+    }
+    @media (min-width: 992px){
+      .side-nav-scroll{
+        overflow-y: scroll;
+        min-height: 100% !important;
       }
-      a:hover, .nav-tabs button:hover{
-        text-decoration: underline;
-      }
-     
-      .dropdown{
-  position: relative;
-}
-.dropdown-menu{
-  position: absolute;
-  display: none;
-}
-.dropdown:hover .dropdown-menu{
-  display: block;
-}
-      .piechart{
-    border:1px solid white;
-    border-radius: 50%;
-    width:12.5rem;
-    height: 12.5rem;
-    background-image: conic-gradient(
-                pink 0deg 45deg, 
-                violet 45deg 140deg,
-                orange 140deg 175deg,
-                blue 175deg 220deg,
-                green 220deg 315deg,
-                red 315deg 360deg);
-    
-}
-.nav-item{
-  background-color: white;
-}
-.nav-item button{
-  color: black;
-  background-color: white;
-  border: none;
-}
-
-.nav-item button:hover
-{
-  background-color: orange !important;
-  color: white;
-}
-.nav-item .active, .nav-item button:focus,.nav-item button:active{
-    color: blue ;
-    background-color: white !important;
-}
-@media (min-width: 992px){
-.side-nav-scroll{
-    overflow-y: scroll;
-    min-height: 100% !important;
-}
-}
-    </style>
+    }
+  </style>
 </head>
 <body class="d-flex flex-column h-100 bg-light">
   <!--header-->
@@ -91,7 +79,6 @@
       </ul>
     </header>
   </div>
-  <!--****************-->
  <!--body-->
     <div class="d-flex flex-fill row w-100 mx-auto align-content-start">
   <!--sidebar-->
@@ -103,180 +90,197 @@
          <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse p-2 p-lg-0 bg-white m-1" id="navbarContent">
-          <div class="nav flex-column nav-item fs-5 w-100 " id="tab" role="tablist" aria-orientation="vertical">
-            <button class="nav-link active text-start bg-light" id="all-tab" data-bs-toggle="pill" data-bs-target="#all" type="button" role="tab" aria-controls="all" aria-selected="true">All</button>
-            <button class="nav-link text-start bg-light" id="testing-tab" data-bs-toggle="pill" data-bs-target="#testing" type="button" role="tab" aria-controls="testing" aria-selected="false">Testing</button>
-            <button class="nav-link text-start bg-light" id="profile-tab" data-bs-toggle="pill" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
-            <button class="nav-link text-start bg-light" id="classes-tab" data-bs-toggle="pill" data-bs-target="#classes" type="button" role="tab" aria-controls="classes" aria-selected="false">Classes</button>
-            <button class="nav-link text-start bg-light" id="messages-tab" data-bs-toggle="pill" data-bs-target="#messages" type="button" role="tab" aria-controls="messages" aria-selected="false">Messages</button>
-            <button class="nav-link text-start bg-light" id="immunization-tab" data-bs-toggle="pill" data-bs-target="#immunization" type="button" role="tab" aria-controls="immunization" aria-selected="false">Immunization</button>
-            <button class="nav-link text-start bg-light" id="progressrprt-tab" data-bs-toggle="pill" data-bs-target="#progressrprt" type="button" role="tab" aria-controls="progressrprt" aria-selected="false">Progress Report</button>
-            <button class="nav-link text-start bg-light" id="rprtcard-tab" data-bs-toggle="pill" data-bs-target="#rprtcard" type="button" role="tab" aria-controls="rprtcard" aria-selected="false">Annual Analysis</button>
-            <button class="nav-link text-start bg-light" id="assignments-tab" data-bs-toggle="pill" data-bs-target="#assignments" type="button" role="tab" aria-controls="assignments" aria-selected="false">Assignments</button>
+          <div class="nav flex-column nav-item fs-5 w-100 " id="tab" role="tablist" 
+          aria-orientation="vertical">
+            <button class="nav-link active text-start bg-light" id="all-tab" 
+            data-bs-toggle="pill" data-bs-target="#all" type="button" role="tab" 
+            aria-controls="all" aria-selected="true">All</button>
+            <button class="nav-link text-start bg-light" id="testing-tab" 
+            data-bs-toggle="pill" data-bs-target="#testing" type="button" role="tab" 
+            aria-controls="testing" aria-selected="false">Testing</button>
+            <button class="nav-link text-start bg-light" id="profile-tab" 
+            data-bs-toggle="pill" data-bs-target="#profile" type="button" role="tab" 
+            aria-controls="profile" aria-selected="false">Profile</button>
+            <button class="nav-link text-start bg-light" id="classes-tab" 
+            data-bs-toggle="pill" data-bs-target="#classes" type="button" role="tab" 
+            aria-controls="classes" aria-selected="false">Classes</button>
+            <button class="nav-link text-start bg-light" id="messages-tab" 
+            data-bs-toggle="pill" data-bs-target="#messages" type="button" role="tab" 
+            aria-controls="messages" aria-selected="false">Messages</button>
+            <button class="nav-link text-start bg-light" id="immunization-tab" 
+            data-bs-toggle="pill" data-bs-target="#immunization" type="button" role="tab" 
+            aria-controls="immunization" aria-selected="false">Immunization</button>
+            <button class="nav-link text-start bg-light" id="progressrprt-tab" 
+            data-bs-toggle="pill" data-bs-target="#progressrprt" type="button" role="tab" 
+            aria-controls="progressrprt" aria-selected="false">Progress Report</button>
+            <button class="nav-link text-start bg-light" id="rprtcard-tab" 
+            data-bs-toggle="pill" data-bs-target="#rprtcard" type="button" role="tab" 
+            aria-controls="rprtcard" aria-selected="false">Annual Analysis</button>
+            <button class="nav-link text-start bg-light" id="assignments-tab" 
+            data-bs-toggle="pill" data-bs-target="#assignments" type="button" role="tab" 
+            aria-controls="assignments" aria-selected="false">Assignments</button>
           </div>
         </div>
       </nav>
     </div>
-  <!--***********************-->
   <!--sidebarcontent-->
-      <div class="tab-content col-12 col-lg-9" id="tabContent">
-        <div class="tab-pane fade show active" id="all" role="tabpanel" 
+    <div class="tab-content col-12 col-lg-9" id="tabContent">
+      <div class="tab-pane fade show active" id="all" role="tabpanel" 
         aria-labelledby="all-tab">
         <h3 class="p-3 mb-2 text-center">WELCOME PARENT</h3>
-            <table class="table table-bordered table-striped text-center mb-5 p-2">
-                <tr>
-                    <th>Number of classes registered</th><th>Messages</th><th>Attendance</th></tr>
-                <tr><td><span>8</span></td>
-                    <td><span>4</span></td>
-                    <td>full</td>
-                </tr>
-            </table>
-            <div class="row">
-            <div class="col-12 col-lg-5">
-              <div class="card shadow mb-4 bg-body rounded">
-                <div class="card-title card-header">YOUR GRADES</div>
+        <table class="table table-bordered table-striped text-center mb-5 p-2">
+          <tr><th>Number of classes registered</th><th>Messages</th>
+            <th>Attendance</th></tr>
+            <tr><td><span>8</span></td><td><span>4</span></td><td>full</td></tr>
+        </table>
+        <div class="row">
+          <div class="col-12 col-lg-5">
+            <div class="card shadow mb-4 bg-body rounded">
+              <div class="card-title card-header">YOUR GRADES</div>
                 <div class="card-body d-flex align-items-center justify-content-center">
-                    <div class="piechart"></div>
+                  <div class="piechart"></div>
                     <ul class="text-center text-light">
-                        <li style="background-color: pink;">A</li>
-                        <li class="p-1" style="background-color: green;">B</li>
-                        <li style="background-color: orange;">C</li>
-                        <li style="background-color: blue;">D</li>
-                        <li style="background-color:violet;">E</li>
-                        <li style="background-color: red;">F</li>
+                      <li style="background-color: pink;">A</li>
+                      <li class="p-1" style="background-color: green;">B</li>
+                      <li style="background-color: orange;">C</li>
+                      <li style="background-color: blue;">D</li>
+                      <li style="background-color:violet;">E</li>
+                      <li style="background-color: red;">F</li>
                     </ul>
                 </div>
-                <div class="card-footer text-muted">
-                  Quarterly grades
-                </div>
-              </div>
+                <div class="card-footer text-muted">Quarterly grades</div>
             </div>
-            <div class="col-12 col-lg-7">
-              <div class="card shadow mb-4 bg-body rounded">
-                <div class="card-title card-header">REMARKS</div>
-                <div class="card-blody">
+          </div>
+          <div class="col-12 col-lg-7">
+            <div class="card shadow mb-4 bg-body rounded">
+              <div class="card-title card-header">REMARKS</div>
+              <div class="card-blody">
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">He/She is doing good in xxxx,xxxx,xxxx.</li>
-                    <li class="list-group-item">He/She should improve in these subjects xxxx,xxx.</li>
-                    <li class="list-group-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
-                    <li class="list-group-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
-                    <li class="list-group-item">He/She has been showing interest in these xxxx,xxxx,xxxxx</li>
-                    <li class="list-group-item">Can refer these for further improvement: <a href="">xxxxx</a>, <a href="">xxxxx</a>.</li>
+                  <li class="list-group-item">He/She is doing good in xxxx,xxxx,xxxx.</li>
+                  <li class="list-group-item">He/She should improve in these subjects xxxx,xxx.</li>
+                  <li class="list-group-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                  <li class="list-group-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                  <li class="list-group-item">He/She has been showing interest in these xxxx,xxxx,xxxxx</li>
+                  <li class="list-group-item">Can refer these for further improvement: <a href="">xxxxx</a>, <a href="">xxxxx</a>.</li>
                 </ul>
-                </div>
-                <div class="card-footer text-muted">
-                 Remarks for quarterly exams
-                </div>
-                </div>
+              </div>
+              <div class="card-footer text-muted">Remarks for quarterly exams</div>
             </div>
-            </div>
+          </div>
         </div>
-      <!--*********-->  
-        <div class="tab-pane fade p-2" id="testing" role="tabpanel" 
+      </div>
+      <!--Testing-->  
+      <div class="tab-pane fade p-2" id="testing" role="tabpanel" 
         aria-labelledby="testing-tab">
         <h3 class="p-3 mb-2 text-center">Testing</h3>
-            <p class="py-3">Your test results for this semister are Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem eligendi at error explicabo qui a atque vero sunt ea ad minus quae laudantium tenetur, obcaecati consequuntur nesciunt quisquam asperiores. Sapiente!
-            </p>
-        </div>
-      <!--*************-->
-        <div class="tab-pane fade p-2" id="profile" role="tabpanel" 
+        <p class="py-3">
+          Your test results for this semister are Lorem, ipsum dolor sit amet consectetur 
+          adipisicing elit. Autem eligendi at error explicabo qui a atque vero sunt ea ad 
+          minus quae laudantium tenetur, 
+          obcaecati consequuntur nesciunt quisquam asperiores. Sapiente!</p>
+      </div>
+      <!--Profile-->
+      <div class="tab-pane fade p-2" id="profile" role="tabpanel" 
         aria-labelledby="profile-tab">
         <h3 class="p-3 mb-2 text-center">My Profile</h3>
-            <table class="table table-bordered table-hover mb-2">
-                <tr class="table-dark"><th></th><th>Details</th></tr>
-                <tr><td>Name</td><td>xxxxxxxx</td></tr>
-                <tr><td>Class</td><td>xxxxxxxx</td></tr>
-                <tr><td>Name</td><td>xxxxxxxx</td></tr>
-                <tr><td>Name</td><td>xxxxxxxx</td></tr>
-                <tr><td>Name</td><td>xxxxxxxx</td></tr>
-            </table>
-        </div>
-    <!--*************-->
-        <div class="tab-pane fade p-2" id="classes" role="tabpanel" 
+        <table class="table table-bordered table-hover mb-2">
+          <tr class="table-dark"><th></th><th>Details</th></tr>
+          <tr><td>Name</td><td>xxxxxxxx</td></tr>
+          <tr><td>Class</td><td>xxxxxxxx</td></tr>
+          <tr><td>Name</td><td>xxxxxxxx</td></tr>
+          <tr><td>Name</td><td>xxxxxxxx</td></tr>
+          <tr><td>Name</td><td>xxxxxxxx</td></tr>
+        </table>
+      </div>
+      <!--Classes-->
+      <div class="tab-pane fade p-2" id="classes" role="tabpanel" 
         aria-labelledby="classes-tab">
-          <h3 class="p-3 mb-2 text-center">Schedule for this semester</h3>
-          <table class="table-responsive table-bordered my-2 w-100 text-center">
-            <tr class="p-2 bg-dark text-white"><th>Attending Classes</th><th>Completed classes</th><th>Pending clases</th><th>Assignments pending</th></tr>
-            <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
-            <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>                
-            <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
-          </table>
-        </div>
-      <!--****************-->
-        <div class="tab-pane fade p-2" id="messages" role="tabpanel" 
+        <h3 class="p-3 mb-2 text-center">Schedule for this semester</h3>
+        <table class="table-responsive table-bordered my-2 w-100 text-center">
+          <tr class="bg-dark text-white"><th class="p-2">Attending Classes</th>
+            <th class="p-2">Completed classes</th><th class="p-2">Pending clases</th>
+            <th class="p-2">Assignments pending</th>
+          </tr>
+          <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
+          <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>                
+          <tr><td>xxxx</td><td>xxxxx</td><td>xxxxx</td><td>xxxxx</td></tr>
+        </table>
+      </div>
+      <!--Messages-->
+      <div class="tab-pane fade p-2" id="messages" role="tabpanel" 
         aria-labelledby="messages-tab">
         <h3 class="p-3 mb-2 text-center">Messages</h3>
-            <ul class="list-group">
-                <li class="list-group-item">A reward for completing today's tasks</li>
-                <li class="list-group-item">Not completed today's tasks</li>
-            </ul>
-        </div>
-      <!--*************-->
-        <div class="tab-pane fade p-2" id="immunization" role="tabpanel" 
+        <ul class="list-group">
+          <li class="list-group-item">A reward for completing today's tasks</li>
+          <li class="list-group-item">Not completed today's tasks</li>
+        </ul>
+      </div>
+      <!--Immunization-->
+      <div class="tab-pane fade p-2" id="immunization" role="tabpanel" 
         aria-labelledby="immunization-tab">
         <h3 class="p-3 mb-2 text-center">Immunization</h3>
-            <p class="py-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere dolore velit tempore neque error itaque repellat aliquid magni blanditiis eius molestias, inventore dolor ut ab et. Impedit expedita neque consectetur.
-            </p>
-        </div>
-      <!--**********************-->
-        <div class="tab-pane fade p-2" id="progressrprt" role="tabpanel" 
+        <p class="py-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+          Facere dolore velit tempore neque error itaque repellat aliquid magni blanditiis 
+          eius molestias, inventore dolor ut ab et. Impedit expedita neque consectetur.
+        </p>
+      </div>
+      <!--Progress Report-->
+      <div class="tab-pane fade p-2" id="progressrprt" role="tabpanel" 
         aria-labelledby="progressrprt-tab">
         <h3 class="p-3 mb-2 text-center">Report Card</h3>
-            <p class="lead">Your grades for this semester are:</p>
-            <table class="table table-success table-hover table-bordered">
-                <tr class="table-dark"><th>Subject</th><th>Marks</th><th>Grade</th></tr>
-                <tr><td>xxxxx</td><td>xxx</td><td>A</td></tr>
-                <tr><td>xxxxx</td><td>xxx</td><td>B</td></tr>
-                <tr><td>xxxxx</td><td>xxx</td><td>C</td></tr>
-                <tr><td>xxxxx</td><td>xxx</td><td>D</td></tr>
-                <tr><td>xxxxx</td><td>xxx</td><td>E</td></tr>
-                <tr><td>xxxxx</td><td>xxx</td><td>F</td></tr>
-                <tr class="table-secondary"><td>overall grade</td><td></td><td>C</td></tr>
-            </table>
-        </div>
-      <!--************-->
-        <div class="tab-pane fade p-2" id="rprtcard" role="tabpanel" 
+        <p class="lead">Your grades for this semester are:</p>
+        <table class="table table-success table-hover table-bordered">
+          <tr class="table-dark"><th>Subject</th><th>Marks</th><th>Grade</th></tr>
+          <tr><td>xxxxx</td><td>xxx</td><td>A</td></tr>
+          <tr><td>xxxxx</td><td>xxx</td><td>B</td></tr>
+          <tr><td>xxxxx</td><td>xxx</td><td>C</td></tr>
+          <tr><td>xxxxx</td><td>xxx</td><td>D</td></tr>
+          <tr><td>xxxxx</td><td>xxx</td><td>E</td></tr>
+          <tr><td>xxxxx</td><td>xxx</td><td>F</td></tr>
+          <tr class="table-secondary"><td>overall grade</td><td></td><td>C</td></tr>
+        </table>
+      </div>
+      <!--Report Card-->
+      <div class="tab-pane fade p-2" id="rprtcard" role="tabpanel" 
         aria-labelledby="rprtcard-tab">
         <h3 class="p-3 mb-2 text-center">Remarks</h3>
-            <p class="lead">Your performance in this semister:</p>
-            <table class="table table-info table-hover table-bordered">
-                <tr class="table-dark"><th>Subject</th><th>Performance</th></tr>
-                <tr><td>xxxxxx</td><td>Good</td></tr>
-                <tr><td>xxxxxx</td><td>Can Be Improved</td></tr>
-                <tr><td>xxxxxx</td><td>Continue like this</td></tr>
-                <tr><td>xxxxxx</td><td>Learn Basics</td></tr>
-                <tr><td>xxxxxx</td><td>Best</td></tr>
-                <tr><td>xxxxxx</td><td>Better</td></tr>
-            </table>
-        </div>
-      <!--*************-->
-        <div class="tab-pane fade p-2" id="assignments" role="tabpanel" 
+        <p class="lead">Your performance in this semister:</p>
+        <table class="table table-info table-hover table-bordered">
+          <tr class="table-dark"><th>Subject</th><th>Performance</th></tr>
+          <tr><td>xxxxxx</td><td>Good</td></tr>
+          <tr><td>xxxxxx</td><td>Can Be Improved</td></tr>
+          <tr><td>xxxxxx</td><td>Continue like this</td></tr>
+          <tr><td>xxxxxx</td><td>Learn Basics</td></tr>
+          <tr><td>xxxxxx</td><td>Best</td></tr>
+          <tr><td>xxxxxx</td><td>Better</td></tr>
+        </table>
+      </div>
+      <!--Assignments-->
+      <div class="tab-pane fade p-2" id="assignments" role="tabpanel" 
         aria-labelledby="assignments-tab">
         <h3 class="p-3 mb-2 text-center">Assignments</h3>
-            <table class="table table-striped table-bordered text-center mb-3">
-                <tr><th>Assigned</th><th>Completed</th><th>Pending</th></tr>
-                <tr><td>7</td><td>5</td><td>2</td></tr>
-            </table>
-            <br>
-            <p class="lead">Current Assignments are:</p>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">xxxxxx</li>
-                <li class="list-group-item">xxxxxx</li>
-            </ul>
-        </div>
-        
-      </div>
+        <table class="table table-striped table-bordered text-center mb-3">
+          <tr><th>Assigned</th><th>Completed</th><th>Pending</th></tr>
+          <tr><td>7</td><td>5</td><td>2</td></tr>
+        </table>
+        <p class="lead">Current Assignments are:</p>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+          <li class="list-group-item">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+        </ul>
+      </div>  
+    </div>
   </div>
+  <!--footer-->
   <footer class="footer mt-auto text-center border-top p-1">
     <div class="container">
-      <small class="text-muted">&copy; Copyright 
-         XXXX. All rights reserved.</small>
+      <small class="text-muted">&copy; Copyright XXXX. All rights reserved.</small>
     </div>
   </footer>
   
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

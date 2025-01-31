@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        upload the file: <input type="file" id="files1">
+        <script>
+        function filesupld(){
+            var fileinput = document.querySelector('#files1');
+            var files=fileinput.files;
+            if(files.length==0){
+                alert('you have not seelcted anything');
+            }else{
+                alert(files.name);
+            }
+        }   
+        document.querySelector('#files1').onChange=filesupld(); 
+        </script>
+    </body>
+</html>

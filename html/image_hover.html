@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Image with hover effects</title>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+    <meta name="description" content="Advanced hover effects on image">
+    <style type="text/css">
+/*        html, body {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            color: #a92929;
+        }
+h2{
+text-align:center;
+padding:1em;
+border:0.2em dotted #a92929;
+margin:2em auto 2em auto;
+width:25%;
+}
+*/
+figure.image{
+position:relative;
+overflow:hidden;
+margin:20px;
+min-width:440px;
+min-height:440px;
+max-width:620px;
+//max-height:620px;
+width:100%;
+text-align:center;
+background-color:#000000;
+color:#e2ee2e;
+font-style:italic;
+}
+	
+figure.image *{
+-webkit-transition:all 0.3s ease-in-out;
+-moz-transition:all 0.3s ease-in-out;
+-o-transition:all 0.3s ease-in-out;
+transition: all 0.3s ease-in-out;
+}
+
+figure.image img{
+max-width:100%;
+position:relative;
+opacity:0.6;
+}
+
+figure.image h3{
+background:#000000;
+position:absolute;
+text-transform:uppercase;
+font-weight:400;
+left:100px;
+right:100px;
+top:40%;
+display:inline-block;
+margin:0;
+padding:15px 5px;
+transform: skew(-15deg) rotate(-20deg) translate(0,50%);
+border-radius:15px 50px;
+}
+
+figure.image div{
+background:#000000;
+position:absolute;
+text-transform:uppercase;
+font-weight:bold;
+max-height:40px;
+top:40%;
+display:inline-block;
+margin:0;
+width:100%;
+padding:10px 5px;
+transform: rotate(90deg) translate(0,50%);
+}
+figure.image div h4{
+transform: rotate(-90deg);
+display:inline-block;
+padding:5px;
+margin:0;
+}
+
+.sample{
+text-align:center;
+background:#000000;
+text-transform:uppercase;
+position:absolute;
+overflow:hidden;
+font-weight:bold;
+max-height:40px;
+top:35%;
+left:480px;
+margin:0;
+padding:10px;
+width:425px;
+transform: rotate(90deg) translate(0,50%);
+}
+
+.sample h4{
+color:white;
+transform: rotate(-90deg);
+display:inline-block;
+padding:10px;
+margin:0;
+}
+
+figure.image:before{
+height:148%;
+width:129%;
+top:0;
+left:0;
+content:'';
+background:#cccccc;
+position:absolute;
+transition:all 0.5s ease-in-out;
+transform:skew(-10deg) rotate(110deg) translateY(-50%);
+}
+
+figure.image:hover img{
+opacity:1;
+transform:scale(1.1);
+}
+
+figure.image:hover h3{
+transform:skew(-10deg) rotate(-10deg) translate(-150%,-50%);
+}
+
+figure.image:hover:before{
+transform:rotate(110deg) translateY(-150%);
+}
+    </style>
+</head>
+<body>
+<h2>Welcome</h2>
+<figure class="image">
+<img src="https://images.unsplash.com/photo-1546146830-2cca9512c68e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+width="620" height="440" alt="Desktop image">
+<figcaption>
+<h3>Desktop</h3>
+<div>
+<h4>D</h4>
+<h4>E</h4>
+<h4>S</h4>
+<h4>K</h4>
+<h4>T</h4>
+<h4>O</h4>
+<h4>P</h4>
+</div>
+</figcaption>
+</figure>
+<div class="sample">
+<h4>s</h4>
+<h4>O</h4>
+<h4>U</h4>
+<h4>J</h4>
+<h4>A</h4>
+<h4>N</h4>
+<h4>Y</h4>
+<h4>A</h4>
+<h4></h4>
+<h4>M</h4>
+</div>
+</body>
+</html>
